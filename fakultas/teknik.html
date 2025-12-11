@@ -5,106 +5,129 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Fakultas Teknik - Universitas Seruni</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
-  <style> 
-    :root {
-      --primary: #1e3a8a;
-      --accent: #10b981;
-      --bg: #f8fafc;
-      --text: #111827;
-      --card: #ffffff;
-    }
+ <style>
+  :root {
+    --primary: #1e3a8a;   /* Biru gelap */
+    --accent: #3b82f6;    /* Biru terang */
+    --bg: #f0f5ff;        /* Biru sangat muda untuk background */
+    --text: #1e293b;      /* Biru keabu-abuan untuk teks */
+  }
 
-   * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
 
-    body {
-      font-family: 'Inter', sans-serif;
-      background-color: var(--bg);
-      color: var(--text);
-      overflow-x: hidden;
-    }
+  body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
 
-    header {
-      background-color: var(--card);
-      padding: 40px 60px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-      width: 100%;
-    }
+  header {
+    background: linear-gradient(135deg, var(--primary), var(--accent));
+    color: white;
+    padding: 50px 5vw;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+    width: 100%;
+  }
 
-    header h1 {
-      margin: 0;
-      font-size: 2.2em;
-      color: var(--primary);
-    }
+  header h1 {
+    font-size: 2.3em;
+    font-weight: 700;
+  }
 
-    /* Bagian utama dibuat full width */
-    main {
-      width: 100%;
-      max-width: none;
-      margin: 0;
-      padding: 60px 60px;
-    }
+  main {
+    width: 100%;
+    padding: 60px 6vw;
+    background: var(--bg);
+  }
 
-    section {
-      margin-bottom: 60px;
-      width: 100%;
-    }
+  section {
+    width: 100%;
+    margin-bottom: 70px;
+  }
 
+  h2 {
+    font-size: 1.8em;
+    border-left: 6px solid var(--accent);
+    padding-left: 15px;
+    margin-bottom: 25px;
+    font-weight: 700;
+  }
+
+  h3 {
+    color: var(--accent);
+    margin-top: 25px;
+    margin-bottom: 10px;
+    font-size: 1.3em;
+  }
+
+  p {
+    margin-bottom: 15px;
+    font-size: 1.05em;
+  }
+
+  ul {
+    list-style: none;
+    padding-left: 0;
+  }
+
+  ul li {
+    background: white;
+    margin-bottom: 12px;
+    padding: 16px 24px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    transition: all 0.2s ease-in-out;
+    width: 100%;
+  }
+
+  ul li:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  }
+
+  .facilities li::before {
+    content: "💊";
+    margin-right: 10px;
+  }
+
+  .highlight {
+    background: linear-gradient(90deg, rgba(59,130,246,0.1), transparent);
+    border-left: 4px solid var(--accent);
+    padding: 18px 22px;
+    border-radius: 8px;
+    margin-bottom: 25px;
+  }
+
+  footer {
+    width: 100%;
+    background-color: var(--primary);
+    color: #ecf0f1;
+    text-align: center;
+    padding: 40px 20px;
+    font-size: 0.95em;
+    margin-top: 60px;
+  }
+
+  /* Responsif */
+  @media (max-width: 768px) {
+    header, main {
+      padding: 30px 5vw;
+    }
+    h1 {
+      font-size: 1.9em;
+    }
     h2 {
-      font-size: 1.8em;
-      margin-bottom: 20px;
-      border-left: 5px solid var(--primary);
-      padding-left: 15px;
+      font-size: 1.5em;
     }
+  }
+</style>
 
-    h3 {
-      margin-top: 30px;
-      color: var(--accent);
-    }
-
-    ul {
-      list-style: none;
-      padding-left: 0;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 15px;
-      width: 100%;
-    }
-
-    ul li {
-      background-color: var(--card);
-      padding: 16px 20px;
-      border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-    }
-
-
-
-    footer {
-      background-color: var(--text);
-      color: white;
-      text-align: center;
-      padding: 50px 30px;
-      margin-top: 80px;
-      width: 100%;
-    }
-
-    /* Responsif di layar kecil */
-    @media (max-width: 768px) {
-      header {
-        padding: 25px 30px;
-      }
-      main {
-        padding: 40px 25px;
-      }
-      ul {
-        grid-template-columns: 1fr;
-      }
-    }
-  </style>
 </head>
 <body>
   <header>
@@ -120,154 +143,422 @@
    <section>
   <h2>Program Studi</h2>
 
-  <h3>Program Sarjana (S1)</h3>
-  <ul>
-    <li>Teknik Sipil</li>
-    <li>Teknik Mesin</li>
-    <li>Teknik Elektro</li>
-    <li>Teknik Industri</li>
-    <li>Teknik Kimia</li>
-    <li>Teknik Lingkungan</li>
-    <li>Teknik Perminyakan</li>
-    <li>Teknik Pertambangan</li>
-    <li>Teknik Metalurgi</li>
-    <li>Teknik Dirgantara</li>
-    <li>Teknik Nuklir</li>
-    <li>Teknik Robotika</li>
-    <li>Teknik Otomotif</li>
-    <li>Teknik Telekomunikasi</li>
-    <li>Teknik Energi Terbarukan</li>
-    <li>Teknik Fisika</li>
-    <li>Teknik Material</li>
-    <li>Teknik Biomedik</li>
-    <li>Teknik Bioproses</li>
-    <li>Perencanaan Wilayah dan Kota</li>
-    <li>Teknik Perkapalan</li>
-    <li>Arsitektur</li>
-    <li>Arsitektur Interior</li>
-    <li>Teknik dan Pengelolaan Sumber Daya Air</li>
-    <li>Rekayasa Infrastruktur Lingkungan</li>
-    <li>Teknik Bioenergi dan Kemurgi</li>
-    <li>Manajemen Rekayasa Industri</li>
-    <li>Teknik Transportasi</li>
-    <li>Teknik Keselamatan dan Kesehatan Kerja</li>
-    <li>Teknik Energi dan Sistem Daya</li>
-    <li>Teknik Sistem Cerdas</li>
-    <li>Rekayasa Keberlanjutan dan Energi Hijau</li>
-    <li>Teknik Sistem dan Kontrol</li>
-    <li>Teknik Produksi dan Manufaktur</li>
-    <li>Teknik Rekayasa Material Maju</li>
-    <li>Teknik Polimer</li>
-    <li>Teknik Nanoteknologi</li>
-    <li>Teknik Rekayasa Medis</li>
-    <li>Teknik Keselamatan Transportasi</li>
-    <li>Teknik Perancangan Produk</li>
-    <li>Rekayasa Infrastruktur Digital</li>
-    <li>Teknik Energi Nuklir dan Radiasi</li>
-    <li>Teknik Sistem Informasi Industri</li>
-    <li>Teknik Energi dan Lingkungan</li>
-    <li>Teknik Bahan Bakar dan Petrokimia</li>
-    <li>Teknik Instrumentasi Industri</li>
-    <li>Teknik Keteknikan Laut</li>
-    <li>Teknik Sistem Produksi Otomatis</li>
-    <li>Rekayasa Transportasi Cerdas</li>
-    <li>Teknik Keandalan dan Pemeliharaan</li>
-    <li>Teknik Desain dan Inovasi Produk</li>
-    <li>Teknik Pengelolaan Sumber Daya Energi</li>
-    <li>Teknik Keberlanjutan Industri</li>
-    <li>Teknik Manufaktur Presisi</li>
-    <li>Teknik Energi dan Mesin Termal</li>
-    <li>Teknik Sistem Energi Listrik Terapan</li>
-    <li>Teknik Pengolahan Limbah Industri</li>
-    <li>Teknik Keselamatan Proses</li>
-    <li>Teknik Bioteknologi Industri</li>
-    <li>Teknik Rekayasa Katalis dan Reaksi Kimia</li>
-    <li>Teknik Material Energi Baru</li>
-    <li>Teknik Produksi Berkelanjutan</li>
-    <li>Rekayasa Nanoteknologi</li>
-  </ul>
+<!-- ================================ -->
+<!-- Departemen Teknik Sipil & Lingkungan -->
+<!-- ================================ -->
+<h3>Departemen Teknik Sipil & Lingkungan</h3>
 
-  <h3>Program Magister (S2)</h3>
-  <ul>
-    <li>Magister Teknik Sipil</li>
-    <li>Magister Teknik Mesin</li>
-    <li>Magister Teknik Elektro</li>
-    <li>Magister Teknik Industri</li>
-    <li>Magister Teknik Lingkungan</li>
-    <li>Magister Teknik Kimia</li>
-    <li>Magister Teknik Dirgantara</li>
-    <li>Magister Teknik Energi</li>
-    <li>Magister Rekayasa Sistem</li>
-    <li>Magister Teknik Telekomunikasi</li>
-    <li>Magister Teknologi dan Inovasi</li>
-    <li>Magister Perencanaan Wilayah dan Kota</li>
-    <li>Magister Teknik Fisika</li>
-    <li>Magister Teknik Pertambangan dan Perminyakan</li>
-    <li>Magister Arsitektur</li>
-    <li>Magister Teknik Biomedik</li>
-    <li>Magister Teknik Material</li>
-    <li>Magister Rekayasa Energi Terbarukan</li>
-    <li>Magister Teknik Transportasi</li>
-    <li>Magister Teknik Keselamatan dan Kesehatan Kerja</li>
-    <li>Magister Rekayasa Keberlanjutan</li>
-    <li>Magister Teknik Sistem Produksi</li>
-    <li>Magister Rekayasa Nanoteknologi</li>
-    <li>Magister Teknik Manufaktur</li>
-    <li>Magister Rekayasa Infrastruktur Digital</li>
-    <li>Magister Teknik Energi dan Lingkungan</li>
-    <li>Magister Rekayasa Polimer dan Material Maju</li>
-    <li>Magister Rekayasa Transportasi Cerdas</li>
-    <li>Magister Teknik Bioteknologi Industri</li>
-    <li>Magister Teknik Sistem Energi Listrik</li>
-    <li>Magister Desain dan Inovasi Produk Teknik</li>
-    <li>Magister Rekayasa Nanoteknologi</li>
-  </ul>
+<h4>Program Sarjana (S1)</h4>
+<ul>
+  <li>Teknik Sipil</li>
+  <li>Teknik Lingkungan</li>
+  <li>Perencanaan Wilayah dan Kota</li>
+  <li>Rekayasa Infrastruktur Lingkungan</li>
+  <li>Teknik dan Pengelolaan Sumber Daya Air</li>
+  <li>Teknik Pengolahan Limbah Industri</li>
+  <li>Rekayasa Infrastruktur Digital</li>
+  <li>Teknik Infrastruktur Pesisir & Pelabuhan</li>
+  <li>Teknik Rekayasa Lingkungan Laut</li>
+</ul>
 
-  <h3>Program Doktor (S3)</h3>
-  <ul>
-    <li>Doktor Teknik Sipil</li>
-    <li>Doktor Teknik Mesin</li>
-    <li>Doktor Teknik Elektro</li>
-    <li>Doktor Teknik Industri</li>
-    <li>Doktor Teknik Lingkungan</li>
-       <li>Doktor Teknik Metalurgi dan Material</li>
-          <li>Doktor Teknik Pertambangan dan Perminyakan</li>
-             <li>Doktor Teknik Dirgantara</li>
-                <li>Doktor Arsitektur</li>
-                   <li>Doktor Teknik Kimia</li>
-                      <li>Doktor Teknik Fisika</li>
-                         <li>Doktor Perencanaan Wilayah dan Kota</li>
-                            <li>Doktor Teknik Biomedik</li>
-    <li>Doktor Rekayasa dan Teknologi Berkelanjutan</li>
-    <li>Doktor Teknik Material dan Energi</li>
-    <li>Doktor Teknik Energi Terbarukan</li>
-    <li>Doktor Rekayasa Sistem dan Produksi</li>
-    <li>Doktor Teknik Transportasi dan Infrastruktur</li>
-    <li>Doktor Rekayasa Nanoteknologi</li>
-    <li>Doktor Teknik Bioteknologi dan Proses Kimia</li>
-    <li>Doktor Rekayasa Industri Berkelanjutan</li>
-    <li>Doktor Teknologi Manufaktur Maju</li>
-    <li>Doktor Rekayasa Infrastruktur Digital dan Energi</li>
-    <li>Doktor Teknik Keselamatan dan Sistem Cerdas</li>
-    <li>Doktor Rekayasa Nanoteknologi</li>
-  </ul>
+<h4>Program Magister (S2)</h4>
+<ul>
+  <li>Magister Teknik Sipil</li>
+  <li>Magister Teknik Lingkungan</li>
+  <li>Magister Perencanaan Wilayah dan Kota</li>
+</ul>
 
-  <h3>Program Profesi</h3>
-  <ul>
-    <li>Program Profesi Insinyur</li>
-    <li>Program Profesi Arsitek</li>
-    <li>Program Sertifikasi Keahlian Teknik</li>
+<h4>Program Doktor (S3)</h4>
+<ul>
+  <li>Doktor Teknik Sipil</li>
+  <li>Doktor Teknik Lingkungan</li>
+  <li>Doktor Perencanaan Wilayah dan Kota</li>
+</ul>
 
-    <!-- Tambahan Profesi Baru -->
-    <li>Program Profesi Rekayasa Energi</li>
-    <li>Program Profesi Rekayasa Transportasi</li>
-    <li>Program Profesi Manufaktur dan Produksi</li>
-    <li>Program Profesi Keselamatan dan Kesehatan Teknik</li>
-    <li>Program Profesi Rekayasa Lingkungan Industri</li>
-    <li>Program Profesi Rekayasa Material dan Nanoteknologi</li>
-    <li>Program Profesi Rekayasa Energi Terbarukan</li>
-    <li>Program Profesi Sistem dan Kontrol Industri</li>
-  </ul>
+
+<!-- ================================ -->
+<!-- Departemen Teknik Mesin -->
+<!-- ================================ -->
+<h3>Departemen Teknik Mesin</h3>
+
+<h4>Program Sarjana (S1)</h4>
+<ul>
+  <li>Teknik Mesin</li>
+  <li>Teknik Produksi dan Manufaktur</li>
+  <li>Teknik Keandalan dan Pemeliharaan</li>
+  <li>Teknik Energi dan Mesin Termal</li>
+  <li>Teknik Manufaktur Presisi</li>
+</ul>
+
+<h4>Program Magister (S2)</h4>
+<ul>
+  <li>Magister Teknik Mesin</li>
+  <li>Magister Teknik Manufaktur</li>
+</ul>
+
+<h4>Program Doktor (S3)</h4>
+<ul>
+  <li>Doktor Teknik Mesin</li>
+  <li>Doktor Teknik Manufaktur</li>
+</ul>
+
+
+<!-- ================================ -->
+<!-- Departemen Teknik Elektro -->
+<!-- ================================ -->
+<h3>Departemen Teknik Elektro</h3>
+
+<h4>Program Sarjana (S1)</h4>
+<ul>
+  <li>Teknik Elektro</li>
+  <li>Teknik Telekomunikasi</li>
+</ul>
+
+<h4>Program Magister (S2)</h4>
+<ul>
+  <li>Magister Teknik Elektro</li>
+  <li>Magister Teknik Telekomunikasi</li>
+</ul>
+
+<h4>Program Doktor (S3)</h4>
+<ul>
+  <li>Doktor Teknik Elektro</li>
+  <li>Doktor Teknik Telekomunikasi</li>
+</ul>
+
+
+<!-- ================================ -->
+<!-- Departemen Teknik Industri -->
+<!-- ================================ -->
+<h3>Departemen Teknik Industri</h3>
+
+<h4>Program Sarjana (S1)</h4>
+<ul>
+  <li>Teknik Industri</li>
+  <li>Manajemen Rekayasa Industri</li>
+  <li>Teknik Keselamatan dan Kesehatan Kerja</li>
+  <li>Teknik Sistem dan Kontrol</li>
+  <li>Teknik Sistem Informasi Industri</li>
+  <li>Teknik Sistem Produksi Otomatis</li>
+  <li>Teknik Instrumentasi Industri</li>
+  <li>Teknik Keberlanjutan Industri</li>
+</ul>
+
+<h4>Program Magister (S2)</h4>
+<ul>
+  <li>Magister Teknik Industri</li>
+  <li>Magister Teknik Keselamatan dan Kesehatan Kerja</li>
+</ul>
+
+<h4>Program Doktor (S3)</h4>
+<ul>
+  <li>Doktor Teknik Industri</li>
+  <li>Doktor Teknik Keselamatan dan Kesehatan Kerja</li>
+</ul>
+
+
+<!-- ================================ -->
+<!-- Departemen Teknik Kimia -->
+<!-- ================================ -->
+<h3>Departemen Teknik Kimia</h3>
+
+<h4>Program Sarjana (S1)</h4>
+<ul>
+  <li>Teknik Kimia</li>
+  <li>Teknik Bioproses</li>
+  <li>Teknik Rekayasa Katalis dan Reaksi Kimia</li>
+  <li>Teknik Produksi Berkelanjutan</li>
+  <li>Teknik Keselamatan Proses</li>
+</ul>
+
+<h4>Program Magister (S2)</h4>
+<ul>
+  <li>Magister Teknik Kimia</li>
+  <li>Magister Teknik Bioproses</li>
+</ul>
+
+<h4>Program Doktor (S3)</h4>
+<ul>
+  <li>Doktor Teknik Kimia</li>
+  <li>Doktor Teknik Bioproses</li>
+</ul>
+
+
+<!-- ================================ -->
+<!-- Departemen Teknik Material & Metalurgi -->
+<!-- ================================ -->
+<h3>Departemen Teknik Material & Metalurgi</h3>
+
+<h4>Program Sarjana (S1)</h4>
+<ul>
+  <li>Teknik Metalurgi</li>
+  <li>Teknik Material</li>
+  <li>Teknik Rekayasa Material Maju</li>
+  <li>Teknik Polimer</li>
+  <li>Rekayasa Nanoteknologi</li>
+</ul>
+
+<h4>Program Magister (S2)</h4>
+<ul>
+  <li>Magister Teknik Metalurgi</li>
+  <li>Magister Teknik Material</li>
+  <li>Magister Rekayasa Nanoteknologi</li>
+</ul>
+
+<h4>Program Doktor (S3)</h4>
+<ul>
+  <li>Doktor Teknik Metalurgi</li>
+  <li>Doktor Teknik Material</li>
+  <li>Doktor Rekayasa Nanoteknologi</li>
+</ul>
+
+
+<!-- ================================ -->
+<!-- Departemen Teknik Energi -->
+<!-- ================================ -->
+<h3>Departemen Teknik Energi</h3>
+
+<h4>Program Sarjana (S1)</h4>
+<ul>
+  <li>Teknik Energi Terbarukan</li>
+  <li>Teknik Fisika</li>
+  <li>Teknik Bioenergi dan Kemurgi</li>
+  <li>Teknik Energi dan Sistem Daya</li>
+  <li>Rekayasa Keberlanjutan dan Energi Hijau</li>
+  <li>Teknik Energi dan Lingkungan</li>
+  <li>Teknik Material Energi Baru</li>
+  <li>Teknik Sistem Energi Listrik Terapan</li>
+  <li>Teknik Pengelolaan Sumber Daya Energi</li>
+</ul>
+
+<h4>Program Magister (S2)</h4>
+<ul>
+  <li>Magister Teknik Energi</li>
+  <li>Magister Teknik Fisika</li>
+</ul>
+
+<h4>Program Doktor (S3)</h4>
+<ul>
+  <li>Doktor Teknik Energi</li>
+  <li>Doktor Teknik Fisika</li>
+</ul>
+
+
+<!-- ================================ -->
+<!-- Departemen Teknik Robotika -->
+<!-- ================================ -->
+<h3>Departemen Teknik Robotika</h3>
+
+<h4>Program Sarjana (S1)</h4>
+<ul>
+  <li>Teknik Robotika</li>
+  <li>Teknik Sistem Cerdas</li>
+</ul>
+
+<h4>Program Magister (S2)</h4>
+<ul>
+  <li>Magister Teknik Robotika</li>
+  <li>Magister Teknik Sistem Cerdas</li>
+</ul>
+
+<h4>Program Doktor (S3)</h4>
+<ul>
+  <li>Doktor Teknik Robotika</li>
+  <li>Doktor Teknik Sistem Cerdas</li>
+</ul>
+
+
+<!-- ================================ -->
+<!-- Departemen Teknik Transportasi -->
+<!-- ================================ -->
+<h3>Departemen Teknik Transportasi</h3>
+
+<h4>Program Sarjana (S1)</h4>
+<ul>
+  <li>Teknik Dirgantara</li>
+  <li>Teknik Otomotif</li>
+  <li>Teknik Transportasi</li>
+  <li>Teknik Perkapalan</li>
+  <li>Teknik Keselamatan Transportasi</li>
+  <li>Rekayasa Transportasi Cerdas</li>
+  <li>Teknik Sistem Kapal</li>
+  <li>Teknik Hidrodinamika Kapal</li>
+</ul>
+
+<h4>Program Magister (S2)</h4>
+<ul>
+  <li>Magister Teknik Dirgantara</li>
+  <li>Magister Teknik Otomotif</li>
+  <li>Magister Teknik Transportasi</li>
+  <li>Magister Teknik Perkapalan</li>
+</ul>
+
+<h4>Program Doktor (S3)</h4>
+<ul>
+  <li>Doktor Teknik Dirgantara</li>
+  <li>Doktor Teknik Otomotif</li>
+  <li>Doktor Teknik Transportasi</li>
+  <li>Doktor Teknik Perkapalan</li>
+</ul>
+
+
+<!-- ================================ -->
+<!-- Departemen Teknik Nuklir -->
+<!-- ================================ -->
+<h3>Departemen Teknik Nuklir</h3>
+
+<h4>Program Sarjana (S1)</h4>
+<ul>
+  <li>Teknik Nuklir</li>
+  <li>Teknik Energi Nuklir dan Radiasi</li>
+</ul>
+
+<h4>Program Magister (S2)</h4>
+<ul>
+  <li>Magister Teknik Nuklir</li>
+</ul>
+
+<h4>Program Doktor (S3)</h4>
+<ul>
+  <li>Doktor Teknik Nuklir</li>
+</ul>
+
+
+<!-- ================================ -->
+<!-- Departemen Teknik Pertambangan & Perminyakan -->
+<!-- ================================ -->
+<h3>Departemen Teknik Pertambangan & Perminyakan</h3>
+
+<h4>Program Sarjana (S1)</h4>
+<ul>
+  <li>Teknik Perminyakan</li>
+  <li>Teknik Pertambangan</li>
+  <li>Teknik Bahan Bakar dan Petrokimia</li>
+</ul>
+
+<h4>Program Magister (S2)</h4>
+<ul>
+  <li>Magister Teknik Perminyakan</li>
+  <li>Magister Teknik Pertambangan</li>
+</ul>
+
+<h4>Program Doktor (S3)</h4>
+<ul>
+  <li>Doktor Teknik Perminyakan</li>
+  <li>Doktor Teknik Pertambangan</li>
+</ul>
+
+
+<!-- ================================ -->
+<!-- Departemen Teknik Biomedik & Rekayasa Medis -->
+<!-- ================================ -->
+<h3>Departemen Teknik Biomedik & Rekayasa Medis</h3>
+
+<h4>Program Sarjana (S1)</h4>
+<ul>
+  <li>Teknik Biomedik</li>
+  <li>Teknik Rekayasa Medis</li>
+  <li>Teknik Bioteknologi Industri</li>
+</ul>
+
+<h4>Program Magister (S2)</h4>
+<ul>
+  <li>Magister Teknik Biomedik</li>
+  <li>Magister Teknik Rekayasa Medis</li>
+</ul>
+
+<h4>Program Doktor (S3)</h4>
+<ul>
+  <li>Doktor Teknik Biomedik</li>
+  <li>Doktor Teknik Rekayasa Medis</li>
+</ul>
+
+
+<!-- ================================ -->
+<!-- Departemen Arsitektur -->
+<!-- ================================ -->
+<h3>Departemen Arsitektur</h3>
+
+<h4>Program Sarjana (S1)</h4>
+<ul>
+  <li>Arsitektur</li>
+  <li>Arsitektur Interior</li>
+</ul>
+
+<h4>Program Magister (S2)</h4>
+<ul>
+  <li>Magister Arsitektur</li>
+  <li>Magister Arsitektur Interior</li>
+</ul>
+
+<h4>Program Doktor (S3)</h4>
+<ul>
+  <li>Doktor Arsitektur</li>
+  <li>Doktor Arsitektur Interior</li>
+</ul>
+
+
+<!-- ================================ -->
+<!-- Departemen Teknik Kelautan -->
+<!-- ================================ -->
+<h3>Departemen Teknik Kelautan</h3>
+
+<h4>Program Sarjana (S1)</h4>
+<ul>
+  <li>Teknik Keteknikan Laut</li>
+  <li>Rekayasa Instalasi Kelautan</li>
+  <li>Teknologi Kelautan</li>
+  <li>Teknik Sistem Observasi dan Instrumen Laut</li>
+  <li>Teknik Operasi dan Teknologi Eksplorasi Laut</li>
+</ul>
+
+<h4>Program Magister (S2)</h4>
+<ul>
+  <li>Magister Teknologi Kelautan</li>
+  <li>Magister Teknik Keteknikan Laut</li>
+</ul>
+
+<h4>Program Doktor (S3)</h4>
+<ul>
+  <li>Doktor Teknologi Kelautan</li>
+  <li>Doktor Teknik Keteknikan Laut</li>
+</ul>
+
+
+<!-- ================================ -->
+<!-- Departemen Program Profesi -->
+<!-- ================================ -->
+<h3>Departemen Program Profesi</h3>
+
+<h4>Program Profesi</h4>
+<ul>
+  <li>Program Profesi Insinyur</li>
+  <li>Program Profesi Arsitek</li>
+  <li>Program Sertifikasi Keahlian Teknik</li>
+  <li>Program Profesi Rekayasa Energi</li>
+  <li>Program Profesi Rekayasa Transportasi</li>
+  <li>Program Profesi Manufaktur dan Produksi</li>
+  <li>Program Profesi Keselamatan dan Kesehatan Teknik</li>
+  <li>Program Profesi Rekayasa Lingkungan Industri</li>
+  <li>Program Profesi Rekayasa Material dan Nanoteknologi</li>
+  <li>Program Profesi Rekayasa Energi Terbarukan</li>
+  <li>Program Profesi Sistem dan Kontrol Industri</li>
+  <li>Program Profesi Proteksi Radiasi</li>
+  <li>Program Profesi Transportasi Cerdas</li>
+  <li>Program Profesi Keselamatan Transportasi</li>
+  <li>Program Profesi Aviasi & Dirgantara</li>
+  <li>Program Profesi Rekayasa Perkapalan & Hidrodinamika</li>
+  <li>Program Profesi Polimer & Komposit</li>
+  <li>Program Profesi Rekayasa Proses Kimia</li>
+  <li>Program Profesi Rekayasa Katalisis & Reaksi Kimia</li>
+  <li>Program Profesi Bioproses Industri</li>
+  <li>Program Profesi Petrokimia dan Bahan Bakar</li>
+  <li>Program Profesi Robotika</li>
+  <li>Program Profesi Sistem Cerdas</li>
+  <li>Program Profesi Otomasi & Kendali Industri</li>
+  <li>Program Profesi Instrumentasi Industri</li>
+</ul>
+
 </section>
 
 <section class="facilities">
