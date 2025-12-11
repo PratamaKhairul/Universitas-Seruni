@@ -5,114 +5,129 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Fakultas Ilmu Sosial dan Ilmu Politik - Universitas Seruni</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
-  <style> 
-  :root {
-    --primary: #8e44ad;
-    --accent: #9b59b6;
-    --bg: #f8f9fc;
-    --text: #2c3e50;
-    --card: #ffffff;
-  }
+  <style>
+    :root {
+      --primary: #d35400;   /* Orange tua */
+      --accent: #e67e22;    /* Orange terang */
+      --bg: #f9fafb;
+      --text: #2c3e50;
+    }
 
-  body {
-    margin: 0;
-    font-family: 'Inter', sans-serif;
-    background-color: var(--bg);
-    color: var(--text);
-  }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-  header {
-    background-color: var(--card);
-    padding: 40px 40px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    width: 100%;
-    box-sizing: border-box;
-  }
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
 
-  header h1 {
-    margin: 0;
-    font-size: 2.2em;
-    color: var(--primary);
-  }
+    header {
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      color: white;
+      padding: 50px 5vw;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+      width: 100%;
+    }
 
-  main {
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
+    header h1 {
+      font-size: 2.3em;
+      font-weight: 700;
+    }
 
-  section {
-    margin-bottom: 60px;
-    width: 100%;
-    padding: 40px 20px;
-    box-sizing: border-box;
-  }
+    main {
+      width: 100%;
+      padding: 60px 6vw;
+      background: var(--bg);
+    }
 
-  h2 {
-    font-size: 1.8em;
-    margin-bottom: 20px;
-    border-left: 5px solid var(--primary);
-    padding-left: 15px;
-  }
+    section {
+      width: 100%;
+      margin-bottom: 70px;
+    }
 
-  h3 {
-    margin-top: 30px;
-    color: var(--accent);
-  }
+    h2 {
+      font-size: 1.8em;
+      border-left: 6px solid var(--accent);
+      padding-left: 15px;
+      margin-bottom: 25px;
+      font-weight: 700;
+    }
 
-  ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 15px;
-    width: 100%;
-  }
+    h3 {
+      color: var(--accent);
+      margin-top: 25px;
+      margin-bottom: 10px;
+      font-size: 1.3em;
+    }
 
-  ul li {
-    background-color: var(--card);
-    padding: 16px 20px;
-    border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-    box-sizing: border-box;
-    line-height: 1.6;
-  }
+    p {
+      margin-bottom: 15px;
+      font-size: 1.05em;
+    }
 
-  .facilities li {
-    display: flex;
-    align-items: flex-start;
-    gap: 10px;
-  }
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
 
-  .facilities li span.icon {
-    font-size: 1.5em;
-  }
+    ul li {
+      background: white;
+      margin-bottom: 12px;
+      padding: 16px 24px;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+      transition: all 0.2s ease-in-out;
+      width: 100%;
+    }
 
-  .facilities li div {
-    flex: 1;
-  }
+    ul li:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
 
-  footer {
-    background-color: var(--text);
-    color: white;
-    text-align: center;
-    padding: 40px 20px;
-    width: 100%;
-    margin: 0;
-    box-sizing: border-box;
-  }
+    .facilities li::before {
+      content: "💊";
+      margin-right: 10px;
+    }
 
-  html, body, header, main, section, footer, ul, li {
-    max-width: 100%;
-  }
+    .highlight {
+      background: linear-gradient(90deg, rgba(230,126,34,0.15), transparent);
+      border-left: 4px solid var(--accent);
+      padding: 18px 22px;
+      border-radius: 8px;
+      margin-bottom: 25px;
+    }
 
-  * {
-    margin-left: 0;
-    margin-right: 0;
-  }
-  </style>
+    footer {
+      width: 100%;
+      background-color: var(--primary);
+      color: #ecf0f1;
+      text-align: center;
+      padding: 40px 20px;
+      font-size: 0.95em;
+      margin-top: 60px;
+    }
+
+    /* Responsif */
+    @media (max-width: 768px) {
+      header, main {
+        padding: 30px 5vw;
+      }
+      h1 {
+        font-size: 1.9em;
+      }
+      h2 {
+        font-size: 1.5em;
+      }
+    }
+</style>
+
 </head>
 <body>
   <header>
@@ -204,138 +219,242 @@
      <section>
   <h2>Program Studi</h2>
 
-  <h3>Program Sarjana (S1)</h3>
-  <ul>
-    <li>Sosiologi</li>
-    <li>Ilmu Politik</li>
-    <li>Hubungan Internasional</li>
-    <li>Kebijakan Publik</li>
-    <li>Ilmu Pemerintahan</li>
-    <li>Kriminologi</li>
-    <li>Ilmu Kesejahteraan Sosial</li>
-    <li>Ilmu Kepemudaan</li>
-    <li>Ilmu Lingkungan Sosial</li>
-    <li>Ilmu Sosial Digital</li>
-    <li>Ilmu Kajian Gender dan Seksualitas</li>
-    <li>Kajian Ketahanan Nasional</li>
-    <li>Kajian Wilayah</li>
-    <li>Studi Perdamaian dan Resolusi Konflik</li>
-    <li>Ilmu Perbatasan dan Keamanan Laut</li>
-    <li>Sosiologi Pembangunan</li>
-    <li>Sosiologi Politik</li>
-    <li>Sosiologi Lingkungan</li>
-    <li>Sosiologi Hukum dan Masyarakat</li>
-    <li>Studi Kepemimpinan dan Kebijakan</li>
-    <li>Ilmu Pertahanan dan Keamanan</li>
-    <li>Studi Konflik dan Humanitarian</li>
-    <li>Ilmu Masyarakat Digital</li>
-    <li>Ilmu Sosial dan Inovasi</li>
-    <li>Studi Komunitas dan Pemberdayaan</li>
-    <li>Studi Kependudukan dan Pembangunan Sosial</li>
-    <li>Studi Pembangunan Global</li>
-    <li>Ilmu Keluarga dan Konsumen</li>
-    <li>Studi Ketahanan Sosial</li>
-    <li>Ilmu Sosial Terapan</li>
-    <li>Ilmu Pembangunan dan Transformasi Sosial</li>
-    <li>Studi Demokrasi dan Tata Kelola</li>
-    <li>Politik Global dan Keamanan Internasional</li>
-    <li>Studi Perbatasan dan Maritim</li>
-    <li>Studi Kebijakan Pembangunan Daerah</li>
-    <li>Studi Inovasi Pemerintahan</li>
-    <li>Ilmu Sosial dan Teknologi</li>
-    <li>Politik Digital dan Keamanan Siber</li>
-    <li>Studi Perdamaian Internasional</li>
-    <li>Studi Migrasi dan Urbanisasi</li>
-    <li>Studi Gerakan Sosial</li>
-    <li>Studi Pembangunan Daerah dan Komunitas</li>
-    <li>Studi Keadilan Sosial dan Hak Asasi Manusia</li>
-    <li>Ilmu Sosial dan Keberlanjutan</li>
-    <li>Ilmu Sosial Global dan Transnasional</li>
-    <li>Politik dan Diplomasi Global</li>
-    <li>Ilmu Sosial Perubahan Iklim</li>
-    <li>Studi Resiliensi Sosial dan Kebencanaan</li>
-    <li>Studi Kewarganegaraan dan Multikulturalisme</li>
-    <li>Ilmu Sosial Data dan Analisis Kebijakan</li>
-    <li>Studi Urban dan Perkotaan</li>
-    <li>Studi Desa dan Pembangunan Lokal</li>
-    <li>Politik dan Kebijakan Lingkungan</li>
-    <li>Ilmu Sosial Kreatif dan Budaya Populer</li>
-    <li>Studi Diplomasi Kemanusiaan</li>
-    <li>Ilmu Sosial dan Etika Global</li>
-  </ul>
+<!-- ================================ -->
+<!-- Departemen Sosiologi & Pembangunan Sosial -->
+<!-- ================================ -->
+<h3>Departemen Sosiologi & Pembangunan Sosial</h3>
 
-  <h3>Program Magister (S2)</h3>
-  <ul>
-    <li>Magister Ilmu Politik</li>
-    <li>Magister Hubungan Internasional</li>
-    <li>Magister Sosiologi</li>
-    <li>Magister Kebijakan Publik</li>
-    <li>Magister Ilmu Pemerintahan</li>
-    <li>Magister Ketahanan Nasional</li>
-    <li>Magister Kajian Strategik dan Keamanan</li>
-    <li>Magister Kajian Wilayah</li>
-    <li>Magister Studi Perdamaian dan Konflik</li>
-    <li>Magister Kajian Perbatasan dan Laut</li>
-    <li>Magister Kriminologi</li>
-    <li>Magister Pekerjaan Sosial</li>
-    <li>Magister Pengembangan Masyarakat</li>
-    <li>Magister Studi Kepemudaan</li>
-    <li>Magister Gender dan Pembangunan</li>
-    <li>Magister Ilmu Sosial Digital</li>
-    <li>Magister Studi Media dan Budaya</li>
-    <li>Magister Kajian Pembangunan</li>
-    <li>Magister Ilmu Lingkungan Sosial</li>
-    <li>Magister Sosiologi Lingkungan</li>
-    <li>Magister Pembangunan Berkelanjutan</li>
-    <li>Magister Sosiologi Politik</li>
-    <li>Magister Sosiologi Pembangunan</li>
-    <li>Magister Politik Global dan Diplomasi</li>
-    <li>Magister Studi Demokrasi dan Tata Kelola</li>
-    <li>Magister Kajian Ketahanan Sosial</li>
-    <li>Magister Kebijakan dan Transformasi Sosial</li>
-    <li>Magister Studi Urban dan Perkotaan</li>
-    <li>Magister Studi Migrasi dan Populasi</li>
-    <li>Magister Pembangunan Komunitas dan Desa</li>
-    <li>Magister Politik dan Keamanan Lingkungan</li>
-    <li>Magister Ilmu Sosial Data dan Analisis Kebijakan</li>
-    <li>Magister Ilmu Sosial dan Teknologi</li>
-    <li>Magister Politik Digital dan Keamanan Siber</li>
-    <li>Magister Diplomasi dan Perdamaian Global</li>
-    <li>Magister Pembangunan Daerah dan Pemerintahan Lokal</li>
-    <li>Magister Ilmu Sosial dan Inovasi Publik</li>
-    <li>Magister Studi Resiliensi Sosial dan Kebencanaan</li>
-    <li>Magister Kewarganegaraan dan Multikulturalisme</li>
-  </ul>
+<h4>Program Sarjana (S1)</h4>
+<ul>
+  <li>Sosiologi</li>
+  <li>Sosiologi Politik</li>
+  <li>Sosiologi Hukum dan Masyarakat</li>
+  <li>Ilmu Pengembangan Masyarakat</li>
+  <li>Ilmu Pembangunan Global, Daerah dan Komunitas</li>
+  <li>Ilmu Sosial Terapan</li>
+  <li>Ilmu Pembangunan dan Transformasi Sosial</li>
+</ul>
 
-  <h3>Program Doktor (S3)</h3>
-  <ul>
-    <li>Doktor Ilmu Sosial</li>
-    <li>Doktor Ilmu Politik</li>
-    <li>Doktor Kriminologi</li>
-    <li>Doktor Sosiologi</li>
-    <li>Doktor Pekerjaan Sosial</li>
-    <li>Doktor Kebijakan Publik</li>
-    <li>Doktor Kajian Wilayah</li>
-    <li>Doktor Studi Perdamaian dan Konflik</li>
-    <li>Doktor Ketahanan Nasional</li>
-    <li>Doktor Studi Gender dan Pembangunan</li>
-    <li>Doktor Ilmu Sosial Digital</li>
-    <li>Doktor Ilmu Lingkungan Sosial</li>
-    <li>Doktor Pembangunan Berkelanjutan</li>
-    <li>Doktor Sosiologi Politik dan Pembangunan</li>
-    <li>Doktor Hubungan Internasional dan Diplomasi Global</li>
-    <li>Doktor Studi Demokrasi dan Tata Kelola</li>
-    <li>Doktor Kajian Ketahanan Sosial dan Komunitas</li>
-    <li>Doktor Kebijakan Sosial dan Pembangunan Daerah</li>
-    <li>Doktor Pembangunan Komunitas dan Desa</li>
-    <li>Doktor Politik Digital dan Transformasi Sosial</li>
-    <li>Doktor Politik dan Keamanan Lingkungan</li>
-    <li>Doktor Ilmu Sosial dan Data Kebijakan</li>
-    <li>Doktor Ilmu Sosial dan Kemanusiaan Global</li>
-    <li>Doktor Ketahanan dan Resiliensi Sosial</li>
-    <li>Doktor Ilmu Sosial dan Teknologi</li>
-    <li>Doktor Studi Urban dan Pembangunan Kota</li>
-  </ul>
+<h4>Program Magister (S2)</h4>
+<ul>
+  <li>Magister Sosiologi</li>
+  <li>Magister Pengembangan Masyarakat</li>
+  <li>Magister Ilmu Pembangunan Sosial</li>
+  <li>Magister Kajian Pembangunan</li>
+  <li>Magister Pembangunan Berkelanjutan</li>
+</ul>
+
+<h4>Program Doktor (S3)</h4>
+<ul>
+  <li>Doktor Sosiologi</li>
+  <li>Doktor Ilmu Pembangunan Sosial</li>
+</ul>
+
+
+
+<!-- ================================ -->
+<!-- Departemen Ilmu Politik & Pemerintahan -->
+<!-- ================================ -->
+<h3>Departemen Ilmu Politik & Pemerintahan</h3>
+
+<h4>Program Sarjana (S1)</h4>
+<ul>
+  <li>Ilmu Politik</li>
+  <li>Kebijakan Publik</li>
+  <li>Ilmu Pemerintahan</li>
+  <li>Studi Demokrasi dan Tata Kelola</li>
+  <li>Studi Kepemimpinan dan Kebijakan</li>
+  <li>Studi Kebijakan Pembangunan Daerah</li>
+  <li>Studi Inovasi Pemerintahan</li>
+</ul>
+
+<h4>Program Magister (S2)</h4>
+<ul>
+  <li>Magister Ilmu Politik</li>
+  <li>Magister Kebijakan Publik</li>
+  <li>Magister Ilmu Pemerintahan</li>
+</ul>
+
+<h4>Program Doktor (S3)</h4>
+<ul>
+  <li>Doktor Ilmu Politik</li>
+  <li>Doktor Kebijakan Publik</li>
+  <li>Doktor Ilmu Pemerintahan</li>
+</ul>
+
+
+
+<!-- ================================ -->
+<!-- Departemen Hubungan Internasional -->
+<!-- ================================ -->
+<h3>Departemen Hubungan Internasional</h3>
+
+<h4>Program Sarjana (S1)</h4>
+<ul>
+  <li>Hubungan Internasional</li>
+  <li>Politik Global dan Keamanan Internasional</li>
+  <li>Politik dan Diplomasi Global</li>
+  <li>Studi Perdamaian dan Resolusi Konflik</li>
+  <li>Kajian Wilayah</li>
+  <li>Studi Gerakan Global & Transnasional</li>
+  <li>Studi Kemanusiaan Global</li>
+  <li>Studi Diplomasi Kemanusiaan</li>
+</ul>
+
+<h4>Program Magister (S2)</h4>
+<ul>
+  <li>Magister Hubungan Internasional dan Diplomasi Global</li>
+  <li>Magister Kajian Wilayah</li>
+</ul>
+
+<h4>Program Doktor (S3)</h4>
+<ul>
+  <li>Doktor Hubungan Internasional dan Diplomasi Global</li>
+  <li>Doktor Kajian Wilayah</li>
+</ul>
+
+
+
+<!-- ================================ -->
+<!-- Departemen Kriminologi & Keamanan Sosial -->
+<!-- ================================ -->
+<h3>Departemen Kriminologi & Keamanan Sosial</h3>
+
+<h4>Program Sarjana (S1)</h4>
+<ul>
+  <li>Kriminologi</li>
+  <li>Ilmu Pertahanan dan Keamanan</li>
+  <li>Ilmu Ketahanan Nasional</li>
+  <li>Ilmu Perbatasan dan Keamanan Laut</li>
+  <li>Ilmu Resiliensi Sosial dan Kebencanaan</li>
+</ul>
+
+<h4>Program Magister (S2)</h4>
+<ul>
+  <li>Magister Kriminologi</li>
+  <li>Magister Ilmu Ketahanan Nasional</li>
+</ul>
+
+<h4>Program Doktor (S3)</h4>
+<ul>
+  <li>Doktor Kriminologi</li>
+  <li>Doktor Ilmu Ketahanan Nasional</li>
+</ul>
+
+
+
+<!-- ================================ -->
+<!-- Departemen Kesejahteraan Sosial & Studi Kemanusiaan -->
+<!-- ================================ -->
+<h3>Departemen Kesejahteraan Sosial & Studi Kemanusiaan</h3>
+
+<h4>Program Sarjana (S1)</h4>
+<ul>
+  <li>Ilmu Kesejahteraan Sosial</li>
+  <li>Ilmu Kepemudaan</li>
+  <li>Ilmu Keluarga dan Konsumen</li>
+  <li>Studi Humanitarian dan Konflik</li>
+</ul>
+
+<h4>Program Magister (S2)</h4>
+<ul>
+  <li>Magister Pekerjaan Sosial</li>
+  <li>Magister Ilmu Keluarga dan Konsumen</li>
+  <li>Magister Ilmu Kesejahteraan Sosial</li>
+</ul>
+
+<h4>Program Doktor (S3)</h4>
+<ul>
+  <li>Doktor Pekerjaan Sosial</li>
+  <li>Doktor Ilmu Keluarga dan Konsumen</li>
+  <li>Doktor Ilmu Kesejahteraan Sosial</li>
+</ul>
+
+
+
+<!-- ================================ -->
+<!-- Departemen Ilmu Kajian Sosial Budaya & Gender -->
+<!-- ================================ -->
+<h3>Departemen Ilmu Kajian Sosial Budaya & Gender</h3>
+
+<h4>Program Sarjana (S1)</h4>
+<ul>
+  <li>Ilmu Kajian Sosial</li>
+  <li>Ilmu Kajian Gender dan Seksualitas</li>
+  <li>Studi Kewarganegaraan dan Multikulturalisme</li>
+  <li>Studi Keadilan Sosial dan Hak Asasi Manusia</li>
+  <li>Ilmu Kajian Migrasi dan Urbanisasi</li>
+</ul>
+
+<h4>Program Magister (S2)</h4>
+<ul>
+  <li>Magister Ilmu Kajian Sosial</li>
+  <li>Magister Keadilan Sosial dan Hak Asasi Manusia</li>
+  <li>Magister Kewarganegaraan dan Multikulturalisme</li>
+</ul>
+
+<h4>Program Doktor (S3)</h4>
+<ul>
+  <li>Doktor Studi Keadilan Sosial dan Hak Asasi Manusia</li>
+  <li>Doktor Ilmu Kajian Sosial</li>
+</ul>
+
+
+
+<!-- ================================ -->
+<!-- Departemen Ilmu Lingkungan Sosial & Keberlanjutan -->
+<!-- ================================ -->
+<h3>Departemen Ilmu Lingkungan Sosial & Keberlanjutan</h3>
+
+<h4>Program Sarjana (S1)</h4>
+<ul>
+  <li>Ilmu Lingkungan Sosial</li>
+  <li>Politik dan Kebijakan Lingkungan</li>
+  <li>Ilmu Sosial Perubahan Iklim</li>
+  <li>Ilmu Sosial dan Keberlanjutan</li>
+</ul>
+
+<h4>Program Magister (S2)</h4>
+<ul>
+  <li>Magister Ilmu Lingkungan Sosial</li>
+  <li>Magister Politik dan Keamanan Lingkungan</li>
+</ul>
+
+<h4>Program Doktor (S3)</h4>
+<ul>
+  <li>Doktor Ilmu Lingkungan Sosial</li>
+</ul>
+
+
+
+<!-- ================================ -->
+<!-- Departemen Ilmu Sosial Digital, Teknologi & Data -->
+<!-- ================================ -->
+<h3>Departemen Ilmu Sosial Digital, Teknologi & Data</h3>
+
+<h4>Program Sarjana (S1)</h4>
+<ul>
+  <li>Ilmu Sosial Digital</li>
+  <li>Ilmu Masyarakat Digital</li>
+  <li>Ilmu Sosial dan Teknologi</li>
+  <li>Politik Digital dan Keamanan Siber</li>
+  <li>Ilmu Sosial Data dan Analisis Kebijakan</li>
+  <li>Ilmu Sosial Kreatif dan Budaya Populer</li>
+</ul>
+
+<h4>Program Magister (S2)</h4>
+<ul>
+  <li>Magister Ilmu Sosial Digital</li>
+  <li>Magister Politik Digital dan Keamanan Siber</li>
+  <li>Magister Ilmu Sosial Data dan Analisis Kebijakan</li>
+  <li>Magister Ilmu Sosial dan Teknologi</li>
+</ul>
+
+<h4>Program Doktor (S3)</h4>
+<ul>
+  <li>Doktor Ilmu Sosial Digital</li>
+</ul>
+
 </section>
 
 
