@@ -5,124 +5,129 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Fakultas Ilmu Komunikasi - Universitas Seruni</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
-  <style>
-    :root {
-      --primary: #d35400;
-      --accent: #e67e22;
-      --bg: #f9fafb;
-      --text: #2c3e50;
-    }
+<style>
+  :root {
+    --primary: #f97316;   /* Jingga utama (enerjik, kreatif, komunikasi) */
+    --accent: #16a34a;    /* Hijau aksen (pertumbuhan, kepercayaan, publik) */
+    --bg: #fff7ed;        /* Jingga sangat muda (background) */
+    --text: #14532d;      /* Hijau gelap untuk teks */
+  }
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
 
-    body {
-      font-family: 'Inter', sans-serif;
-      background-color: var(--bg);
-      color: var(--text);
-      line-height: 1.6;
-      overflow-x: hidden;
-    }
+  body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
 
-    header {
-      background: linear-gradient(135deg, var(--primary), var(--accent));
-      color: white;
-      padding: 50px 5vw;
-      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
-      width: 100%;
-    }
+  header {
+    background: linear-gradient(135deg, var(--primary), var(--accent));
+    color: white;
+    padding: 50px 5vw;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.18);
+    width: 100%;
+  }
 
-    header h1 {
-      font-size: 2.3em;
-      font-weight: 700;
-    }
+  header h1 {
+    font-size: 2.3em;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+  }
 
-    main {
-      width: 100%;
-      padding: 60px 6vw;
-    }
+  main {
+    width: 100%;
+    padding: 60px 6vw;
+    background: var(--bg);
+  }
 
-    section {
-      width: 100%;
-      margin-bottom: 70px;
-    }
+  section {
+    width: 100%;
+    margin-bottom: 70px;
+  }
 
-    /* SPASI BARU DI SINI */
+  h2 {
+    font-size: 1.8em;
+    border-left: 6px solid var(--accent);
+    padding-left: 15px;
+    margin-bottom: 25px;
+    font-weight: 700;
+  }
+
+  h3 {
+    color: var(--accent);
+    margin-top: 25px;
+    margin-bottom: 10px;
+    font-size: 1.3em;
+  }
+
+  p {
+    margin-bottom: 15px;
+    font-size: 1.05em;
+  }
+
+  ul {
+    list-style: none;
+    padding-left: 0;
+  }
+
+  ul li {
+    background: #ffffff;
+    margin-bottom: 12px;
+    padding: 16px 24px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+    transition: all 0.2s ease-in-out;
+    width: 100%;
+  }
+
+  ul li:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 14px rgba(0,0,0,0.14);
+  }
+
+  /* Ikon khusus Fakultas Ilmu Komunikasi */
+  .facilities li::before {
+    content: "📡"; /* komunikasi, media, penyiaran */
+    margin-right: 10px;
+  }
+
+  .highlight {
+    background: linear-gradient(90deg, rgba(249,115,22,0.18), transparent);
+    border-left: 4px solid var(--accent);
+    padding: 18px 22px;
+    border-radius: 8px;
+    margin-bottom: 25px;
+  }
+
+  footer {
+    width: 100%;
+    background-color: var(--primary);
+    color: #ecfdf5;
+    text-align: center;
+    padding: 40px 20px;
+    font-size: 0.95em;
+    margin-top: 60px;
+  }
+
+  /* Responsif */
+  @media (max-width: 768px) {
+    header, main {
+      padding: 30px 5vw;
+    }
+    h1 {
+      font-size: 1.9em;
+    }
     h2 {
-      font-size: 1.8em;
-      border-left: 6px solid var(--accent);
-      padding-left: 15px;
-      margin: 40px 0 30px 0;  /* <– SPACING BARU */
-      font-weight: 700;
+      font-size: 1.5em;
     }
-
-    /* khusus fasilitas biar lebih lega */
-    .facilities h2 {
-      margin-top: 60px;  /* <– SPACING TAMBAHAN */
-    }
-
-    h3 {
-      color: var(--accent);
-      margin-top: 30px;
-      margin-bottom: 15px;
-      font-size: 1.3em;
-    }
-
-    p {
-      margin-bottom: 15px;
-      font-size: 1.05em;
-    }
-
-    ul {
-      list-style: none;
-      padding-left: 0;
-      margin-top: 10px; /* tambah jarak atas */
-    }
-
-    ul li {
-      background: white;
-      margin-bottom: 12px;
-      padding: 16px 24px;
-      border-radius: 10px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-      transition: all 0.2s ease-in-out;
-      width: 100%;
-    }
-
-    ul li:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    }
-
-    .facilities li::before {
-      content: "💊";
-      margin-right: 10px;
-    }
-
-    footer {
-      width: 100%;
-      background-color: var(--primary);
-      color: #ecf0f1;
-      text-align: center;
-      padding: 40px 20px;
-      font-size: 0.95em;
-      margin-top: 60px;
-    }
-
-    @media (max-width: 768px) {
-      header, main {
-        padding: 30px 5vw;
-      }
-      h1 {
-        font-size: 1.9em;
-      }
-      h2 {
-        font-size: 1.5em;
-      }
-    }
+  }
 </style>
 </head>
 <body>
@@ -135,42 +140,77 @@
     <section>
       <h2>Profil Fakultas</h2>
       <p>Fakultas Ilmu Komunikasi Universitas Seruni merupakan fakultas baru dengan pertumbuhan paling dinamis. Fokus kami adalah membekali mahasiswa dengan keterampilan komunikasi strategis, teknologi media, serta kemampuan berpikir kritis dalam dunia informasi modern.</p>
-    </section>
+ <section>
+  <h2>Program Studi</h2>
 
-    <h2>Program Studi</h2>
+<!-- ================================ -->
+<!-- Departemen Departemen Ilmu Komunikasi -->
+<!-- ================================ -->
+<h3>Departemen Departemen Ilmu Komunikasi</h3>
 
-    <h3>Sarjana (S1)</h3>
-    <ul>
-      <li>Ilmu Komunikasi</li>
-      <li>Jurnalistik</li>
-      <li>Hubungan Masyarakat</li>
-      <li>Produksi Media</li>
-      <li>Ilmu Periklanan</li>
-      <li>Manajemen Komunikasi</li>
-      <li>Televisi dan Film</li>
-      <li>Media Digital & Content Creation</li>
-      <li>Fotografi dan Media Baru</li>
-    </ul>
+<h4>Program Sarjana (S1)</h4>
+<ul>
+  <li>Ilmu Komunikasi</li>
+  <li>Manajemen Komunikasi</li>
+  <li>Hubungan Masyarakat</li>
+</ul>
 
-    <h3>Magister (S2)</h3>
-    <ul>
-      <li>Magister Ilmu Komunikasi</li>
-      <li>Magister Jurnalistik</li>
-      <li>Magister Hubungan Masyarakat</li>
-      <li>Magister Produksi Media</li>
-      <li>Magister Ilmu Periklanan</li>
-      <li>Magister Manajemen Komunikasi</li>
-      <li>Magister Televisi dan Film</li>
-      <li>Magister Media Digital & Content Creation</li>
-      <li>Magister Komunikasi Digital & Teknologi Media</li>
-      <li>Magister Branding & Strategi Kreatif</li>
-    </ul>
+<h4>Program Magister (S2)</h4>
+<ul>
+  <li>Magister Ilmu Komunikasi</li>
+  <li>Magister Manajemen Komunikasi</li>
+  <li>Magister Hubungan Masyarakat</li>
+  <li>Magister Branding & Strategi Kreatif</li>
+</ul>
 
-    <h3>Doktor (S3)</h3>
-    <ul>
-      <li>Doktor Ilmu Komunikasi</li>
-      <li>Doktor Produksi Media</li>
-    </ul>
+<h4>Program Doktor (S3)</h4>
+<ul>
+  <li>Doktor Ilmu Komunikasi</li>
+</ul>
+
+<!-- ================================ -->
+<!-- Departemen Departemen Jurnalistik & Periklanan -->
+<!-- ================================ -->
+<h3>Departemen Jurnalistik & Periklanan</h3>
+
+<h4>Program Sarjana (S1)</h4>
+<ul>
+  <li>Jurnalistik</li>
+  <li>Ilmu Periklanan</li>
+</ul>
+
+<h4>Program Magister (S2)</h4>
+<ul>
+  <li>Magister Jurnalistik</li>
+  <li>Magister Ilmu Periklanan</li>
+</ul>
+
+<!-- ================================ -->
+<!-- Departemen Departemen Media & Produksi Kreatif -->
+<!-- ================================ -->
+<h3>Departemen Media & Produksi Kreatif</h3>
+
+<h4>Program Sarjana (S1)</h4>
+<ul>
+  <li>Produksi Media</li>
+  <li>Televisi dan Film</li>
+  <li>Media Digital & Content Creation</li>
+  <li>Fotografi dan Media Baru</li>
+</ul>
+
+<h4>Program Magister (S2)</h4>
+<ul>
+  <li>Magister Produksi Media</li>
+  <li>Magister Televisi dan Film</li>
+  <li>Magister Media Digital & Content Creation</li>
+  <li>Magister Komunikasi Digital & Teknologi Media</li>
+</ul>
+
+<h4>Program Doktor (S3)</h4>
+<ul>
+  <li>Doktor Produksi Media</li>
+</ul>
+
 
     <section class="facilities">
       <h2>Fasilitas Unggulan</h2>
