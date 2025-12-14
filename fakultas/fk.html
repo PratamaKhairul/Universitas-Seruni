@@ -5,93 +5,177 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Fakultas Kedokteran, Kesehatan Masyarakat, dan Keperawatan - Universitas Seruni</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
-  <style>
-    :root {
-      --primary: #1abc9c;
-      --accent: #16a085;
-      --bg: #f9fafa;
-      --text: #2c3e50;
-      --card: #ffffff;
-    }
+<style>
+  :root {
+    --primary: #064e3b;   /* Hijau tua akademik (fondasi FK-KMK) */
+    --accent: #16a34a;    /* Hijau medis */
+    --bg: #f0fdf4;        /* Latar hijau sangat lembut */
+    --text: #022c22;      /* Hijau gelap teks utama */
+  }
 
-    body {
-      margin: 0;
-      font-family: 'Inter', sans-serif;
-      background-color: var(--bg);
-      color: var(--text);
-      width: 100%;
-      overflow-x: hidden;
-    }
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
 
-    header {
-      background-color: var(--card);
-      padding: 40px 60px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-      width: 100%;
-      box-sizing: border-box;
-    }
+  body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
 
-    header h1 {
-      margin: 0;
-      font-size: 2.2em;
-      color: var(--primary);
-    }
+  header {
+    background: linear-gradient(135deg, var(--primary), var(--accent));
+    color: white;
+    padding: 50px 5vw;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.25);
+    width: 100%;
+  }
 
-    main {
-      width: 100%;
-      margin: 50px 0;
-      padding: 0 60px;
-      box-sizing: border-box;
-    }
+  header h1 {
+    font-size: 2.3em;
+    font-weight: 700;
+    letter-spacing: 0.4px;
+  }
 
-    section {
-      margin-bottom: 60px;
-      width: 100%;
-    }
+  main {
+    width: 100%;
+    padding: 60px 6vw;
+    background: var(--bg);
+  }
 
+  section {
+    width: 100%;
+    margin-bottom: 70px;
+  }
+
+  h2 {
+    font-size: 1.8em;
+    border-left: 6px solid var(--accent);
+    padding-left: 15px;
+    margin-bottom: 25px;
+    font-weight: 700;
+  }
+
+  h3 {
+    color: var(--primary);
+    margin-top: 25px;
+    margin-bottom: 10px;
+    font-size: 1.3em;
+  }
+
+  h4 {
+    color: #065f46;
+    margin-bottom: 12px;
+    font-size: 1.05em;
+    font-weight: 600;
+  }
+
+  p {
+    margin-bottom: 15px;
+    font-size: 1.05em;
+  }
+
+  ul {
+    list-style: none;
+    padding-left: 0;
+  }
+
+  ul li {
+    background: #ffffff;
+    margin-bottom: 12px;
+    padding: 16px 24px;
+    border-radius: 10px;
+    border-left: 4px solid var(--primary);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+    transition: all 0.2s ease-in-out;
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  ul li:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+  }
+
+  /* ================================ */
+  /* Ikon Fakultas Kedokteran & Kesehatan */
+  /* ================================ */
+
+  /* Default medis */
+  .medical li::before {
+    content: "🩺";
+    margin-right: 12px;
+  }
+
+  /* Kedokteran klinis & spesialis */
+  .clinical li::before {
+    content: "🏥";
+    margin-right: 12px;
+  }
+
+  /* Kesehatan masyarakat */
+  .public-health li::before {
+    content: "🌿";
+    margin-right: 12px;
+  }
+
+  /* Keperawatan & kebidanan */
+  .nursing li::before {
+    content: "👩‍⚕️";
+    margin-right: 12px;
+  }
+
+  /* Penelitian & akademik */
+  .research li::before {
+    content: "📚";
+    margin-right: 12px;
+  }
+
+  /* ================================ */
+  /* Highlight akademik */
+  /* ================================ */
+
+  .highlight {
+    background: linear-gradient(
+      90deg,
+      rgba(6,78,59,0.12),
+      transparent
+    );
+    border-left: 4px solid var(--accent);
+    padding: 18px 22px;
+    border-radius: 8px;
+    margin-bottom: 25px;
+  }
+
+  footer {
+    width: 100%;
+    background-color: var(--primary);
+    color: #d1fae5;
+    text-align: center;
+    padding: 40px 20px;
+    font-size: 0.95em;
+    margin-top: 60px;
+  }
+
+  /* Responsif */
+  @media (max-width: 768px) {
+    header, main {
+      padding: 30px 5vw;
+    }
+    h1 {
+      font-size: 1.9em;
+    }
     h2 {
-      font-size: 1.8em;
-      margin-bottom: 20px;
-      border-left: 5px solid var(--primary);
-      padding-left: 15px;
+      font-size: 1.5em;
     }
+  }
+</style>
 
-    h3 {
-      margin-top: 30px;
-      color: var(--accent);
-    }
-
-    ul {
-      list-style: none;
-      padding-left: 0;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 15px;
-    }
-
-    ul li {
-      background-color: var(--card);
-      padding: 16px 20px;
-      border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-      box-sizing: border-box;
-    }
-
-    .facilities li::before {
-      content: '🩺';
-      margin-right: 10px;
-    }
-
-    footer {
-      background-color: var(--text);
-      color: white;
-      text-align: center;
-      padding: 40px 20px;
-      margin-top: 80px;
-      width: 100%;
-      box-sizing: border-box;
-    }
-  </style>
 </head>
 <body>
   <header>
@@ -103,120 +187,303 @@
       <h2>Profil Fakultas</h2>
       <p>Fakultas Kedokteran, Kesehatan Masyarakat, dan Keperawatan Universitas Seruni merupakan pusat pendidikan kedokteran terintegrasi yang mengedepankan profesionalisme, riset klinis, dan pelayanan masyarakat. Dengan teknologi terkini dan rumah sakit pendidikan modern, kami mendidik calon dokter, tenaga kesehatan, dan peneliti medis masa depan.</p>
     </section>
+ <section>
+  <h2>Program Studi</h2>
 
-    <section>
-      <h2>Program Studi</h2>
-      <h3>Sarjana (S1)</h3>
-      <ul>
-        <li>Kedokteran</li>
-        <li>Kedokteran Hewan</li>
-        <li>Kedokteran Gigi</li>
-        <li>Kesehatan Masyarakat</li>
-        <li>Ilmu Gizi</li>
-        <li>Keperawatan</li>
-        <li>Kebidanan</li>
-        <li>Radiologi</li>
-        <li>Analis Kesehatan</li>
-        <li>Epidemiologi</li>
-      </ul>
+<!-- ================================ -->
+<!-- Departemen Kedokteran -->
+<!-- ================================ -->
+<h3>Departemen Kedokteran</h3>
 
-      <h3>Magister (S2)</h3>
-      <ul>
-        <li>Magister Ilmu Kedokteran</li>
-        <li>Magister Ilmu Keperawatan</li>
-        <li>Magister Kesehatan Masyarakat</li>
-        <li>Magister Ilmu Kedokteran Hewan</li>
-        <li>Magister Ilmu Kedokteran Gigi</li>
-        <li>Magister Ilmu Gizi</li>
-        <li>Magister Epidemiologi</li>
-        <li>Magister Analisis Kesehatan</li>
-        <li>MagisterRadiologi</li>
-        <li>Magister Kebidanan</li>
+<h4>Program Sarjana (S1)</h4>
+<ul>
+  <li>Pendidikan Dokter</li>
+</ul>
 
-      </ul>
+<h4>Program Magister (S2)</h4>
+<ul>
+  <li>Magister Kedokteran</li>
+  <li>Magister Ilmu Biomedik</li>
+  <li>Magister Kedokteran Kerja</li>
+  <li>Magister Pendidikan Kedokteran</li>
+</ul>
 
-      <h3>Doktor (S3)</h3>
-      <ul>
-        <li>Doktor Ilmu Kedokteran</li>
-        <li>Doktor Ilmu Keperawatan</li>
-        <li>Doktor Kesehatan Masyarakat</li>
-        <li>Doktor Ilmu Kedokteran Hewan</li>
-        <li>Doktor Ilmu Kedokteran Gigi</li>
-                <li>Doktor Ilmu Gizi</li>
-        <li>Doktor Epidemiologi</li>
-        <li>Doktor Analisis Kesehatan</li>
-        <li>Doktor Radiologi</li>
-        <li>Doktor Kebidanan</li>
-      </ul>
+<h4>Program Doktor (S3)</h4>
+<ul>
+    <li>Doktor Ilmu Kedokteran</li>
+    <li>Doktor Ilmu Biomedik</li>
+</ul>
 
-      <h3>Profesi</h3>
+<!-- ================================ -->
+<!-- Departemen Kedokteran Gigi -->
+<!-- ================================ -->
+<h3>Departemen Kedokteran Gigi</h3>
+
+<h4>Program Sarjana (S1)</h4>
+<ul>
+  <li>Kedokteran Gigi</li>
+</ul>
+
+<h4>Program Magister (S2)</h4>
+<ul>
+  <li>Magister Ilmu Kedokteran Gigi Dasar</li>
+  <li>Magister Ilmu Kedokteran Gigi Komunitas</li>
+</ul>
+
+<h4>Program Doktor (S3)</h4>
+<ul>
+  <li>Doktor Ilmu Kedokteran Gigi</li>
+</ul>
+
+<!-- ================================ -->
+<!-- Departemen Kedokteran Hewan -->
+<!-- ================================ -->
+<h3>Departemen Kedokteran Hewan</h3>
+
+<h4>Program Sarjana (S1)</h4>
+<ul>
+  <li>Kedokteran Hewan</li>
+</ul>
+
+<h4>Program Magister (S2)</h4>
+<ul>
+  <li>Magister Ilmu Kedokteran Hewan</li>
+</ul>
+
+<h4>Program Doktor (S3)</h4>
+<ul>
+  <li>Doktor Ilmu Kedokteran Hewan</li>
+</ul>
+
+<!-- ================================ -->
+<!-- Departemen Kesehatan Masyarakat -->
+<!-- ================================ -->
+<h3>Departemen Kesehatan Masyarakat</h3>
+
+<h4>Program Sarjana (S1)</h4>
+<ul>
+  <li>Kesehatan Masyarakat</li>
+  <li>Ilmu Gizi</li>
+</ul>
+
+<h4>Program Magister (S2)</h4>
+<ul>
+  <li>Magister Kesehatan Masyarakat</li>
+  <li>Magister Epidemiologi</li>
+  <li>Magister Ilmu Gizi</li>
+</ul>
+
+<h4>Program Doktor (S3)</h4>
+<ul>
+  <li>Doktor Epidemiologi</li>
+  <li>Doktor Kesehatan Masyarakat</li>
+  <li>Doktor Ilmu Gizi</li>
+</ul>
+
+
+<!-- ================================ -->
+<!-- Departemen Ilmu Keperawatan dan Kebidanan -->
+<!-- ================================ -->
+<h3>Departemen Ilmu Keperawatan dan Kebidanan</h3>
+
+<h4>Program Sarjana (S1)</h4>
+<ul>
+  <li>Ilmu Keperawatan</li>
+  <li>Ilmu Kebidanan</li>
+</ul>
+
+<h4>Program Magister (S2)</h4>
+<ul>
+  <li>Magister Ilmu Keperawatan</li>
+  <li>Magister Ilmu Kebidanan</li>
+</ul>
+
+<h4>Program Doktor (S3)</h4>
+<ul>
+  <li>Doktor Ilmu Keperawatan</li>
+  <li>Doktor Ilmu Kebidanan</li>
+</ul>
+
+
+<!-- ================================ -->
+<!-- Departemen Ilmu Laboratorium dan Radiologi Kesehatan -->
+<!-- ================================ -->
+<h3>Departemen Ilmu Laboratorium dan Radiologi Kesehatan</h3>
+
+<h4>Program Magister (S2)</h4>
+<ul>
+  <li>Magister Analisis Kesehatan</li>
+  <li>Magister Radiologi</li>
+</ul>
+
+<h4>Program Doktor (S3)</h4>
+<ul>
+  <li>Doktor Analisis Kesehatan</li>
+  <li>Doktor Radiologi</li>
+</ul>
+
+
+
+<!-- ================================ -->
+<!-- Departemen Program Profesi -->
+<!-- ================================ -->
+<h3>Departemen Pendidikan Profesi Klinis Kedokteran dan Kedokteran Gigi</h3>
+
+<h4>Program Profesi</h4>
 <ul>
   <li>Profesi Dokter</li>
   <li>Profesi Dokter Gigi</li>
+</ul>
+
+
+<h3>Departemen Pendidikan Profesi Klinis Veteriner
+<h4>Program Profesi</h4>
+<ul>
   <li>Profesi Dokter Hewan</li>
-  <li>Profesi Apoteker</li>
+</ul>
+
+<h3>Departemen Profesi Keperawatan, Kebidanan, dan Terapi Klinis
+<h4>Program Profesi</h4>
+<ul>
   <li>Profesi Ners</li>
   <li>Profesi Bidan</li>
-  <li>Profesi Ahli Gizi Klinik</li>
-  <li>Profesi Epidemiolog</li>
-  <li>Profesi Entomolog Kesehatan</li>
-  <li>Profesi Promotor Kesehatan</li>
-  <li>Profesi Perekam Medis</li>
-  <li>Profesi Manajer Pelayanan Kesehatan</li>
-  <li>Profesi Tenaga Kesehatan Masyarakat lainnya (sesuai peminatan)</li>
   <li>Profesi Terapi Wicara</li>
+</ul>
+
+<h3>Departemen Profesi Teknologi Kesehatan
+<h4>Program Profesi</h4>
+<ul>
   <li>Profesi Radiografer</li>
   <li>Profesi Ahli Elektromedis</li>
   <li>Profesi Ortotis Prostetis</li>
-  <li>Profesi Sanitarian (peminatan seperti kesehatan air & makanan, pengendalian penyakit vektor)</li>
-  <li>Profesi Informasi Kesehatan</li>
-  <li>Profesi Peneliti Kesehatan</li>
+</ul>
+
+<h3>Departemen Profesi Gizi dan Kesehatan Metabolik Terapan
+<h4>Program Profesi</h4>
+<ul>
+  <li>Profesi Ahli Gizi Klinik</li>
+</ul>
+
+<h3>Departemen Profesi Teknologi Kesehatan
+<h4>Program Profesi</h4>
+<ul>
+  <li>Profesi Radiografer</li>
+  <li>Profesi Ahli Elektromedis</li>
+  <li>Profesi Ortotis Prostetis</li>
+</ul>
+
+<h3>Departemen Profesi Kesehatan Masyarakat
+<h4>Program Profesi</h4>
+<ul>
+  <li>Profesi Epidemiolog</li>
+  <li>Profesi Sanitarian</li>
+  <li>Profesi Tenaga Kesehatan Masyarakat lainnya</li>
+  <li>Profesi Entomolog Kesehatan</li>
+  <li>Profesi Promotor Kesehatan</li>
   <li>Profesi Tenaga Promosi Kesehatan</li>
 </ul>
 
-<h3>Spesialis</h3>
+<h3>Departemen Profesi Informasi, Manajemen, dan Riset Kesehatan
+<h4>Program Profesi</h4>
+<ul>
+  <li>Profesi Perekam Medis</li>
+  <li>Profesi Informasi Kesehatan</li>
+  <li>Profesi Manajer Pelayanan Kesehatan</li>
+  <li>Profesi Peneliti Kesehatan</li>
+</ul>
+
+
+
+
+<!-- ================================ -->
+<!-- Departemen Program Spesialis -->
+<!-- ================================ -->
+
+<h3>Departemen Ilmu Penyakit Dalam dan Kedokteran Dewasa</h3>
+<h4>Program Spesialis</h4>
 <ul>
   <li>Spesialis Penyakit Dalam</li>
-  <li>Spesialis Bedah</li>
-  <li>Spesialis Anak</li>
-  <li>Spesialis Obstetri dan Ginekologi</li>
-  <li>Spesialis Saraf</li>
-  <li>Spesialis Kulit dan Kelamin</li>
-  <li>Spesialis Psikiatri</li>
-  <li>Spesialis Mata</li>
-  <li>Spesialis THT-KL</li>
-  <li>Spesialis Radiologi</li>
-  <li>Spesialis Anestesi</li>
-  <li>Spesialis Forensik</li>
-  <li>Spesialis Rehabilitasi Medik</li>
-  <li>Spesialis Paru</li>
   <li>Spesialis Jantung dan Pembuluh Darah</li>
+  <li>Spesialis Paru</li>
   <li>Spesialis Gizi Klinik</li>
-  <li>Spesialis Mikrobiologi Klinik</li>
-  <li>Spesialis Patologi Klinik</li>
-  <li>Spesialis Patologi Anatomi</li>
-  <li>Spesialis Urologi</li>
-  <li>Spesialis Ortopedi dan Traumatologi</li>
-  <li>Spesialis Bedah Plastik</li>
-  <li>Spesialis Bedah Syaraf</li>
-  <li>Spesialis Kedokteran Fisik dan Rehabilitasi</li>
-  <li>Spesialis Kedokteran Olahraga</li>
-  <li>Spesialis Kedokteran Jiwa Anak</li>
-  <li>Spesialis Kedokteran Okupasi</li>
-  <li>Spesialis Kedokteran Penerbangan</li>
-  <li>Spesialis Kedokteran Nuklir</li>
-  <li>Spesialis Kedokteran Komunitas</li>
-  <li>Spesialis Kedokteran Forensik dan Medikolegal</li>
   <li>Spesialis Kedokteran Tropis</li>
-  <li>Spesialis Mikrobiologi Medik</li>
-  <li>Spesialis Patologi Forensik</li>
-  <li>Spesialis Bedah Anak</li>
-  <li>Spesialis Kedokteran Darurat</li>
-  <li>Spesialis Kedokteran Keluarga</li> 
+  <li>Spesialis Kedokteran Komunitas</li>
+  <li>Spesialis Kedokteran Keluarga</li>
   <li>Spesialis Kedokteran Pekerjaan</li>
 </ul>
 
-<h3>Subspesialis (Konsultan)</h3>
+<h3>Departemen Ilmu Bedah dan Disiplin Operatif</h3>
+<h4>Program Spesialis</h4>
+<ul>
+  <li>Spesialis Bedah</li>
+  <li>Spesialis Bedah Anak</li>
+  <li>Spesialis Bedah Plastik</li>
+  <li>Spesialis Bedah Syaraf</li>
+  <li>Spesialis Urologi</li>
+  <li>Spesialis Ortopedi dan Traumatologi</li>
+</ul>
+
+<h3>Departemen Kesehatan Ibu, Anak, dan Reproduksi</h3>
+<h4>Program Spesialis</h4>
+<ul>
+  <li>Spesialis Anak</li>
+  <li>Spesialis Obstetri dan Ginekologi</li>
+</ul>
+
+<h3>Departemen Ilmu Saraf, Psikiatri, dan Perilaku</h3>
+<h4>Program Spesialis</h4>
+<ul>
+  <li>Spesialis Saraf</li>
+  <li>Spesialis Psikiatri</li>
+  <li>Spesialis Kedokteran Jiwa Anak</li>
+</ul>
+
+<h3>Departemen Ilmu Indera dan Kepala-Leher</h3>
+<h4>Program Spesialis</h4>
+<ul>
+  <li>Spesialis Mata</li>
+  <li>Spesialis THT-KL</li>
+  <li>Spesialis Kulit dan Kelamin</li>
+</ul>
+
+<h3>Departemen Ilmu Penunjang Diagnostik dan Intervensi</h3>
+<h4>Program Spesialis</h4>
+<ul>
+  <li>Spesialis Radiologi</li>
+  <li>Spesialis Anestesi</li>
+  <li>Spesialis Kedokteran Nuklir</li>
+</ul>
+
+<h3>Departemen Patologi, Forensik, dan Ilmu Medikolegal</h3>
+<h4>Program Spesialis</h4>
+<ul>
+  <li>Spesialis Forensik</li>
+  <li>Spesialis Patologi Klinik</li>
+  <li>Spesialis Patologi Anatomi</li>
+  <li>Spesialis Mikrobiologi Klinik</li>
+  <li>Spesialis Mikrobiologi Medik</li>
+  <li>Spesialis Patologi Forensik</li>
+  <li>Spesialis Kedokteran Forensik dan Medikolegal</li>
+</ul>
+
+<h3>Departemen Rehabilitasi, Olahraga, dan Kedokteran Okupasi</h3>
+<h4>Program Spesialis</h4>
+<ul>
+  <li>Spesialis Rehabilitasi Medik</li>
+  <li>Spesialis Kedokteran Fisik dan Rehabilitasi</li>
+  <li>Spesialis Kedokteran Olahraga</li>
+  <li>Spesialis Kedokteran Okupasi</li>
+  <li>Spesialis Kedokteran Penerbangan</li>
+  <li>Spesialis Kedokteran Darurat</li>
+</ul>
+
+
+<!-- ================================ -->
+<!-- Departemen Program Subspesialis -->
+<!-- ================================ -->
+
+<h3>Departemen Subspesialis Penyakit Dalam dan Kardiometabolik</h3>
+<h4>Program Subspesialis (Konsultan)</h4>
 <ul>
   <li>Konsultan Gastroenterohepatologi</li>
   <li>Konsultan Hematologi-Onkologi Medik</li>
@@ -224,54 +491,124 @@
   <li>Konsultan Endokrin-Metabolik-Diabetes</li>
   <li>Konsultan Ginjal Hipertensi</li>
   <li>Konsultan Geriatri</li>
+  <li>Konsultan Infeksi Tropik</li>
+</ul>
+
+<h3>Departemen Subspesialis Jantung, Paru, dan Kardiopulmoner</h3>
+<h4>Program Subspesialis (Konsultan)</h4>
+<ul>
   <li>Konsultan Kardiologi Intervensi</li>
   <li>Konsultan Elektrofisiologi Jantung</li>
+  <li>Konsultan Rehabilitasi Kardiopulmoner</li>
+  <li>Konsultan Pulmonologi Intervensi</li>
+</ul>
+
+<h3>Departemen Subspesialis Ibu, Anak, dan Perinatologi</h3>
+<h4>Program Subspesialis (Konsultan)</h4>
+<ul>
   <li>Konsultan Fetomaternal</li>
   <li>Konsultan Fertilitas Reproduksi</li>
   <li>Konsultan Onkologi Ginekologi</li>
+  <li>Konsultan Perinatologi</li>
+  <li>Konsultan Neonatologi</li>
+  <li>Konsultan Kardiologi Anak</li>
+  <li>Konsultan Gizi dan Metabolik Anak</li>
+  <li>Konsultan Hematologi Anak</li>
+  <li>Konsultan Infeksi dan Tropik Anak</li>
+  <li>Konsultan Endokrinologi Anak</li>
+</ul>
+
+<h3>Departemen Subspesialis Bedah Lanjut dan Onkologi</h3>
+<h4>Program Subspesialis (Konsultan)</h4>
+<ul>
   <li>Konsultan Bedah Onkologi</li>
   <li>Konsultan Bedah Digestif</li>
   <li>Konsultan Bedah Toraks-Kardiovaskular</li>
+  <li>Konsultan Bedah Anak</li>
+  <li>Konsultan Bedah Vaskular</li>
+  <li>Konsultan Onkologi Bedah</li>
+</ul>
+
+<h3>Departemen Subspesialis Neuropsikiatri dan Psikiatri Lanjut</h3>
+<h4>Program Subspesialis (Konsultan)</h4>
+<ul>
   <li>Konsultan Neuropsikiatri</li>
   <li>Konsultan Psikiatri Anak dan Remaja</li>
-  <li>Konsultan Patologi Forensik</li>
+  <li>Konsultan Psikiatri Geriatrik</li>
+</ul>
+
+<h3>Departemen Subspesialis Mata dan THT Lanjut</h3>
+<h4>Program Subspesialis (Konsultan)</h4>
+<ul>
   <li>Konsultan Oftalmologi Pediatrik</li>
   <li>Konsultan Retina</li>
   <li>Konsultan Glaukoma</li>
   <li>Konsultan Otologi dan Neurotologi</li>
   <li>Konsultan Rinologi</li>
   <li>Konsultan Laringologi</li>
-  <li>Konsultan Rehabilitasi Kardiopulmoner</li>
+</ul>
+
+<h3>Departemen Subspesialis Rehabilitasi dan Cedera Olahraga</h3>
+<h4>Program Subspesialis (Konsultan)</h4>
+<ul>
   <li>Konsultan Cedera Olahraga</li>
-  <li>Konsultan Infeksi Tropik</li>
-  <li>Konsultan Perinatologi</li>
-  <li>Konsultan Neonatologi</li>
-  <li>Konsultan Kardiologi Anak</li>
-  <li>Konsultan Bedah Anak</li>
-  <li>Konsultan Gizi dan Metabolik Anak</li>
-  <li>Konsultan Pulmonologi Intervensi</li>
-  <li>Konsultan Bedah Vaskular</li>
-  <li>Konsultan Hematologi Anak</li>
-  <li>Konsultan Infeksi dan Tropik Anak</li>
-  <li>Konsultan Endokrinologi Anak</li>
-  <li>Konsultan Onkologi Bedah</li>
-  <li>Konsultan Psikiatri Geriatrik</li>
 </ul>
 
 </section>
 
     <section class="facilities">
-      <h2>Fasilitas Unggulan</h2>
-      <ul>
-        <li>Rumah Sakit Pendidikan Terintegrasi</li>
-        <li>Laboratorium Anatomi & Biomedis</li>
-        <li>Simulasi Klinik & Skills Lab</li>
-        <li>Pusat Riset Kesehatan Tropis</li>
-        <li>Apotek Edukasi & Laboratorium Farmasi</li>
-        <li>Perpustakaan Digital Kedokteran</li>
-        <li>Unit Gawat Darurat Simulatif</li>
-      </ul>
-    </section>
+  <h2>Fasilitas Unggulan</h2>
+  <ul>
+    <!-- Fasilitas yang SUDAH ADA (tidak diubah) -->
+    <li>Rumah Sakit Pendidikan Terintegrasi</li>
+    <li>Laboratorium Anatomi & Biomedis</li>
+    <li>Simulasi Klinik & Skills Lab</li>
+    <li>Pusat Riset Kesehatan Tropis</li>
+    <li>Apotek Edukasi & Laboratorium Farmasi</li>
+    <li>Perpustakaan Digital Kedokteran</li>
+    <li>Unit Gawat Darurat Simulatif</li>
+
+    <!-- Fasilitas Klinis & Pendidikan Kedokteran -->
+    <li>Pusat Pendidikan Klinis Terpadu (Clinical Education Center)</li>
+    <li>Laboratorium OSCE & Assessment Kompetensi Klinik</li>
+    <li>Laboratorium Histologi, Patologi Anatomi, dan Patologi Klinik</li>
+    <li>Laboratorium Mikrobiologi, Parasitologi, dan Imunologi Klinik</li>
+    <li>Laboratorium Biokimia Klinik dan Kedokteran Molekuler</li>
+    <li>Pusat Pelatihan Advanced Life Support (ACLS, ATLS, PALS)</li>
+
+    <!-- Fasilitas Keperawatan & Kesehatan Masyarakat -->
+    <li>Laboratorium Keperawatan Medikal Bedah, Maternitas, Anak, dan Komunitas</li>
+    <li>Pusat Pelatihan Kebidanan dan Kesehatan Reproduksi</li>
+    <li>Laboratorium Kesehatan Masyarakat dan Epidemiologi Terapan</li>
+    <li>Laboratorium Kesehatan Lingkungan dan Sanitasi</li>
+    <li>Pusat Promosi dan Edukasi Kesehatan Berbasis Masyarakat</li>
+
+    <!-- Fasilitas Riset & Inovasi -->
+    <li>Biomedical Research Center dan Translational Medicine Lab</li>
+    <li>Clinical Research Unit dan Ethical Review Board</li>
+    <li>Laboratorium Bioinformatika dan Data Kesehatan</li>
+    <li>Pusat Riset Kebijakan dan Sistem Kesehatan</li>
+    <li>Inkubator Inovasi Kesehatan dan Teknologi Medis</li>
+
+    <!-- Fasilitas Penunjang Akademik -->
+    <li>Pusat E-Learning dan Learning Management System Kedokteran</li>
+    <li>Ruang Tutorial Problem-Based Learning (PBL)</li>
+    <li>Ruang Diskusi Akademik dan Konferensi Ilmiah</li>
+    <li>Pusat Pengembangan Pendidikan Kedokteran dan Profesi Kesehatan</li>
+
+    <!-- Fasilitas Kemahasiswaan & Profesional -->
+    <li>Asrama Mahasiswa Profesi dan Koas</li>
+    <li>Pusat Konseling Mahasiswa dan Kesehatan Mental</li>
+    <li>Medical Student Center dan Ruang Organisasi Profesi</li>
+    <li>Fasilitas Kebugaran dan Kesehatan Preventif</li>
+
+    <!-- Fasilitas Jejaring & Global Health -->
+    <li>International Office dan Global Health Center</li>
+    <li>Pusat Kolaborasi Rumah Sakit Jejaring Nasional dan Internasional</li>
+    <li>Telemedicine dan Digital Health Center</li>
+  </ul>
+</section>
+
 
     <section>
       <h2>Kontak Fakultas</h2>
