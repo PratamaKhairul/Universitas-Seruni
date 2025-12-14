@@ -5,138 +5,134 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Fakultas Seni Pertunjukan - Universitas Seruni</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --primary: #6a1b9a;
-      --accent: #ff4081;
-      --bg: #faf8fb;
-      --text: #2c2c2c;
-    }
+<style>
+  :root {
+    --primary: #d94f8c;   /* Pink utama – seni pertunjukan */
+    --accent: #f2b6cf;    /* Pink lembut */
+    --bg: #ffffff;        /* Putih bersih */
+    --text: #3b1f2b;      /* Gelap elegan untuk keterbacaan */
+  }
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
- 
-    body {
-      font-family: 'Inter', sans-serif;
-      background-color: var(--bg);
-      color: var(--text);
-      line-height: 1.7;
-      overflow-x: hidden;
-    }
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
 
-    header {
-      width: 100%;
-      background: linear-gradient(135deg, var(--primary), var(--accent));
-      color: white;
-      padding: 60px 5vw;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    }
+  body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
 
-    header h1 {
-      font-size: 2.4em;
-      font-weight: 700;
-      letter-spacing: 0.5px;
-    }
+  header {
+    background: linear-gradient(135deg, var(--primary), var(--accent));
+    color: #ffffff;
+    padding: 50px 5vw;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+    width: 100%;
+  }
 
-    main {
-      width: 100%;
-      padding: 70px 6vw;
-      background: var(--bg);
-    }
+  header h1 {
+    font-size: 2.3em;
+    font-weight: 700;
+  }
 
-    section {
-      width: 100%;
-      margin-bottom: 70px;
-    }
+  main {
+    width: 100%;
+    padding: 60px 6vw;
+    background: #fffafb; /* putih dengan sentuhan pink sangat halus */
+  }
 
-    h2 {
+  section {
+    width: 100%;
+    margin-bottom: 70px;
+  }
+
+  h2 {
+    font-size: 1.8em;
+    border-left: 6px solid var(--primary);
+    padding-left: 15px;
+    margin-bottom: 25px;
+    font-weight: 700;
+  }
+
+  h3 {
+    color: var(--primary);
+    margin-top: 25px;
+    margin-bottom: 10px;
+    font-size: 1.3em;
+  }
+
+  p {
+    margin-bottom: 15px;
+    font-size: 1.05em;
+  }
+
+  ul {
+    list-style: none;
+    padding-left: 0;
+  }
+
+  ul li {
+    background: #ffffff;
+    margin-bottom: 12px;
+    padding: 16px 24px;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+    transition: all 0.2s ease-in-out;
+    width: 100%;
+  }
+
+  ul li:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 14px rgba(0,0,0,0.12);
+  }
+
+  /* Ikon disesuaikan untuk Fakultas Seni Pertunjukan */
+  .facilities li::before {
+    content: "🎭"; /* teater, tari, musik, pertunjukan */
+    margin-right: 10px;
+  }
+
+  .highlight {
+    background: linear-gradient(
+      90deg,
+      rgba(217,79,140,0.18),
+      transparent
+    );
+    border-left: 4px solid var(--primary);
+    padding: 18px 22px;
+    border-radius: 10px;
+    margin-bottom: 25px;
+  }
+
+  footer {
+    width: 100%;
+    background-color: var(--primary);
+    color: #ffffff;
+    text-align: center;
+    padding: 40px 20px;
+    font-size: 0.95em;
+    margin-top: 60px;
+  }
+
+  /* Responsif */
+  @media (max-width: 768px) {
+    header, main {
+      padding: 30px 5vw;
+    }
+    h1 {
       font-size: 1.9em;
-      border-left: 6px solid var(--accent);
-      padding-left: 15px;
-      margin-bottom: 25px;
-      font-weight: 700;
     }
+    h2 {
+      font-size: 1.5em;
+    }
+  }
+</style>
 
-    h3 {
-      color: var(--accent);
-      margin-top: 25px;
-      margin-bottom: 10px;
-      font-size: 1.3em;
-    }
-
-    p {
-      margin-bottom: 15px;
-      font-size: 1.05em;
-    }
-
-    ul {
-      list-style: none;
-      padding-left: 0;
-    }
-
-    ul li {
-      background: white;
-      margin-bottom: 12px;
-      padding: 18px 24px;
-      border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-      transition: all 0.2s ease-in-out;
-      width: 100%;
-    }
-
-    ul li:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    }
-
-    .facilities li::before {
-      content: "🎭";
-      margin-right: 10px;
-    }
-
-    .highlight {
-      background: linear-gradient(90deg, rgba(255,64,129,0.1), transparent);
-      border-left: 4px solid var(--accent);
-      padding: 20px 24px;
-      border-radius: 8px;
-      margin-bottom: 25px;
-    }
-
-    footer {
-      width: 100%;
-      background-color: var(--primary);
-      color: #ecf0f1;
-      text-align: center;
-      padding: 40px 20px;
-      font-size: 0.95em;
-      margin-top: 60px;
-    }
-
-    a {
-      color: var(--accent);
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    /* Responsif */
-    @media (max-width: 768px) {
-      header, main {
-        padding: 30px 5vw;
-      }
-      h1 {
-        font-size: 2em;
-      }
-      h2 {
-        font-size: 1.5em;
-      }
-    }
-  </style>
 </head>
 <body>
   <header>
@@ -154,31 +150,51 @@
     </section>
 
     <section>
-      <h2>Program Studi</h2>
+  <h2>Program Studi</h2>
 
-      <h3>Sarjana (S1)</h3>
-      <ul>
-        <li>Teater dan Seni Drama</li>
-        <li>Tari dan Koreografi</li>
-        <li>Musik dan Produksi Suara</li>
-        <li>Manajemen Seni Pertunjukan</li>
-        <li>Teknologi Panggung dan Produksi Pertunjukan</li>
-        <li>Desain Suara & Produksi Rekaman</li>
-        <li>Seni Pertunjukan</li>
-      </ul>
+  <!-- ================================ -->
+<!-- Departemen SSeni Pertunjukan -->
+<!-- ================================ -->
+<h3>Departemen Seni Pertunjukan</h3>
 
-      <h3>Magister (S2)</h3>
-      <ul>
-        <li>Magister Seni Pertunjukan</li>
-        <li>Magister Kajian Budaya dan Estetika</li>
-      </ul>
+<h4>Program Sarjana (S1)</h4>
+<ul>
+  <li>Seni Pertunjukan</li>
+  <li>Teater dan Seni Drama</li>
+  <li>Tari dan Koreografi</li>
+  <li>Manajemen Seni Pertunjukan</li>
+</ul>
 
-      <h3>Doktor (S3)</h3>
-      <ul>
-        <li>Doktor Seni Pertunjukan dan Inovasi Kreatif</li>
-      </ul>
-    </section>
+<h4>Program Magister (S2)</h4>
+<ul>
+  <li>Magister Seni Pertunjukan</li>
+  <li>Magister Kajian Budaya dan Estetika Pertunjukan</li>
+</ul>
 
+<h4>Program Doktor (S3)</h4>
+<ul>
+    <li>Doktor Seni Pertunjukan dan Inovasi Kreatif</li>
+</ul>
+
+
+<!-- ================================ -->
+<!-- Departemen Musik dan Produksi Pertunjukan -->
+<!-- ================================ -->
+<h3>Departemen Musik dan Produksi Pertunjukan</h3>
+
+<h4>Program Sarjana (S1)</h4>
+<ul>
+  <li>Musik dan Produksi Suara</li>
+  <li>Desain Suara & Produksi Rekaman</li>
+  <li>Teknologi Panggung dan Produksi Pertunjukan</li>
+</ul>
+
+<h4>Program Magister (S2)</h4>
+<ul>
+  <li>Magister Teknologi Seni Pertunjukan</li>
+</ul>
+
+</section>
     <section class="facilities">
       <h2>Fasilitas</h2>
       <ul>
