@@ -5,13 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Fakultas Ilmu Administrasi - Universitas Seruni</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
- <style>
+<style>
   :root {
-    --primary: #27ae60;
-    --accent: #2ecc71;
-    --bg: #f6fcf9;
-    --text: #2c3e50;
-    --card: #ffffff;
+    --primary: #7b1e3a;   /* Merah-ungu tua (otoritatif & akademik) */
+    --accent: #9333ea;    /* Ungu modern (aksen kebijakan & manajemen) */
+    --bg: #faf5ff;        /* Ungu sangat muda (background) */
+    --text: #3b0a25;      /* Merah-ungu gelap untuk teks */
   }
 
   * {
@@ -24,92 +23,113 @@
     font-family: 'Inter', sans-serif;
     background-color: var(--bg);
     color: var(--text);
-    width: 100%;
+    line-height: 1.6;
     overflow-x: hidden;
   }
 
   header {
-    background-color: var(--card);
-    padding: 40px 80px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    background: linear-gradient(135deg, var(--primary), var(--accent));
+    color: white;
+    padding: 50px 5vw;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.18);
     width: 100%;
   }
 
   header h1 {
-    margin: 0;
-    font-size: 2.2em;
-    color: var(--primary);
+    font-size: 2.3em;
+    font-weight: 700;
+    letter-spacing: 0.3px;
   }
 
   main {
     width: 100%;
-    margin: 0;
-    padding: 60px 80px;
+    padding: 60px 6vw;
     background: var(--bg);
   }
 
   section {
-    margin-bottom: 70px;
     width: 100%;
+    margin-bottom: 70px;
   }
 
   h2 {
     font-size: 1.8em;
-    margin-bottom: 20px;
-    border-left: 6px solid var(--primary);
+    border-left: 6px solid var(--accent);
     padding-left: 15px;
+    margin-bottom: 25px;
+    font-weight: 700;
   }
 
   h3 {
-    margin-top: 30px;
     color: var(--accent);
+    margin-top: 25px;
+    margin-bottom: 10px;
+    font-size: 1.3em;
+  }
+
+  p {
+    margin-bottom: 15px;
+    font-size: 1.05em;
   }
 
   ul {
     list-style: none;
     padding-left: 0;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 15px;
-    width: 100%;
   }
 
   ul li {
-    background-color: var(--card);
-    padding: 18px 22px;
+    background: #ffffff;
+    margin-bottom: 12px;
+    padding: 16px 24px;
     border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+    transition: all 0.2s ease-in-out;
+    width: 100%;
   }
 
+  ul li:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 14px rgba(0,0,0,0.14);
+  }
+
+  /* Ikon khusus Ilmu Administrasi */
   .facilities li::before {
-    content: '📄';
+    content: "📑"; /* dokumen, tata kelola, administrasi */
     margin-right: 10px;
   }
 
+  .highlight {
+    background: linear-gradient(90deg, rgba(147,51,234,0.15), transparent);
+    border-left: 4px solid var(--accent);
+    padding: 18px 22px;
+    border-radius: 8px;
+    margin-bottom: 25px;
+  }
+
   footer {
-    background-color: var(--text);
-    color: white;
-    text-align: center;
-    padding: 50px 20px;
     width: 100%;
-    margin-top: 80px;
+    background-color: var(--primary);
+    color: #f5d0fe;
+    text-align: center;
+    padding: 40px 20px;
+    font-size: 0.95em;
+    margin-top: 60px;
   }
 
   /* Responsif */
   @media (max-width: 768px) {
-    header {
-      padding: 30px 25px;
+    header, main {
+      padding: 30px 5vw;
     }
-
-    main {
-      padding: 40px 25px;
+    h1 {
+      font-size: 1.9em;
     }
-
-    ul {
-      grid-template-columns: 1fr;
+    h2 {
+      font-size: 1.5em;
     }
   }
 </style>
+
 
 </head>
 <body>
@@ -123,37 +143,61 @@
       <p>Fakultas Ilmu Administrasi adalah salah satu fakultas baru di Universitas Seruni yang berfokus pada pengembangan keilmuan dan praktik di bidang administrasi publik dan bisnis. Didirikan untuk menjawab tantangan dunia birokrasi dan manajerial yang terus berkembang secara dinamis.</p>
     </section>
 
-    <section>
-      <h2>Program Studi</h2>
-      <h3>Sarjana (S1)</h3>
-      <ul>
-      <li>Ilmu Administrasi Bisnis</li>
-      <li>Ilmu Administrasi Perkantoran</li>
-      <li>Ilmu Administrasi Fiskal</li>
-      <li>Ilmu Administrasi Negara</li>
-      <li>Ilmu Administrasi Pendidikan</li>
-      <li>Ilmu Administrasi Sumber Daya Manusia</li>
-      <li>Ilmu Administrasi Informasi dan Kearsipan</li>      
-      </ul>
+   <section>
+  <h2>Program Studi</h2>
 
-      <h3>Magister (S2)</h3>
-      <ul>
-      <li>Magister Ilmu Administrasi Pendidikan</li>
-      <li>Magister Ilmu Administrasi Bisnis</li>
-      <li>Magister Ilmu Administrasi Negara</li>
-      <li>Magister Ilmu Administrasi Fiskal</li>
-      <li>Magister Manajemen Aset Publik</li>
-      <li>Magister Manajemen Sumber Daya Manusia Sektor Publik</li>
-      <li>Magister Manajemen Pelayanan Publik</li>
-      <li>Magister Manajemen Kearsipan dan Informasi Publik
-      </ul>
+<!-- ================================ -->
+<!-- Departemen Ilmu Administrasi Negara -->
+<!-- ================================ -->
+<h3>Departemen Ilmu Administrasi Negara</h3>
 
-      <h3>Doktor (S3)</h3>
-      <ul>
-        <li>Doktor Ilmu Administrasi</li>
-      </ul>
-    </section>
+<h4>Program Sarjana (S1)</h4>
+<ul>
+  <li>Ilmu Administrasi Negara</li>
+  <li>Ilmu Administrasi Fiskal</li>
+  <li>Ilmu Administrasi Sumber Daya Manusia</li>
+</ul>
 
+<h4>Program Magister (S2)</h4>
+<ul>
+  <li>Magister Ilmu Administrasi Negara</li>
+  <li>Magister Ilmu Administrasi Fiskal</li>
+  <li>Magister Manajemen Pelayanan Publik</li>
+  <li>Magister Manajemen Aset Publik</li>
+  <li>Magister Manajemen Sumber Daya Manusia Sektor Publik</li>
+</ul>
+
+<!-- ================================ -->
+<!-- Departemen Ilmu Administrasi Bisnis -->
+<!-- ================================ -->
+<h3>Departemen Ilmu Administrasi Bisnis</h3>
+
+<h4>Program Sarjana (S1)</h4>
+<ul>
+  <li>Ilmu Administrasi Bisnis</li>
+  <li>Ilmu Administrasi Pendidikan</li>
+  <li>Ilmu Administrasi Perkantoran</li>
+  <li>Ilmu Administrasi Informasi dan Kearsipan</li>
+</ul>
+
+<h4>Program Magister (S2)</h4>
+<ul>
+  <li>Magister Ilmu Administrasi Bisnis</li>
+  <li>Magister Ilmu Administrasi Pendidikan</li>
+  <li>Magister Manajemen Kearsipan dan Informasi Publik</li>
+</ul>
+
+<!-- ================================ -->
+<!-- Departemen Program Doktor -->
+<!-- ================================ -->
+<h3>Departemen Program Doktor</h3>
+
+<h4>Program Doktor (S3)</h4>
+<ul>
+  <li>Doktor Ilmu Administrasi</li>
+</ul>
+
+</section>
     <section class="facilities">
       <h2>Fasilitas Unggulan</h2>
       <ul>
