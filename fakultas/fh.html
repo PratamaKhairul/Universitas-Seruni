@@ -5,103 +5,128 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Fakultas Hukum - Universitas Seruni</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --primary: #34495e;
-      --accent: #2980b9;
-      --bg: #f8f9fa;
-      --text: #2c3e50;
-    }
+<style>
+  :root {
+    --primary: #7f1d1d;   /* Merah marun gelap */
+    --accent: #dc2626;    /* Merah utama */
+    --bg: #fef2f2;        /* Merah sangat muda (background) */
+    --text: #3f1d1d;      /* Merah kecokelatan untuk teks */
+  }
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
 
-    body {
-      font-family: 'Inter', sans-serif;
-      background-color: var(--bg);
-      color: var(--text);
-      width: 100%;
-      overflow-x: hidden;
-    }
+  body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
 
-    header {
-      width: 100%;
-      background-color: #fff;
-      padding: 30px 60px;
-      box-shadow: 0 3px 6px rgba(0,0,0,0.05);
-    }
+  header {
+    background: linear-gradient(135deg, var(--primary), var(--accent));
+    color: white;
+    padding: 50px 5vw;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+    width: 100%;
+  }
 
-    header h1 {
-      font-size: 2em;
-      color: var(--primary);
-    }
+  header h1 {
+    font-size: 2.3em;
+    font-weight: 700;
+  }
 
-    main {
-      width: 100%;
-      padding: 60px 60px;
-      margin: 0;
-    }
+  main {
+    width: 100%;
+    padding: 60px 6vw;
+    background: var(--bg);
+  }
 
-    section {
-      width: 100%;
-      margin-bottom: 50px;
-    }
+  section {
+    width: 100%;
+    margin-bottom: 70px;
+  }
 
+  h2 {
+    font-size: 1.8em;
+    border-left: 6px solid var(--accent);
+    padding-left: 15px;
+    margin-bottom: 25px;
+    font-weight: 700;
+  }
+
+  h3 {
+    color: var(--accent);
+    margin-top: 25px;
+    margin-bottom: 10px;
+    font-size: 1.3em;
+  }
+
+  p {
+    margin-bottom: 15px;
+    font-size: 1.05em;
+  }
+
+  ul {
+    list-style: none;
+    padding-left: 0;
+  }
+
+  ul li {
+    background: #ffffff;
+    margin-bottom: 12px;
+    padding: 16px 24px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+    transition: all 0.2s ease-in-out;
+    width: 100%;
+  }
+
+  ul li:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 14px rgba(127,29,29,0.25);
+  }
+
+  .facilities li::before {
+    content: "💊";
+    margin-right: 10px;
+  }
+
+  .highlight {
+    background: linear-gradient(90deg, rgba(220,38,38,0.12), transparent);
+    border-left: 4px solid var(--accent);
+    padding: 18px 22px;
+    border-radius: 8px;
+    margin-bottom: 25px;
+  }
+
+  footer {
+    width: 100%;
+    background-color: var(--primary);
+    color: #fee2e2;
+    text-align: center;
+    padding: 40px 20px;
+    font-size: 0.95em;
+    margin-top: 60px;
+  }
+
+  /* Responsif */
+  @media (max-width: 768px) {
+    header, main {
+      padding: 30px 5vw;
+    }
+    h1 {
+      font-size: 1.9em;
+    }
     h2 {
-      font-size: 1.6em;
-      border-left: 6px solid var(--accent);
-      padding-left: 15px;
-      margin-bottom: 20px;
+      font-size: 1.5em;
     }
-
-    h3 {
-      color: var(--accent);
-      margin-top: 25px;
-      margin-bottom: 10px;
-    }
-
-    p {
-      max-width: 100%;
-      line-height: 1.7;
-    }
-
-    ul {
-      list-style: none;
-      padding-left: 0;
-    }
-
-    ul li {
-      background-color: #fff;
-      margin-bottom: 10px;
-      padding: 14px 20px;
-      border-radius: 8px;
-      box-shadow: 0 1px 4px rgba(0,0,0,0.04);
-    }
-
-    .facilities li::before {
-      content: '⚖️';
-      margin-right: 10px;
-    }
-
-    footer {
-      width: 100%;
-      background-color: var(--primary);
-      color: white;
-      text-align: center;
-      padding: 30px 20px;
-      margin-top: 60px;
-    }
-
-    /* Responsif */
-    @media (max-width: 768px) {
-      header, main {
-        padding: 25px 20px;
-      }
-    }
-  </style>
+  }
+</style>
 </head>
 <body>
   <header>
@@ -114,26 +139,34 @@
       <p>Fakultas Hukum Universitas Seruni menjadi pilar utama dalam pengembangan ilmu hukum yang adil, progresif, dan relevan dengan kebutuhan masyarakat modern. Kami menyiapkan mahasiswa untuk menjadi profesional hukum yang kritis, berintegritas, dan siap berkontribusi secara global.</p>
     </section>
 
-    <section>
-      <h2>Program Studi</h2>
-      <h3>Sarjana (S1)</h3>
-      <ul>
-        <li>Ilmu Hukum</li>
-      </ul>
+ <section>
+  <h2>Program Studi</h2>
 
-      <h3>Magister (S2)</h3>
-      <ul>
-        <li>Magister Hukum Bisnis</li>
-        <li>Magister Hukum Internasional</li>
-        <li>Magister Hukum Tata Negara</li>
-        <li>Magister Kenotariatan</li>
-      </ul>
+<!-- ================================ -->
+<!-- Departemen Ilmu Hukum -->
+<!-- ================================ -->
+<h3>Departemen Ilmu Hukum</h3>
 
-      <h3>Doktor (S3)</h3>
-      <ul>
-        <li>Doktor Ilmu Hukum</li>
-      </ul>
-    </section>
+<h4>Program Sarjana (S1)</h4>
+<ul>
+  <li>Ilmu Hukum</li>
+</ul>
+
+<h4>Program Magister (S2)</h4>
+<ul>
+  <li>Magister Ilmu Hukum</li>
+  <li>Magister Kenotariatan</li>
+  <li>Magister Hukum Bisnis</li>
+  <li>Magister Hukum Internasional</li>
+  <li>Magister Hukum Tata Negara</li>
+</ul>
+
+<h4>Program Doktor (S3)</h4>
+<ul>
+  <li>Doktor Ilmu Hukum</li>
+</ul>
+
+</section>
 
     <section class="facilities">
       <h2>Fasilitas</h2>
