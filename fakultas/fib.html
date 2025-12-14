@@ -6,104 +6,128 @@
   <title>Fakultas Ilmu Budaya - Universitas Seruni</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
   <style>
-    :root {
-      --primary: #4b0082;
-      --accent: #ff6f61;
-      --bg: #fdfcff;
-      --text: #1f1f1f;
-      --card: #ffffff;
-    }
+  :root {
+    --primary: #ffffff;   /* Putih */
+    --accent: #e5e7eb;    /* Abu sangat muda */
+    --bg: #ffffff;        /* Putih */
+    --text: #111827;      /* Hitam keabu-abuan */
+  }
 
-    * {
-      box-sizing: border-box;
-    }
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
 
-    body {
-      margin: 0;
-      font-family: 'Inter', sans-serif;
-      background-color: var(--bg);
-      color: var(--text);
-    }
+  body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
 
-    header {
-      background-color: var(--card);
-      padding: 40px 4vw;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-      width: 100%;
-    }
+  header {
+    background: #ffffff;
+    color: var(--text);
+    padding: 50px 5vw;
+    border-bottom: 1px solid #e5e7eb;
+    width: 100%;
+  }
 
-    header h1 {
-      margin: 0;
-      font-size: 2.4em;
-      color: var(--primary);
-    }
+  header h1 {
+    font-size: 2.3em;
+    font-weight: 700;
+  }
 
-    main {
-      width: 100%;
-      margin: 0;
-      padding: 60px 4vw;
-    }
+  main {
+    width: 100%;
+    padding: 60px 6vw;
+    background: #ffffff;
+  }
 
-    section {
-      width: 100%;
-      margin-bottom: 60px;
-    }
+  section {
+    width: 100%;
+    margin-bottom: 70px;
+  }
 
-    h2 {
+  h2 {
+    font-size: 1.8em;
+    border-left: 6px solid #d1d5db;
+    padding-left: 15px;
+    margin-bottom: 25px;
+    font-weight: 700;
+  }
+
+  h3 {
+    color: #374151;
+    margin-top: 25px;
+    margin-bottom: 10px;
+    font-size: 1.3em;
+  }
+
+  p {
+    margin-bottom: 15px;
+    font-size: 1.05em;
+  }
+
+  ul {
+    list-style: none;
+    padding-left: 0;
+  }
+
+  ul li {
+    background: #ffffff;
+    margin-bottom: 12px;
+    padding: 16px 24px;
+    border-radius: 10px;
+    border: 1px solid #e5e7eb;
+    transition: all 0.2s ease-in-out;
+    width: 100%;
+  }
+
+  ul li:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.06);
+  }
+
+  .facilities li::before {
+    content: "💊";
+    margin-right: 10px;
+  }
+
+  .highlight {
+    background: #f9fafb;
+    border-left: 4px solid #d1d5db;
+    padding: 18px 22px;
+    border-radius: 8px;
+    margin-bottom: 25px;
+  }
+
+  footer {
+    width: 100%;
+    background-color: #ffffff;
+    color: #6b7280;
+    text-align: center;
+    padding: 40px 20px;
+    font-size: 0.95em;
+    margin-top: 60px;
+    border-top: 1px solid #e5e7eb;
+  }
+
+  /* Responsif */
+  @media (max-width: 768px) {
+    header, main {
+      padding: 30px 5vw;
+    }
+    h1 {
       font-size: 1.9em;
-      margin-bottom: 20px;
-      border-left: 6px solid var(--accent);
-      padding-left: 15px;
     }
-
-    h3 {
-      margin-top: 30px;
-      color: var(--accent);
+    h2 {
+      font-size: 1.5em;
     }
-
-    ul {
-      list-style: none;
-      padding-left: 0;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 18px;
-    }
-
-    ul li {
-      background-color: var(--card);
-      padding: 18px 20px;
-      border-radius: 12px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-    }
-
-    .facilities li::before {
-      content: '📚';
-      margin-right: 10px;
-    }
-
-    footer {
-      background-color: var(--text);
-      color: white;
-      text-align: center;
-      padding: 40px 4vw;
-      margin-top: 60px;
-      width: 100%;
-    }
-
-    /* Supaya semua elemen bener-bener full */
-    body, header, main, section, footer {
-      width: 100%;
-      max-width: 100%;
-      margin: 0;
-    }
-
-    /* Responsif */
-    @media (max-width: 768px) {
-      header, main, footer {
-        padding: 30px 5vw;
-      }
-    }
-  </style>
+  }
+</style>
 </head>
 <body>
   <header>
@@ -117,48 +141,123 @@
     </section>
 
     <section>
-      <h2>Program Studi</h2>
+  <h2>Program Studi</h2>
 
-      <h3>Program Sarjana (S1)</h3>
-      <ul>
-        <li>Sastra Indonesia</li>
-        <li>Sastra Inggris</li>
-        <li>Sastra Jepang</li>
-        <li>Sastra Jerman</li>
-        <li>Sastra Perancis</li>
-        <li>Sastra Arab</li>
-        <li>Sastra Cina</li>
-        <li>Sastra Rusia</li>
-        <li>Sastra Belanda</li>
-        <li>Bahasa dan Kebudayaan Korea</li>
-        <li>Antropologi Budaya</li>
-        <li>Ilmu Sejarah</li>
-        <li>Filologi</li>
-        <li>Bahasa Daerah dan Budaya Nusantara</li>
-        <li>Literatur Dunia</li>
-        <li>Estetika dan Kritik Seni</li>
-        <li>Linguistik Umum</li>
-        <li>Arkeologi</li>
-      </ul>
+<!-- ================================ -->
+<!-- Departemen Sastra dan Studi Bahasa Asing -->
+<!-- ================================ -->
+<h3>Departemen Sastra dan Studi Bahasa Asing</h3>
 
-      <h3>Program Magister (S2)</h3>
-      <ul>
-        <li>Magister Sastra</li>
-        <li>Magister Linguistik</li>
-        <li>Magister Sejarah</li>
-        <li>Magister Kajian Budaya</li>
-        <li>Magister Bahasa dan Sastra Daerah</li>
-        <li>Magister Kajian Tradisi Lisan</li>
-        <li>Magister Antropologi Budaya</li>
-      </ul>
+<h4>Program Sarjana (S1)</h4>
+<ul>
+  <li>Sastra Indonesia</li>
+  <li>Sastra Inggris</li>
+  <li>Sastra Jepang</li>
+  <li>Sastra Jerman</li>
+  <li>Sastra Perancis</li>
+  <li>Sastra Arab</li>
+  <li>Sastra Cina</li>
+  <li>Sastra Rusia</li>
+  <li>Sastra Belanda</li>
+  <li>Bahasa dan Kebudayaan Korea</li>
+  <li>Literatur Dunia</li>
+</ul>
 
-      <h3>Program Doktor (S3)</h3>
-      <ul>
-        <li>Doktor Linguistik</li>
-        <li>Doktor Kajian Budaya</li>
-        <li>Doktor Sejarah</li>
-      </ul>
-    </section>
+<h4>Program Magister (S2)</h4>
+<ul>
+  <li>Magister Sastra dan Studi Bahasa Asing</li>
+</ul>
+
+
+
+<!-- ================================ -->
+<!-- Departemen Linguistik dan Filologi -->
+<!-- ================================ -->
+<h3>Departemen Linguistik dan Filologi</h3>
+
+<h4>Program Sarjana (S1)</h4>
+<ul>
+  <li>Linguistik Umum</li>
+  <li>Filologi</li>
+</ul>
+
+<h4>Program Magister (S2)</h4>
+<ul>
+  <li>Magister Linguistik</li>
+</ul>
+
+<h4>Program Doktor (S3)</h4>
+<ul>
+  <li>Doktor Linguistik</li>
+</ul>
+
+
+<!-- ================================ -->
+<!-- Departemen Sejarah dan Arkeologi -->
+<!-- ================================ -->
+<h3>Departemen Sejarah dan Arkeologi</h3>
+
+<h4>Program Sarjana (S1)</h4>
+<ul>
+  <li>Ilmu Sejarah</li>
+  <li>Arkeologi</li>
+</ul>
+
+<h4>Program Magister (S2)</h4>
+<ul>
+  <li>Magister Sejarah</li>
+  <li>Magister Arkeologi</li>
+</ul>
+
+<h4>Program Doktor (S3)</h4>
+<ul>
+  <li>Doktor Sejarah</li>
+  <li>Doktor Arkeologi</li>
+</ul>
+
+
+<!-- ================================ -->
+<!-- Departemen Antropologi dan Kajian Budaya -->
+<!-- ================================ -->
+<h3>Departemen Antropologi dan Kajian Budaya</h3>
+
+<h4>Program Sarjana (S1)</h4>
+<ul>
+  <li>Antropologi Budaya</li>
+  <li>Bahasa Daerah dan Budaya Nusantara</li>
+</ul>
+
+<h4>Program Magister (S2)</h4>
+<ul>
+  <li>Magister Antropologi Budaya</li>
+  <li>Magister Bahasa dan Sastra Daerah</li>
+  <li>Magister Kajian Budaya</li>
+  <li>Magister Kajian Tradisi Lisan</li>
+</ul>
+
+<h4>Program Doktor (S3)</h4>
+<ul>
+  <li>Doktor Antropologi Budaya</li>
+  <li>Doktor Kajian Budaya</li>
+</ul>
+
+
+<!-- ================================ -->
+<!-- Departemen Seni dan Estetika -->
+<!-- ================================ -->
+<h3>Departemen Seni dan Estetika</h3>
+
+<h4>Program Sarjana (S1)</h4>
+<ul>
+  <li>Estetika dan Kritik Seni</li>
+</ul>
+
+<h4>Program Magister (S2)</h4>
+<ul>
+  <li>Magister Estetika dan Kritik Seni</li>
+</ul>
+
+</section>
 
     <section class="facilities">
       <h2>Fasilitas Unggulan</h2>
