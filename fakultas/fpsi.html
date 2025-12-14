@@ -5,109 +5,131 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Fakultas Psikologi - Universitas Seruni</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
-  <style>
-    :root {
-      --primary: #3498db;
-      --accent: #2980b9;
-      --bg: #f7faff;
-      --text: #2c3e50;
-      --card: #ffffff;
-    }
+<style>
+  :root {
+    --primary: #3b82f6;   /* Biru utama (ilmiah & tepercaya) */
+    --accent: #60a5fa;    /* Biru muda (aksen psikologi & human science) */
+    --bg: #eff6ff;        /* Biru sangat muda (background tenang) */
+    --text: #1e3a8a;      /* Biru gelap untuk keterbacaan */
+  }
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
 
-    body {
-      font-family: 'Inter', sans-serif;
-      background-color: var(--bg);
-      color: var(--text);
-      overflow-x: hidden;
-    }
+  body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
 
-    header {
-      background-color: var(--card);
-      padding: 40px 60px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-      width: 100%;
-    }
+  header {
+    background: linear-gradient(135deg, var(--primary), var(--accent));
+    color: white;
+    padding: 50px 5vw;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+    width: 100%;
+  }
 
-    header h1 {
-      margin: 0;
-      font-size: 2.2em;
-      color: var(--primary);
-    }
+  header h1 {
+    font-size: 2.3em;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+  }
 
-    /* Bagian utama dibuat full width */
-    main {
-      width: 100%;
-      max-width: none;
-      margin: 0;
-      padding: 60px 60px;
-    }
+  main {
+    width: 100%;
+    padding: 60px 6vw;
+    background: var(--bg);
+  }
 
-    section {
-      margin-bottom: 60px;
-      width: 100%;
-    }
+  section {
+    width: 100%;
+    margin-bottom: 70px;
+  }
 
+  h2 {
+    font-size: 1.8em;
+    border-left: 6px solid var(--accent);
+    padding-left: 15px;
+    margin-bottom: 25px;
+    font-weight: 700;
+  }
+
+  h3 {
+    color: var(--primary);
+    margin-top: 25px;
+    margin-bottom: 10px;
+    font-size: 1.3em;
+  }
+
+  p {
+    margin-bottom: 15px;
+    font-size: 1.05em;
+  }
+
+  ul {
+    list-style: none;
+    padding-left: 0;
+  }
+
+  ul li {
+    background: #ffffff;
+    margin-bottom: 12px;
+    padding: 16px 24px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+    transition: all 0.2s ease-in-out;
+    width: 100%;
+  }
+
+  ul li:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 14px rgba(0,0,0,0.12);
+  }
+
+  /* Ikon khusus Fakultas Psikologi */
+  .facilities li::before {
+    content: "🧠"; /* psikologi, kognisi, perilaku */
+    margin-right: 10px;
+  }
+
+  .highlight {
+    background: linear-gradient(90deg, rgba(96,165,250,0.2), transparent);
+    border-left: 4px solid var(--accent);
+    padding: 18px 22px;
+    border-radius: 8px;
+    margin-bottom: 25px;
+  }
+
+  footer {
+    width: 100%;
+    background-color: var(--primary);
+    color: #dbeafe;
+    text-align: center;
+    padding: 40px 20px;
+    font-size: 0.95em;
+    margin-top: 60px;
+  }
+
+  /* Responsif */
+  @media (max-width: 768px) {
+    header, main {
+      padding: 30px 5vw;
+    }
+    h1 {
+      font-size: 1.9em;
+    }
     h2 {
-      font-size: 1.8em;
-      margin-bottom: 20px;
-      border-left: 5px solid var(--primary);
-      padding-left: 15px;
+      font-size: 1.5em;
     }
+  }
+</style>
 
-    h3 {
-      margin-top: 30px;
-      color: var(--accent);
-    }
-
-    ul {
-      list-style: none;
-      padding-left: 0;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 15px;
-      width: 100%;
-    }
-
-    ul li {
-      background-color: var(--card);
-      padding: 16px 20px;
-      border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-    }
-
-    .facilities li::before {
-      content: '🧠';
-      margin-right: 10px;
-    }
-
-    footer {
-      background-color: var(--text);
-      color: white;
-      text-align: center;
-      padding: 50px 30px;
-      margin-top: 80px;
-      width: 100%;
-    }
-
-    /* Responsif di layar kecil */
-    @media (max-width: 768px) {
-      header {
-        padding: 25px 30px;
-      }
-      main {
-        padding: 40px 25px;
-      }
-      ul {
-        grid-template-columns: 1fr;
-      }
-    }
-  </style>
 </head>
 <body>
   <header>
@@ -120,29 +142,36 @@
       <p>Fakultas Psikologi Universitas Seruni bertujuan mencetak lulusan yang memiliki pemahaman mendalam tentang perilaku manusia serta mampu mengaplikasikan ilmu psikologi dalam konteks klinis, pendidikan, sosial, dan industri. Fakultas ini menekankan keseimbangan antara teori, praktik, dan riset ilmiah.</p>
     </section>
 
-    <section>
-      <h2>Program Studi</h2>
-      <h3>Sarjana (S1)</h3>
-      <ul>
-        <li>Psikologi</li> 
-      </ul>
+  <section>
+  <h2>Program Studi</h2>
 
-      <h3>Magister (S2)</h3>
-      <ul>
-        <li>Magister Psikologi Klinis</li>
-        <li>Magister Psikologi Profesi</li>
-        <li>Magister Psikologi Pendidikan</li>
-        <li>Magister Psikologi Sosial</li>
-        <li>Magister Psikologi Industri dan Organisasi</li>
-        <li>Magister Psikologi Perkembangan</li>
-        <li>Magister Psikologi Kognitif</li>
-      </ul>
+<!-- ================================ -->
+<!-- Departemen Departemen Psikologi -->
+<!-- ================================ -->
+<h3>Departemen Psikologi</h3>
 
-      <h3>Doktor (S3)</h3>
-      <ul>
-        <li>Doktor Psikologi</li>
-      </ul>
-    </section>
+<h4>Program Sarjana (S1)</h4>
+<ul>
+  <li>Psikologi</li>
+</ul>
+
+<h4>Program Magister (S2)</h4>
+<ul>
+  <li>Magister Psikologi Klinis</li>
+  <li>Magister Psikologi Profesi</li>
+  <li>Magister Psikologi Pendidikan</li>
+  <li>Magister Psikologi Sosial</li>
+  <li>Magister Psikologi Industri dan Organisasi</li>
+  <li>Magister Psikologi Perkembangan</li>
+  <li>Magister Psikologi Kognitif</li>
+</ul>
+
+<h4>Program Doktor (S3)</h4>
+<ul>
+  <li>Doktor Psikologi</li>
+</ul>
+
+</section>
 
     <section class="facilities">
       <h2>Fasilitas Unggulan</h2>
