@@ -5,95 +5,134 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Fakultas Seni Rupa dan Desain - Universitas Seruni</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
-  <style>
-    :root { 
-      --primary: #2980b9;
-      --accent: #1abc9c;
-      --bg: #ecf9ff; 
-      --text: #2c3e50;
-      --card: #ffffff;
-    }
+<style>
+  :root {
+    --primary: #c0568c;   /* Pink seni – ekspresif & kreatif */
+    --accent: #e3a6c7;    /* Pink muda lembut */
+    --bg: #fff6fb;        /* Latar pink sangat halus */
+    --text: #3a2430;      /* Ungu-cokelat gelap untuk keterbacaan */
+  }
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
 
-    body {
-      font-family: 'Inter', sans-serif;
-      background-color: var(--bg);
-      color: var(--text); 
-      width: 100%;
-      max-width: 100%;
-    }
+  body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
 
-    header {
-      background-color: var(--card);
-      padding: 40px 60px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-      width: 100%;
-    }
+  header {
+    background: linear-gradient(135deg, var(--primary), var(--accent));
+    color: #fffafa;
+    padding: 50px 5vw;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+    width: 100%;
+  }
 
-    header h1 {
-      margin: 0;
-      font-size: 2.2em;
-      color: var(--primary);
-    }
+  header h1 {
+    font-size: 2.3em;
+    font-weight: 700;
+  }
 
-    main {
-      width: 100%;
-      max-width: none;
-      margin: 50px 0;
-      padding: 0 60px;
-    }
+  main {
+    width: 100%;
+    padding: 60px 6vw;
+    background: var(--bg);
+  }
 
-    section {
-      width: 100%;
-      margin-bottom: 60px;
-    }
+  section {
+    width: 100%;
+    margin-bottom: 70px;
+  }
 
+  h2 {
+    font-size: 1.8em;
+    border-left: 6px solid var(--accent);
+    padding-left: 15px;
+    margin-bottom: 25px;
+    font-weight: 700;
+  }
+
+  h3 {
+    color: var(--primary);
+    margin-top: 25px;
+    margin-bottom: 10px;
+    font-size: 1.3em;
+  }
+
+  p {
+    margin-bottom: 15px;
+    font-size: 1.05em;
+  }
+
+  ul {
+    list-style: none;
+    padding-left: 0;
+  }
+
+  ul li {
+    background: #ffffff;
+    margin-bottom: 12px;
+    padding: 16px 24px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+    transition: all 0.2s ease-in-out;
+    width: 100%;
+  }
+
+  ul li:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 14px rgba(0,0,0,0.12);
+  }
+
+  /* Ikon disesuaikan untuk Fakultas Seni Rupa dan Desain */
+  .facilities li::before {
+    content: "🎨"; /* seni rupa & desain */
+    margin-right: 10px;
+  }
+
+  .highlight {
+    background: linear-gradient(
+      90deg,
+      rgba(227,166,199,0.25),
+      transparent
+    );
+    border-left: 4px solid var(--primary);
+    padding: 18px 22px;
+    border-radius: 8px;
+    margin-bottom: 25px;
+  }
+
+  footer {
+    width: 100%;
+    background-color: var(--primary);
+    color: #fff5fa;
+    text-align: center;
+    padding: 40px 20px;
+    font-size: 0.95em;
+    margin-top: 60px;
+  }
+
+  /* Responsif */
+  @media (max-width: 768px) {
+    header, main {
+      padding: 30px 5vw;
+    }
+    h1 {
+      font-size: 1.9em;
+    }
     h2 {
-      font-size: 1.8em;
-      margin-bottom: 20px;
-      border-left: 5px solid var(--primary);
-      padding-left: 15px;
+      font-size: 1.5em;
     }
+  }
+</style>
 
-    h3 {
-      margin-top: 30px;
-      color: var(--accent);
-    }
-
-    ul {
-      list-style: none;
-      padding-left: 0;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 15px;
-    }
-
-    ul li {
-      background-color: var(--card);
-      padding: 16px 20px;
-      border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-    }
-
-    .facilities li::before {
-      content: '🌊';
-      margin-right: 10px;
-    }
-
-    footer {
-      background-color: var(--text);
-      color: white;
-      text-align: center;
-      padding: 40px 20px;
-      margin-top: 80px;
-      width: 100%;
-    }
-  </style>
 </head>
 <body>
   <header>
@@ -106,34 +145,80 @@
       <p>Fakultas Seni Rupa dan Desain (FSRD) Universitas Seruni adalah pusat kreativitas dan inovasi visual. FSRD memfasilitasi perkembangan mahasiswa dalam ranah seni rupa kontemporer dan desain modern yang adaptif terhadap teknologi dan tren global.</p>
     </section>
 
-    <section>
-      <h2>Program Studi</h2>
-      <h3>Sarjana (S1)</h3>
-      <ul>
-        <li>Seni Rupa Murni</li>
-        <li>Desain Komunikasi Visual</li>
-        <li>Desain Interior</li>
-        <li>Desain Produk</li>
-        <li>Kriya Tekstil</li>
-        <li>Kriya Keramik</li>
-        <li>Animasi & Visual Storytelling</li>
-        <li>Desain Game</li>
-        <li>Desain Fashion</li>
-      </ul>
+ <section>
+  <h2>Program Studi</h2>
 
-      <h3>Magister (S2)</h3>
-      <ul>
-        <li>Magister Desain</li>
-        <li>Magister Seni Rupa</li>
-        <li>Magister Seni Kriya</li>
-      </ul>
+  <!-- ================================ -->
+<!-- Departemen Seni Rupa & kriya -->
+<!-- ================================ -->
+<h3>Departemen Seni Rupa & kriya</h3>
 
-      <h3>Doktor (S3)</h3>
-      <ul>
-        <li>Doktor Seni dan Desain</li>
-      </ul>
-    </section>
+<h4>Program Sarjana (S1)</h4>
+<ul>
+  <li>Seni Rupa</li>
+  <li>Seni Kriya</li>
+</ul>
 
+<h4>Program Magister (S2)</h4>
+<ul>
+  <li>Magister Seni Rupa</li>
+  <li>Magister Seni Kriya</li>
+</ul>
+
+<h4>Program Doktor (S3)</h4>
+<ul>
+    <li>Doktor Seni</li>
+
+</ul>
+
+
+<!-- ================================ -->
+<!-- Departemen Desain -->
+<!-- ================================ -->
+<h3>Departemen Desain</h3>
+
+<h4>Program Sarjana (S1)</h4>
+<ul>
+  <li>Desain Komunikasi Visual</li>
+  <li>Desain Interior</li>
+  <li>Desain Produk</li>
+  <li>Desain Fashion</li>
+  <li>Desain Perhiasan & Aksesori</li>
+</ul>
+
+<h4>Program Magister (S2)</h4>
+<ul>
+  <li>Magister Desain Interior</li>
+  <li>Magister Desain Komunikasi Visual</li>
+  <li>Magister Desain Produk</li>
+  <li>Magister Desain Fashion</li>
+  <li>Magister Desain Perhiasan & Aksesori</li>
+</ul>
+
+<h4>Program Doktor (S3)</h4>
+<ul>
+    <li>Doktor Desain</li>
+</ul>
+
+
+<!-- ================================ -->
+<!-- Departemen Media Digital & Kreatif -->
+<!-- ================================ -->
+<h3>Departemen Media Digital & Kreatif</h3>
+
+<h4>Program Sarjana (S1)</h4>
+<ul>
+  <li>Animasi & Visual Storytelling</li>
+  <li>Desain Game</li>
+</ul>
+
+<h4>Program Magister (S2)</h4>
+<ul>
+  <li>Magister Animasi & Game</li>
+  <li>Magister Media Digital Kreatif</li>
+</ul>
+
+</section>
     <section class="facilities">
       <h2>Fasilitas Unggulan</h2>
       <ul>
