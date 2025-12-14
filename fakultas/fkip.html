@@ -5,109 +5,134 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Fakultas Keguruan dan Ilmu Pendidikan - Universitas Seruni</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
-    <style>
-    :root {
-      --primary: #3498db;
-      --accent: #2980b9;
-      --bg: #f7faff;
-      --text: #2c3e50;
-      --card: #ffffff;
-    }
+<style>
+  :root {
+    --primary: #4b2e83;   /* Ungu – keilmuan, kewibawaan akademik FKIP */
+    --accent: #f4c430;    /* Kuning – pencerahan, pendidikan */
+    --bg: #fdfaf4;        /* Krem lembut */
+    --text: #2b2b2b;      /* Gelap netral untuk keterbacaan */
+  }
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
 
-    body {
-      font-family: 'Inter', sans-serif;
-      background-color: var(--bg);
-      color: var(--text);
-      overflow-x: hidden;
-    }
+  body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
 
-    header {
-      background-color: var(--card);
-      padding: 40px 60px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-      width: 100%;
-    }
+  header {
+    background: linear-gradient(135deg, var(--primary), var(--accent));
+    color: #ffffff;
+    padding: 50px 5vw;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+    width: 100%;
+  }
 
-    header h1 {
-      margin: 0;
-      font-size: 2.2em;
-      color: var(--primary);
-    }
+  header h1 {
+    font-size: 2.3em;
+    font-weight: 700;
+  }
 
-    /* Bagian utama dibuat full width */
-    main {
-      width: 100%;
-      max-width: none;
-      margin: 0;
-      padding: 60px 60px;
-    }
+  main {
+    width: 100%;
+    padding: 60px 6vw;
+    background: #fffdf8;
+  }
 
-    section {
-      margin-bottom: 60px;
-      width: 100%;
-    }
+  section {
+    width: 100%;
+    margin-bottom: 70px;
+  }
 
+  h2 {
+    font-size: 1.8em;
+    border-left: 6px solid var(--accent);
+    padding-left: 15px;
+    margin-bottom: 25px;
+    font-weight: 700;
+  }
+
+  h3 {
+    color: var(--primary);
+    margin-top: 25px;
+    margin-bottom: 10px;
+    font-size: 1.3em;
+  }
+
+  p {
+    margin-bottom: 15px;
+    font-size: 1.05em;
+  }
+
+  ul {
+    list-style: none;
+    padding-left: 0;
+  }
+
+  ul li {
+    background: #ffffff;
+    margin-bottom: 12px;
+    padding: 16px 24px;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+    transition: all 0.2s ease-in-out;
+    width: 100%;
+  }
+
+  ul li:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 14px rgba(0,0,0,0.12);
+  }
+
+  /* Ikon disesuaikan untuk Fakultas Keguruan dan Ilmu Pendidikan */
+  .facilities li::before {
+    content: "🎓"; /* simbol pendidikan & keguruan */
+    margin-right: 10px;
+  }
+
+  .highlight {
+    background: linear-gradient(
+      90deg,
+      rgba(244,196,48,0.22),
+      transparent
+    );
+    border-left: 4px solid var(--accent);
+    padding: 18px 22px;
+    border-radius: 10px;
+    margin-bottom: 25px;
+  }
+
+  footer {
+    width: 100%;
+    background-color: var(--primary);
+    color: #ffffff;
+    text-align: center;
+    padding: 40px 20px;
+    font-size: 0.95em;
+    margin-top: 60px;
+  }
+
+  /* Responsif */
+  @media (max-width: 768px) {
+    header, main {
+      padding: 30px 5vw;
+    }
+    h1 {
+      font-size: 1.9em;
+    }
     h2 {
-      font-size: 1.8em;
-      margin-bottom: 20px;
-      border-left: 5px solid var(--primary);
-      padding-left: 15px;
+      font-size: 1.5em;
     }
+  }
+</style>
 
-    h3 {
-      margin-top: 30px;
-      color: var(--accent);
-    }
-
-    ul {
-      list-style: none;
-      padding-left: 0;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 15px;
-      width: 100%;
-    }
-
-    ul li {
-      background-color: var(--card);
-      padding: 16px 20px;
-      border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-    }
-
-    .facilities li::before {
-      content: '🧠';
-      margin-right: 10px;
-    }
-
-    footer {
-      background-color: var(--text);
-      color: white;
-      text-align: center;
-      padding: 50px 30px;
-      margin-top: 80px;
-      width: 100%;
-    }
-
-    /* Responsif di layar kecil */
-    @media (max-width: 768px) {
-      header {
-        padding: 25px 30px;
-      }
-      main {
-        padding: 40px 25px;
-      }
-      ul {
-        grid-template-columns: 1fr;
-      }
-    }
-  </style>
 
 </head>
 <body>
@@ -121,88 +146,245 @@
       <p>Fakultas Keguruan dan Ilmu Pendidikan (FKIP) Universitas Seruni berkomitmen mencetak tenaga pendidik profesional, inovatif, dan berintegritas. Dengan pendekatan pedagogi modern dan teknologi pendidikan, FKIP menjadi pusat unggulan dalam pendidikan dan pelatihan guru di Indonesia.</p>
     </section>
 
- <section>
+<section>
   <h2>Program Studi</h2>
-  <h3>Sarjana (S1)</h3>
+
+  <!-- ================================ -->
+  <!-- Departemen Pendidikan Bahasa dan Sastra -->
+  <!-- ================================ -->
+  <h3>Departemen Pendidikan Bahasa dan Sastra</h3>
+
+  <h4>Program Sarjana (S1)</h4>
   <ul>
     <li>Pendidikan Bahasa Indonesia</li>
     <li>Pendidikan Bahasa Inggris</li>
     <li>Pendidikan Bahasa Arab</li>
     <li>Pendidikan Bahasa Jepang</li>
     <li>Pendidikan Bahasa dan Sastra Daerah</li>
+  </ul>
+
+  <h4>Program Magister (S2)</h4>
+  <ul>
+    <li>Magister Pendidikan Bahasa</li>
+    <li>Magister Pendidikan Bahasa Inggris</li>
+  </ul>
+
+  <h4>Program Doktor (S3)</h4>
+  <ul>
+    <li>Doktor Pendidikan Bahasa</li>
+  </ul>
+
+  <!-- ================================ -->
+  <!-- Departemen Pendidikan Ilmu Sosial dan Humaniora -->
+  <!-- ================================ -->
+  <h3>Departemen Pendidikan Ilmu Sosial dan Humaniora</h3>
+
+  <h4>Program Sarjana (S1)</h4>
+  <ul>
     <li>Pendidikan Pancasila dan Kewarganegaraan (PPKn)</li>
     <li>Pendidikan Sejarah</li>
     <li>Pendidikan Geografi</li>
     <li>Pendidikan Ekonomi</li>
     <li>Pendidikan Sosiologi</li>
+  </ul>
+
+  <h4>Program Magister (S2)</h4>
+  <ul>
+    <li>Magister Pendidikan Sejarah</li>
+    <li>Magister Pendidikan IPS</li>
+  </ul>
+
+  <!-- ================================ -->
+  <!-- Departemen Pendidikan Matematika dan IPA -->
+  <!-- ================================ -->
+  <h3>Departemen Pendidikan Matematika dan Ilmu Pengetahuan Alam</h3>
+
+  <h4>Program Sarjana (S1)</h4>
+  <ul>
     <li>Pendidikan Matematika</li>
     <li>Pendidikan Fisika</li>
     <li>Pendidikan Kimia</li>
     <li>Pendidikan Biologi</li>
     <li>Pendidikan IPA</li>
+  </ul>
+
+  <h4>Program Magister (S2)</h4>
+  <ul>
+    <li>Magister Pendidikan Sains</li>
+    <li>Magister Pendidikan Matematika</li>
+  </ul>
+
+  <h4>Program Doktor (S3)</h4>
+  <ul>
+    <li>Doktor Pendidikan Sains</li>
+  </ul>
+
+  <!-- ================================ -->
+  <!-- Departemen Pendidikan Dasar dan PAUD -->
+  <!-- ================================ -->
+  <h3>Departemen Pendidikan Dasar dan Anak Usia Dini</h3>
+
+  <h4>Program Sarjana (S1)</h4>
+  <ul>
     <li>Pendidikan Guru Sekolah Dasar (PGSD)</li>
     <li>Pendidikan Guru PAUD</li>
+  </ul>
+
+  <h4>Program Magister (S2)</h4>
+  <ul>
+    <li>Magister Pendidikan Dasar</li>
+    <li>Magister Pendidikan Anak Usia Dini</li>
+  </ul>
+
+  <!-- ================================ -->
+  <!-- Departemen Pendidikan Nonformal dan Khusus -->
+  <!-- ================================ -->
+  <h3>Departemen Pendidikan Nonformal dan Pendidikan Khusus</h3>
+
+  <h4>Program Sarjana (S1)</h4>
+  <ul>
     <li>Pendidikan Luar Sekolah (PLS)</li>
     <li>Pendidikan Luar Biasa (PLB)</li>
     <li>Pendidikan Bimbingan dan Konseling</li>
+  </ul>
+
+  <h4>Program Magister (S2)</h4>
+  <ul>
+    <li>Magister Pendidikan Luar Sekolah</li>
+    <li>Magister Pendidikan Khusus</li>
+    <li>Magister Bimbingan dan Konseling</li>
+  </ul>
+
+  <!-- ================================ -->
+  <!-- Departemen Pendidikan Teknologi -->
+  <!-- ================================ -->
+  <h3>Departemen Pendidikan Teknologi</h3>
+
+  <h4>Program Sarjana (S1)</h4>
+  <ul>
     <li>Pendidikan Teknologi Informasi</li>
     <li>Pendidikan Teknik Informatika</li>
     <li>Pendidikan Teknik Mesin</li>
     <li>Pendidikan Teknik Elektro</li>
     <li>Pendidikan Teknik Otomotif</li>
+  </ul>
+
+  <h4>Program Magister (S2)</h4>
+  <ul>
+    <li>Magister Teknologi Pendidikan</li>
+  </ul>
+
+  <h4>Program Doktor (S3)</h4>
+  <ul>
+    <li>Doktor Teknologi Pendidikan</li>
+  </ul>
+
+  <!-- ================================ -->
+  <!-- Departemen Pendidikan Seni dan Keterampilan -->
+  <!-- ================================ -->
+  <h3>Departemen Pendidikan Seni dan Keterampilan</h3>
+
+  <h4>Program Sarjana (S1)</h4>
+  <ul>
     <li>Pendidikan Seni Rupa</li>
+    <li>Pendidikan Seni Tari</li>
     <li>Pendidikan Seni Musik</li>
-    <li>Pendidikan Jasmani, Kesehatan, dan Rekreasi (PJKR)</li>
-    <li>Pendidikan Kepelatihan Olahraga</li>
     <li>Pendidikan Tata Boga</li>
     <li>Pendidikan Tata Busana</li>
     <li>Pendidikan Tata Rias</li>
-    <li>Pendidikan Ekonomi Kreatif</li>
   </ul>
 
-  <h3>Magister (S2)</h3>
+  <h4>Program Magister (S2)</h4>
   <ul>
-    <li>Magister Pendidikan Bahasa</li>
-    <li>Magister Pendidikan Bahasa Inggris</li>
-    <li>Magister Pendidikan Sains</li>
-    <li>Magister Pendidikan Matematika</li>
-    <li>Magister Pendidikan Sejarah</li>
-    <li>Magister Pendidikan IPS</li>
-    <li>Magister Teknologi Pendidikan</li>
-    <li>Magister Manajemen Pendidikan</li>
-    <li>Magister Pendidikan Luar Sekolah</li>
-    <li>Magister Pendidikan Dasar</li>
-    <li>Magister Pendidikan Anak Usia Dini</li>
-    <li>Magister Pendidikan Khusus</li>
-    <li>Magister Bimbingan dan Konseling</li>
-    <li>Magister Pendidikan Olahraga</li>
     <li>Magister Pendidikan Seni</li>
+    <li>Magister Pendidikan Keterampilan dan Vokasional</li>
+  </ul>
+
+  <!-- ================================ -->
+  <!-- Departemen Pendidikan Jasmani dan Olahraga -->
+  <!-- ================================ -->
+  <h3>Departemen Pendidikan Jasmani dan Olahraga</h3>
+
+  <h4>Program Sarjana (S1)</h4>
+  <ul>
+    <li>Pendidikan Jasmani, Kesehatan, dan Rekreasi (PJKR)</li>
+    <li>Pendidikan Kepelatihan Olahraga</li>
+  </ul>
+
+  <h4>Program Magister (S2)</h4>
+  <ul>
+    <li>Magister Pendidikan Olahraga</li>
+  </ul>
+
+  <!-- ================================ -->
+  <!-- Departemen Manajemen dan Evaluasi Pendidikan -->
+  <!-- ================================ -->
+  <h3>Departemen Manajemen dan Evaluasi Pendidikan</h3>
+
+  <h4>Program Magister (S2)</h4>
+  <ul>
+    <li>Magister Manajemen Pendidikan</li>
     <li>Magister Pendidikan Kejuruan</li>
   </ul>
 
-  <h3>Doktor (S3)</h3>
+  <h4>Program Doktor (S3)</h4>
   <ul>
     <li>Doktor Pendidikan</li>
-    <li>Doktor Teknologi Pendidikan</li>
     <li>Doktor Manajemen Pendidikan</li>
     <li>Doktor Penelitian dan Evaluasi Pendidikan</li>
-    <li>Doktor Pendidikan Bahasa</li>
-    <li>Doktor Pendidikan Sains</li>
   </ul>
+
 </section>
 
 
-    <section class="facilities">
-      <h2>Fasilitas Unggulan</h2>
-      <ul>
-        <li>Laboratorium Microteaching</li>
-        <li>Pusat Teknologi Pendidikan</li>
-        <li>Ruang Kelas Multimedia</li>
-        <li>Perpustakaan Pendidikan</li>
-        <li>Studio Produksi Media Pembelajaran</li>
-        <li>Workshop Pendidikan Teknik</li>
-      </ul>
-    </section>
+
+<section class="facilities">
+  <h2>Fasilitas Unggulan</h2>
+  <ul>
+    <!-- Fasilitas Umum Kependidikan -->
+    <li>Laboratorium Microteaching dan Praktik Mengajar</li>
+    <li>Ruang Kelas Multimedia dan Smart Classroom</li>
+    <li>Perpustakaan Pendidikan dan Sumber Belajar Digital</li>
+    <li>Pusat Pengembangan Kurikulum dan Pembelajaran</li>
+
+    <!-- Teknologi & Kejuruan -->
+    <li>Pusat Teknologi Pendidikan dan Inovasi Pembelajaran Digital</li>
+    <li>Studio Produksi Media Pembelajaran dan Konten Edukasi</li>
+    <li>Laboratorium Komputer dan Jaringan Pendidikan</li>
+    <li>Workshop Pendidikan Teknik (Mesin, Elektro, Otomotif)</li>
+
+    <!-- MIPA -->
+    <li>Laboratorium Pendidikan Matematika</li>
+    <li>Laboratorium Pendidikan Fisika</li>
+    <li>Laboratorium Pendidikan Kimia</li>
+    <li>Laboratorium Pendidikan Biologi dan IPA Terpadu</li>
+
+    <!-- Bahasa & Humaniora -->
+    <li>Laboratorium Bahasa (Indonesia, Inggris, Arab, Jepang)</li>
+    <li>Ruang Simulasi Pembelajaran Ilmu Sosial dan Humaniora</li>
+
+    <!-- Seni & Keterampilan -->
+    <li>Studio Seni Rupa dan Desain Edukatif</li>
+    <li>Studio Musik dan Pembelajaran Seni Musik</li>
+    <li>Studio Tari dan Seni Gerak</li>
+    <li>Dapur Praktik Pendidikan Tata Boga</li>
+    <li>Studio Busana dan Tata Rias Pendidikan</li>
+
+    <!-- Jasmani & Olahraga -->
+    <li>Gedung Olahraga dan Laboratorium Pendidikan Jasmani</li>
+    <li>Lapangan Olahraga Terpadu dan Fitness Center</li>
+
+    <!-- Pendidikan Khusus & Nonformal -->
+    <li>Pusat Layanan Pendidikan Inklusif dan Disabilitas</li>
+    <li>Laboratorium Bimbingan dan Konseling</li>
+    <li>Ruang Simulasi Pendidikan Nonformal dan Pemberdayaan Masyarakat</li>
+
+    <!-- Pascasarjana -->
+    <li>Pusat Riset, Evaluasi, dan Manajemen Pendidikan</li>
+    <li>Ruang Diskusi dan Seminar Pascasarjana</li>
+  </ul>
+</section>
+
 
     <section>
       <h2>Kontak Fakultas</h2>
