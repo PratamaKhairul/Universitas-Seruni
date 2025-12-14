@@ -5,109 +5,134 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Fakultas Perikanan - Universitas Seruni</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
-  <style>
-    :root {
-      --primary: #1abc9c;
-      --accent: #16a085;
-      --bg: #f0fbf9;
-      --text: #2c3e50;
-      --card: #ffffff;
-    }
+<style>
+  :root {
+    --primary: #5d2f0a;   /* Coklat tua – laut & keteguhan */
+    --accent: #ff8c42;    /* Jingga – energi, hasil perikanan */
+    --bg: #fdf6ef;        /* Krem hangat */
+    --text: #2b2b2b;      /* Gelap netral untuk keterbacaan */
+  }
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
 
-    body {
-      font-family: 'Inter', sans-serif;
-      background-color: var(--bg);
-      color: var(--text);
-      overflow-x: hidden;
-    }
+  body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
 
-    header {
-      background-color: var(--card);
-      padding: 40px 60px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-      width: 100%;
-    }
+  header {
+    background: linear-gradient(135deg, var(--primary), var(--accent));
+    color: #ffffff;
+    padding: 50px 5vw;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+    width: 100%;
+  }
 
-    header h1 {
-      margin: 0;
-      font-size: 2.2em;
-      color: var(--primary);
-    }
+  header h1 {
+    font-size: 2.3em;
+    font-weight: 700;
+  }
 
-    /* Bagian utama dibuat full width */
-    main {
-      width: 100%;
-      max-width: none;
-      margin: 0;
-      padding: 60px 60px;
-    }
+  main {
+    width: 100%;
+    padding: 60px 6vw;
+    background: #fffaf5;
+  }
 
-    section {
-      margin-bottom: 60px;
-      width: 100%;
-    }
+  section {
+    width: 100%;
+    margin-bottom: 70px;
+  }
 
+  h2 {
+    font-size: 1.8em;
+    border-left: 6px solid var(--accent);
+    padding-left: 15px;
+    margin-bottom: 25px;
+    font-weight: 700;
+  }
+
+  h3 {
+    color: var(--primary);
+    margin-top: 25px;
+    margin-bottom: 10px;
+    font-size: 1.3em;
+  }
+
+  p {
+    margin-bottom: 15px;
+    font-size: 1.05em;
+  }
+
+  ul {
+    list-style: none;
+    padding-left: 0;
+  }
+
+  ul li {
+    background: #ffffff;
+    margin-bottom: 12px;
+    padding: 16px 24px;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+    transition: all 0.2s ease-in-out;
+    width: 100%;
+  }
+
+  ul li:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 14px rgba(0,0,0,0.12);
+  }
+
+  /* Ikon disesuaikan untuk Fakultas Perikanan */
+  .facilities li::before {
+    content: "🐟"; /* simbol perikanan */
+    margin-right: 10px;
+  }
+
+  .highlight {
+    background: linear-gradient(
+      90deg,
+      rgba(255,140,66,0.22),
+      transparent
+    );
+    border-left: 4px solid var(--accent);
+    padding: 18px 22px;
+    border-radius: 10px;
+    margin-bottom: 25px;
+  }
+
+  footer {
+    width: 100%;
+    background-color: var(--primary);
+    color: #ffffff;
+    text-align: center;
+    padding: 40px 20px;
+    font-size: 0.95em;
+    margin-top: 60px;
+  }
+
+  /* Responsif */
+  @media (max-width: 768px) {
+    header, main {
+      padding: 30px 5vw;
+    }
+    h1 {
+      font-size: 1.9em;
+    }
     h2 {
-      font-size: 1.8em;
-      margin-bottom: 20px;
-      border-left: 5px solid var(--primary);
-      padding-left: 15px;
+      font-size: 1.5em;
     }
+  }
+</style>
 
-    h3 {
-      margin-top: 30px;
-      color: var(--accent);
-    }
-
-    ul {
-      list-style: none;
-      padding-left: 0;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 15px;
-      width: 100%;
-    }
-
-    ul li {
-      background-color: var(--card);
-      padding: 16px 20px;
-      border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-    }
-
-    .facilities li::before {
-      content: '🧠';
-      margin-right: 10px;
-    }
-
-    footer {
-      background-color: var(--text);
-      color: white;
-      text-align: center;
-      padding: 50px 30px;
-      margin-top: 80px;
-      width: 100%;
-    }
-
-    /* Responsif di layar kecil */
-    @media (max-width: 768px) {
-      header {
-        padding: 25px 30px;
-      }
-      main {
-        padding: 40px 25px;
-      }
-      ul {
-        grid-template-columns: 1fr;
-      }
-    }
-  </style>
 </head>
 <body>
   <header>
@@ -120,30 +145,55 @@
       <p>Fakultas Perikanan Universitas Seruni berfokus pada pengembangan ilmu perikanan dan kelautan berkelanjutan. Fakultas ini mendidik mahasiswa untuk menjadi ahli di bidang perikanan tangkap, budidaya, dan manajemen sumber daya perairan melalui pendekatan ilmiah dan teknologi modern.</p>
     </section>
 
-    <section>
-      <h2>Program Studi</h2>
-      <h3>Sarjana (S1)</h3>
-      <ul>
-        <li>Manajemen Sumber Daya Perairan</li>
-        <li>Budidaya Perairan</li>
-        <li>Teknologi Hasil Perikanan</li>
-        <li>Perikanan Tangkap</li>
-        <li>Teknologi Akuakultur</li>
-      </ul>
+<section>
+  <h2>Program Studi</h2>
 
-      <h3>Magister (S2)</h3>
-      <ul>
-        <li>Magister Ilmu Perikanan</li>
-        <li>Magister Manajemen Kelautan dan Perikanan</li>
-        <li>Magister Teknologi Akuakultur</li>
-      </ul>
+  <!-- ================================ -->
+  <!-- Departemen Perikanan -->
+  <!-- ================================ -->
+  <h3>Departemen Perikanan</h3>
 
-      <h3>Doktor (S3)</h3>
-      <ul>
-        <li>Doktor Ilmu Perikanan dan Kelautan</li>
-        <li>Doktor Teknologi Akuakultur</li>
-      </ul>
-    </section>
+  <h4>Program Sarjana (S1)</h4>
+  <ul>
+    <li>Manajemen Sumber Daya Perairan</li>
+    <li>Perikanan Tangkap</li>
+    <li>Budidaya Perairan</li>
+  </ul>
+
+  <h4>Program Magister (S2)</h4>
+  <ul>
+    <li>Magister Ilmu Perikanan</li>
+    <li>Magister Manajemen Kelautan dan Perikanan</li>
+  </ul>
+
+  <h4>Program Doktor (S3)</h4>
+  <ul>
+    <li>Doktor Ilmu Perikanan dan Kelautan</li>
+  </ul>
+
+  <!-- ================================ -->
+  <!-- Departemen Akuakultur dan Teknologi Perikanan -->
+  <!-- ================================ -->
+  <h3>Departemen Akuakultur dan Teknologi Perikanan</h3>
+
+  <h4>Program Sarjana (S1)</h4>
+  <ul>
+    <li>Teknologi Akuakultur</li>
+    <li>Teknologi Hasil Perikanan</li>
+  </ul>
+
+  <h4>Program Magister (S2)</h4>
+  <ul>
+    <li>Magister Teknologi Akuakultur</li>
+  </ul>
+
+  <h4>Program Doktor (S3)</h4>
+  <ul>
+    <li>Doktor Teknologi Akuakultur</li>
+  </ul>
+
+</section>
+
 
     <section class="facilities">
       <h2>Fasilitas Unggulan</h2>
