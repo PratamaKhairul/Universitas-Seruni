@@ -5,128 +5,134 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Fakultas Ilmu Agama - Universitas Seruni</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
-   <style>
-    :root {
-      --primary: #2e4053;
-      --accent: #16a085;
-      --bg: #f9fafb;
-      --text: #2c3e50;
-    }
+<style>
+  :root {
+    --primary: #e67e22;   /* Oranye utama – keilmuan & spiritualitas */
+    --accent: #f3c892;    /* Oranye lembut */
+    --bg: #ffffff;        /* Putih bersih */
+    --text: #1f1f1f;      /* Hitam elegan untuk keterbacaan */
+  }
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
 
-    body {
-      font-family: 'Inter', sans-serif;
-      background-color: var(--bg);
-      color: var(--text);
-      line-height: 1.6;
-      overflow-x: hidden;
-    }
+  body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
 
-    header {
-      background: linear-gradient(135deg, var(--primary), var(--accent));
-      color: white;
-      padding: 50px 5vw;
-      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
-      width: 100%;
-    }
+  header {
+    background: linear-gradient(135deg, var(--primary), var(--accent));
+    color: #ffffff;
+    padding: 50px 5vw;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+    width: 100%;
+  }
 
-    header h1 {
-      font-size: 2.3em;
-      font-weight: 700;
-    }
+  header h1 {
+    font-size: 2.3em;
+    font-weight: 700;
+  }
 
-    main {
-      width: 100%;
-      padding: 60px 6vw;
-      background: var(--bg);
-    }
+  main {
+    width: 100%;
+    padding: 60px 6vw;
+    background: #fffdf9; /* putih hangat */
+  }
 
-    section {
-      width: 100%;
-      margin-bottom: 70px;
-    }
+  section {
+    width: 100%;
+    margin-bottom: 70px;
+  }
 
+  h2 {
+    font-size: 1.8em;
+    border-left: 6px solid var(--primary);
+    padding-left: 15px;
+    margin-bottom: 25px;
+    font-weight: 700;
+  }
+
+  h3 {
+    color: var(--primary);
+    margin-top: 25px;
+    margin-bottom: 10px;
+    font-size: 1.3em;
+  }
+
+  p {
+    margin-bottom: 15px;
+    font-size: 1.05em;
+  }
+
+  ul {
+    list-style: none;
+    padding-left: 0;
+  }
+
+  ul li {
+    background: #ffffff;
+    margin-bottom: 12px;
+    padding: 16px 24px;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+    transition: all 0.2s ease-in-out;
+    width: 100%;
+  }
+
+  ul li:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 14px rgba(0,0,0,0.12);
+  }
+
+  /* Ikon disesuaikan untuk Fakultas Ilmu Agama */
+  .facilities li::before {
+    content: "📖"; /* kitab, ilmu agama, kajian */
+    margin-right: 10px;
+  }
+
+  .highlight {
+    background: linear-gradient(
+      90deg,
+      rgba(230,126,34,0.18),
+      transparent
+    );
+    border-left: 4px solid var(--primary);
+    padding: 18px 22px;
+    border-radius: 10px;
+    margin-bottom: 25px;
+  }
+
+  footer {
+    width: 100%;
+    background-color: #1f1f1f; /* hitam solid */
+    color: #ffffff;
+    text-align: center;
+    padding: 40px 20px;
+    font-size: 0.95em;
+    margin-top: 60px;
+  }
+
+  /* Responsif */
+  @media (max-width: 768px) {
+    header, main {
+      padding: 30px 5vw;
+    }
+    h1 {
+      font-size: 1.9em;
+    }
     h2 {
-      font-size: 1.8em;
-      border-left: 6px solid var(--accent);
-      padding-left: 15px;
-      margin-bottom: 25px;
-      font-weight: 700;
+      font-size: 1.5em;
     }
+  }
+</style>
 
-    h3 {
-      color: var(--accent);
-      margin-top: 25px;
-      margin-bottom: 10px;
-      font-size: 1.3em;
-    }
-
-    p {
-      margin-bottom: 15px;
-      font-size: 1.05em;
-    }
-
-    ul {
-      list-style: none;
-      padding-left: 0;
-    }
-
-    ul li {
-      background: white;
-      margin-bottom: 12px;
-      padding: 16px 24px;
-      border-radius: 10px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-      transition: all 0.2s ease-in-out;
-      width: 100%;
-    }
-
-    ul li:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    }
-
-    .facilities li::before {
-      content: "💊";
-      margin-right: 10px;
-    }
-
-    .highlight {
-      background: linear-gradient(90deg, rgba(22,160,133,0.1), transparent);
-      border-left: 4px solid var(--accent);
-      padding: 18px 22px;
-      border-radius: 8px;
-      margin-bottom: 25px;
-    }
-
-    footer {
-      width: 100%;
-      background-color: var(--primary);
-      color: #ecf0f1;
-      text-align: center;
-      padding: 40px 20px;
-      font-size: 0.95em;
-      margin-top: 60px;
-    }
-
-    /* Responsif */
-    @media (max-width: 768px) {
-      header, main {
-        padding: 30px 5vw;
-      }
-      h1 {
-        font-size: 1.9em;
-      }
-      h2 {
-        font-size: 1.5em;
-      }
-    }
-  </style>
 </head>
 <body>
   <header>
