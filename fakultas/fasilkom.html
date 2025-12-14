@@ -5,97 +5,142 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Fakultas Ilmu Komputer - Universitas Seruni</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
-  <style>
+<style>
   :root {
-    --primary: #2c3e50;
-    --accent: #3498db;
-    --bg: #f8f9fa;
-    --text: #2c3e50;
-    --card: #ffffff;
+    --primary: #1e40af;   /* Biru ilmiah (core computing) */
+    --accent: #dc2626;    /* Merah teknologi & inovasi */
+    --bg: #f8fafc;        /* Netral terang (profesional akademik) */
+    --text: #0f172a;      /* Gelap, kontras tinggi */
   }
 
   * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
   }
 
   body {
     font-family: 'Inter', sans-serif;
     background-color: var(--bg);
     color: var(--text);
-    width: 100%;
+    line-height: 1.6;
     overflow-x: hidden;
   }
 
   header {
-    background-color: var(--card);
-    padding: 40px 5vw; /* responsif kiri-kanan */
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    background: linear-gradient(135deg, var(--primary), var(--accent));
+    color: white;
+    padding: 50px 5vw;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.2);
     width: 100%;
   }
 
   header h1 {
-    margin: 0;
-    font-size: 2.2em;
-    color: var(--primary);
+    font-size: 2.3em;
+    font-weight: 700;
+    letter-spacing: 0.4px;
   }
 
   main {
     width: 100%;
-    padding: 60px 5vw; /* full tapi tetap ada ruang aman kiri-kanan */
+    padding: 60px 6vw;
+    background: var(--bg);
   }
 
   section {
     width: 100%;
-    margin-bottom: 60px;
+    margin-bottom: 70px;
   }
 
   h2 {
     font-size: 1.8em;
-    margin-bottom: 20px;
-    border-left: 5px solid var(--primary);
+    border-left: 6px solid var(--accent);
     padding-left: 15px;
+    margin-bottom: 25px;
+    font-weight: 700;
   }
 
   h3 {
-    margin-top: 30px;
-    color: var(--accent);
+    color: var(--primary);
+    margin-top: 25px;
+    margin-bottom: 10px;
+    font-size: 1.3em;
+  }
+
+  p {
+    margin-bottom: 15px;
+    font-size: 1.05em;
   }
 
   ul {
     list-style: none;
     padding-left: 0;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 15px;
   }
 
   ul li {
-    background-color: var(--card);
-    padding: 16px 20px;
+    background: #ffffff;
+    margin-bottom: 12px;
+    padding: 16px 24px;
     border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    border-left: 4px solid var(--primary);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+    transition: all 0.2s ease-in-out;
     width: 100%;
   }
 
+  ul li:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.14);
+  }
+
+  /* Ikon khusus Fakultas Ilmu Komputer */
   .facilities li::before {
-    content: '💻';
+    content: "💻"; /* default: computing */
     margin-right: 10px;
   }
 
-  footer {
-    background-color: var(--text);
-    color: white;
-    text-align: center;
-    padding: 50px 5vw;
-    margin-top: 80px;
-    width: 100%;
+  /* Variasi ikon opsional (pakai class tambahan) */
+  .ai li::before {
+    content: "🤖";
   }
 
+  .data li::before {
+    content: "📊";
+  }
+
+  .security li::before {
+    content: "🔐";
+  }
+
+  .software li::before {
+    content: "🧩";
+  }
+
+  .highlight {
+    background: linear-gradient(90deg, rgba(30,64,175,0.15), transparent);
+    border-left: 4px solid var(--accent);
+    padding: 18px 22px;
+    border-radius: 8px;
+    margin-bottom: 25px;
+  }
+
+  footer {
+    width: 100%;
+    background-color: var(--primary);
+    color: #e5e7eb;
+    text-align: center;
+    padding: 40px 20px;
+    font-size: 0.95em;
+    margin-top: 60px;
+  }
+
+  /* Responsif */
   @media (max-width: 768px) {
-    header, main, footer {
-      padding: 30px 20px;
+    header, main {
+      padding: 30px 5vw;
+    }
+    h1 {
+      font-size: 1.9em;
     }
     h2 {
       font-size: 1.5em;
@@ -115,44 +160,93 @@
       <p>Fakultas Ilmu Komputer Universitas Seruni yang berlokasi di Kampus Utama merupakan pusat pendidikan dan penelitian dalam bidang teknologi informasi, kecerdasan buatan, dan keamanan siber. Mahasiswa diarahkan untuk menjadi inovator dan profesional TIK yang siap menghadapi tantangan digital global.</p>
     </section>
 
-    <section>
+   <section>
   <h2>Program Studi</h2>
 
-  <h3>Sarjana (S1)</h3>
-  <ul>
-    <li>Ilmu Komputer</li>
-    <li>Sistem Informasi</li>
-    <li>Rekayasa Perangkat Lunak</li>
-    <li>Teknologi Informasi</li>
-    <li>Artificial Intelligence</li>
-    <li>Teknik Komputer</li>
-    <li>Teknologi Sains Data</li>
-  </ul>
+<!-- ================================ -->
+<!-- Departemen Ilmu Komputer & Artificial Intelligence -->
+<!-- ================================ -->
+<h3>Departemen Ilmu Komputer & Artificial Intelligence</h3>
 
-  <h3>Magister (S2)</h3>
-  <ul>
-    <li>Magister Ilmu Komputer</li>
-    <li>Magister Sistem Informasi</li>
-    <li>Magister Teknologi Informasi</li>
-    <li>Magister Rekayasa Perangkat Lunak</li>
-    <li>Magister Keamanan Siber</li>
-    <li>Magister Artificial Intelligence</li>
-    <li>Magister Komputasi Terapan</li>
-    <li>Magister Teknologi Multimedia dan Game</li>
-    <li>Magister Teknologi Sains Data</li>
-    <li>Magister Teknologi Blockchain</li>
-    <li>Magister Informatika Medis</li>
-    <li>Magister Digital Forensik</li>
-  </ul>
+<h4>Program Sarjana (S1)</h4>
+<ul>
+  <li>Ilmu Komputer</li>
+  <li>Teknologi Sains Data</li>
+  <li>Artificial Intelligence</li>
+</ul>
 
-  <h3>Doktor (S3)</h3>
-  <ul>
-    <li>Doktor Ilmu Komputer</li>
-    <li>Doktor Sistem Informasi</li>
-    <li>Doktor Teknologi Sains Data</li>
-    <li>Doktor Artificial Intelligence</li>
-    <li>Doktor Komputasi Terapan</li>
-  </ul>
+<h4>Program Magister (S2)</h4>
+<ul>
+  <li>Magister Ilmu Komputer</li>
+  <li>Magister Teknologi Sains Data</li>
+  <li>Magister Artificial Intelligence</li>
+</ul>
+
+<h4>Program Doktor (S3)</h4>
+<ul>
+  <li>Doktor Ilmu Komputer</li>
+  <li>Doktor Teknologi Sains Data</li>
+  <li>Doktor Artificial Intelligence</li>
+</ul>
+
+<!-- ================================ -->
+<!-- Departemen Sistem Informasi & Teknologi Informasi -->
+<!-- ================================ -->
+<h3>Departemen Sistem Informasi & Teknologi Informasi</h3>
+
+<h4>Program Sarjana (S1)</h4>
+<ul>
+  <li>Sistem Informasi</li>
+  <li>Teknologi Informasi</li>
+</ul>
+
+<h4>Program Magister (S2)</h4>
+<ul>
+  <li>Magister Sistem Informasi</li>
+  <li>Magister Teknologi Informasi</li>
+</ul>
+
+<h4>Program Doktor (S3)</h4>
+<ul>
+  <li>Doktor Sistem dan Teknologi Informasi</li>
+</ul>
+
+<!-- ================================ -->
+<!-- Departemen Rekayasa Perangkat Lunak & Komputasi Terapan -->
+<!-- ================================ -->
+<h3>Departemen Rekayasa Perangkat Lunak & Komputasi Terapan</h3>
+
+<h4>Program Sarjana (S1)</h4>
+<ul>
+  <li>Rekayasa Perangkat Lunak</li>
+  <li>Teknik Komputer</li>
+</ul>
+
+<h4>Program Magister (S2)</h4>
+<ul>
+  <li>Magister Rekayasa Perangkat Lunak</li>
+  <li>Magister Komputasi Terapan</li>
+</ul>
+
+<h4>Program Doktor (S3)</h4>
+<ul>
+  <li>Magister Rekayasa Perangkat Lunak & Komputasi Terapan</li>
+</ul>
+
+<!-- ================================ -->
+<!-- Departemen Keamanan Siber & Teknologi Digital Lanjutan -->
+<!-- ================================ -->
+<h3>Departemen Keamanan Siber & Teknologi Digital Lanjutan</h3>
+
+<h4>Program Magister (S2)</h4>
+<ul>
+  <li>Magister Keamanan Siber</li>
+  <li>Magister Digital Forensik</li>
+  <li>Magister Teknologi Multimedia dan Game</li>
+  <li>Magister Teknologi Blockchain</li>
+  <li>Magister Informatika Medis</li>
+</ul>
+
 </section>
 
     <section class="facilities">
