@@ -6,127 +6,127 @@
   <title>Fakultas Ekonomi dan Bisnis - Universitas Seruni</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
  <style>
-    :root {
-      --primary: #2e4053;
-      --accent: #16a085;
-      --bg: #f9fafb;
-      --text: #2c3e50;
-    }
+  :root {
+    --primary: #2f2f2f;   /* Abu gelap */
+    --accent: #6b7280;    /* Abu medium */
+    --bg: #f3f4f6;        /* Abu sangat muda (background) */
+    --text: #1f2937;      /* Abu gelap untuk teks */
+  }
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
 
-    body {
-      font-family: 'Inter', sans-serif;
-      background-color: var(--bg);
-      color: var(--text);
-      line-height: 1.6;
-      overflow-x: hidden;
-    }
+  body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
 
-    header {
-      background: linear-gradient(135deg, var(--primary), var(--accent));
-      color: white;
-      padding: 50px 5vw;
-      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
-      width: 100%;
-    }
+  header {
+    background: linear-gradient(135deg, var(--primary), var(--accent));
+    color: white;
+    padding: 50px 5vw;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+    width: 100%;
+  }
 
-    header h1 {
-      font-size: 2.3em;
-      font-weight: 700;
-    }
+  header h1 {
+    font-size: 2.3em;
+    font-weight: 700;
+  }
 
-    main {
-      width: 100%;
-      padding: 60px 6vw;
-      background: var(--bg);
-    }
+  main {
+    width: 100%;
+    padding: 60px 6vw;
+    background: var(--bg);
+  }
 
-    section {
-      width: 100%;
-      margin-bottom: 70px;
-    }
+  section {
+    width: 100%;
+    margin-bottom: 70px;
+  }
 
+  h2 {
+    font-size: 1.8em;
+    border-left: 6px solid var(--accent);
+    padding-left: 15px;
+    margin-bottom: 25px;
+    font-weight: 700;
+  }
+
+  h3 {
+    color: var(--accent);
+    margin-top: 25px;
+    margin-bottom: 10px;
+    font-size: 1.3em;
+  }
+
+  p {
+    margin-bottom: 15px;
+    font-size: 1.05em;
+  }
+
+  ul {
+    list-style: none;
+    padding-left: 0;
+  }
+
+  ul li {
+    background: #ffffff;
+    margin-bottom: 12px;
+    padding: 16px 24px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+    transition: all 0.2s ease-in-out;
+    width: 100%;
+  }
+
+  ul li:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 14px rgba(0,0,0,0.12);
+  }
+
+  .facilities li::before {
+    content: "💊";
+    margin-right: 10px;
+  }
+
+  .highlight {
+    background: linear-gradient(90deg, rgba(107,114,128,0.12), transparent);
+    border-left: 4px solid var(--accent);
+    padding: 18px 22px;
+    border-radius: 8px;
+    margin-bottom: 25px;
+  }
+
+  footer {
+    width: 100%;
+    background-color: var(--primary);
+    color: #e5e7eb;
+    text-align: center;
+    padding: 40px 20px;
+    font-size: 0.95em;
+    margin-top: 60px;
+  }
+
+  /* Responsif */
+  @media (max-width: 768px) {
+    header, main {
+      padding: 30px 5vw;
+    }
+    h1 {
+      font-size: 1.9em;
+    }
     h2 {
-      font-size: 1.8em;
-      border-left: 6px solid var(--accent);
-      padding-left: 15px;
-      margin-bottom: 25px;
-      font-weight: 700;
+      font-size: 1.5em;
     }
-
-    h3 {
-      color: var(--accent);
-      margin-top: 25px;
-      margin-bottom: 10px;
-      font-size: 1.3em;
-    }
-
-    p {
-      margin-bottom: 15px;
-      font-size: 1.05em;
-    }
-
-    ul {
-      list-style: none;
-      padding-left: 0;
-    }
-
-    ul li {
-      background: white;
-      margin-bottom: 12px;
-      padding: 16px 24px;
-      border-radius: 10px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-      transition: all 0.2s ease-in-out;
-      width: 100%;
-    }
-
-    ul li:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    }
-
-    .facilities li::before {
-      content: "💊";
-      margin-right: 10px;
-    }
-
-    .highlight {
-      background: linear-gradient(90deg, rgba(22,160,133,0.1), transparent);
-      border-left: 4px solid var(--accent);
-      padding: 18px 22px;
-      border-radius: 8px;
-      margin-bottom: 25px;
-    }
-
-    footer {
-      width: 100%;
-      background-color: var(--primary);
-      color: #ecf0f1;
-      text-align: center;
-      padding: 40px 20px;
-      font-size: 0.95em;
-      margin-top: 60px;
-    }
-
-    /* Responsif */
-    @media (max-width: 768px) {
-      header, main {
-        padding: 30px 5vw;
-      }
-      h1 {
-        font-size: 1.9em;
-      }
-      h2 {
-        font-size: 1.5em;
-      }
-    }
-  </style>
+  }
+</style>
 </head>
 <body>
   <header>
@@ -139,64 +139,128 @@
       <p>Fakultas Ekonomi dan Bisnis (FEB) Universitas Seruni adalah pusat pengembangan ilmu ekonomi, manajemen, dan akuntansi, baik konvensional maupun berbasis nilai-nilai Islam. Dengan pendekatan multidisiplin, FEB mempersiapkan lulusan untuk menghadapi tantangan global melalui pendidikan, penelitian, dan pengabdian masyarakat berkualitas tinggi.</p>
     </section>
 
-    <section>
-      <h2>Program Studi</h2>
+ <section>
+  <h2>Program Studi</h2>
 
-      <h3>Program Sarjana (S1)</h3>
-      <ul>
-        <li>Ilmu Ekonomi</li>
-<li>Ilmu Ekonomi Islam</li>
-<li>Akuntansi</li>
-<li>Akuntansi Syariah</li>
-<li>Manajemen</li>
-<li>Bisnis Digital</li>
-<li>Bisnis Islam</li>
-<li>Perbankan Syariah</li>
-<li>Manajemen Keuangan Syariah</li>
-<li>Kewirausahaan</li>
-<li>Keuangan dan Perbankan</li>
-      </ul>
+<!-- ================================ -->
+<!-- Departemen Ilmu Ekonomi -->
+<!-- ================================ -->
+<h3>Departemen Ilmu Ekonomi</h3>
 
-      <h3>Program Magister (S2)</h3>
-      <ul>
-        <li>Magister Manajemen</li>
-<li>Magister Akuntansi</li>
-<li>Magister Ilmu Ekonomi</li>
-<li>Magister Ekonomi Pembangunan</li>
-<li>Magister Ekonomi Terapan</li>
-<li>Magister Ekonomi Islam</li>
-<li>Magister Manajemen Keuangan</li>
-<li>Magister Manajemen Sumber Daya Manusia</li>
-<li>Magister Manajemen Pemasaran</li>
-<li>Magister Manajemen Strategik</li>
-<li>Magister Bisnis (MBA)</li>
-<li>Magister Bisnis Islam</li>
-<li>Magister Keuangan dan Perbankan</li>
-<li>Magister Ekonomi dan Kebijakan Publik</li>
-<li>Magister Perencanaan dan Kebijakan Ekonomi</li>
-<li>Magister Ekonomi Digital</li>
-      </ul>
+<h4>Program Sarjana (S1)</h4>
+<ul>
+  <li>Ilmu Ekonomi</li>
+  <li>Ilmu Ekonomi Islam</li>
+</ul>
 
-      <h3>Program Doktor (S3)</h3>
-      <ul>
-        <li>Doktor Ilmu Ekonomi</li>
-        <li>Doktor Manajemen</li>
-        <li>Doktor Akuntansi</li>
-        <li>Doktor Bisnis</li>
-      </ul>
-    </section>
+<h4>Program Magister (S2)</h4>
+<ul>
+  <li>Magister Ilmu Ekonomi</li>
+  <li>Magister Ekonomi Pembangunan</li>
+  <li>Magister Ekonomi Terapan</li>
+  <li>Magister Ekonomi Islam</li>
+  <li>Magister Ekonomi Digital</li>
+  <li>Magister Ekonomi dan Kebijakan Publik</li>
+  <li>Magister Perencanaan dan Kebijakan Ekonomi</li>
+</ul>
 
-    <section class="facilities">
-      <h2>Fasilitas Unggulan</h2>
-      <ul>
-        <li>Laboratorium Pasar Modal</li>
-        <li>Galeri Investasi Bursa Efek Indonesia</li>
-        <li>Bank Mini Syariah</li>
-        <li>Business Incubator & Start-Up Center</li>
-        <li>Ruang Trading dan Keuangan Digital</li>
-        <li>Pusat Riset Ekonomi dan Kebijakan Publik</li>
-      </ul>
-    </section>
+<h4>Program Doktor (S3)</h4>
+<ul>
+  <li>Doktor Ilmu Ekonomi</li>
+</ul>
+
+
+<!-- ================================ -->
+<!-- Departemen Akuntansi -->
+<!-- ================================ -->
+<h3>Departemen Akuntansi</h3>
+
+<h4>Program Sarjana (S1)</h4>
+<ul>
+  <li>Akuntansi</li>
+  <li>Akuntansi Syariah</li>
+</ul>
+
+<h4>Program Magister (S2)</h4>
+<ul>
+  <li>Magister Akuntansi</li>
+</ul>
+
+<h4>Program Doktor (S3)</h4>
+<ul>
+  <li>Doktor Akuntansi</li>
+</ul>
+
+
+<!-- ================================ -->
+<!-- Departemen Manajemen -->
+<!-- ================================ -->
+<h3>Departemen Manajemen</h3>
+
+<h4>Program Sarjana (S1)</h4>
+<ul>
+  <li>Manajemen</li>
+  <li>Kewirausahaan</li>
+</ul>
+
+<h4>Program Magister (S2)</h4>
+<ul>
+  <li>Magister Manajemen</li>
+  <li>Magister Manajemen Sumber Daya Manusia</li>
+  <li>Magister Manajemen Pemasaran</li>
+  <li>Magister Manajemen Keuangan</li>
+  <li>Magister Manajemen Strategik</li>
+  <li>Magister Kewirausahaan</li>
+</ul>
+
+<h4>Program Doktor (S3)</h4>
+<ul>
+  <li>Doktor Manajemen</li>
+</ul>
+
+
+<!-- ================================ -->
+<!-- Departemen Bisnis -->
+<!-- ================================ -->
+<h3>Departemen Bisnis</h3>
+
+<h4>Program Sarjana (S1)</h4>
+<ul>
+  <li>Bisnis Digital</li>
+  <li>Bisnis Islam</li>
+</ul>
+
+<h4>Program Magister (S2)</h4>
+<ul>
+  <li>Magister Bisnis Islam</li>
+  <li>Magister Bisnis Digital</li>
+  <li>Magister Bisnis (MBA)</li>
+</ul>
+
+<h4>Program Doktor (S3)</h4>
+<ul>
+  <li>Doktor Bisnis</li>
+</ul>
+
+
+<!-- ================================ -->
+<!-- Departemen Keuangan dan Perbankan -->
+<!-- ================================ -->
+<h3>Departemen Keuangan dan Perbankan</h3>
+
+<h4>Program Sarjana (S1)</h4>
+<ul>
+  <li>Keuangan dan Perbankan</li>
+  <li>Perbankan Syariah</li>
+  <li>Manajemen Keuangan Syariah</li>
+</ul>
+
+<h4>Program Magister (S2)</h4>
+<ul>
+  <li>Magister Keuangan dan Perbankan</li>
+</ul>
+
+</section>
 
     <section>
       <h2>Kontak</h2>
