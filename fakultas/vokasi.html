@@ -5,95 +5,146 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Program Pendidikan Vokasi - Universitas Seruni</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
-  <style>
-    :root { 
-      --primary: #2980b9;
-      --accent: #1abc9c;
-      --bg: #ecf9ff; 
-      --text: #2c3e50;
-      --card: #ffffff;
-    }
+<style>
+  :root {
+    --primary: #0d47a1;   /* Biru laut – kelautan, navigasi, profesional */
+    --accent: #2e7d32;    /* Hijau – keberlanjutan & vokasi terapan */
+    --secondary: #f57c00; /* Oranye – energi, vokasi, kesiapan kerja */
+    --bg: #f4f8fb;        /* Biru muda netral */
+    --text: #1f2933;      /* Gelap netral */
+  }
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
 
-    body {
-      font-family: 'Inter', sans-serif;
-      background-color: var(--bg);
-      color: var(--text); 
-      width: 100%;
-      max-width: 100%;
-    }
+  body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
 
-    header {
-      background-color: var(--card);
-      padding: 40px 60px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-      width: 100%;
-    }
+  header {
+    background: linear-gradient(
+      135deg,
+      var(--primary),
+      var(--secondary)
+    );
+    color: #ffffff;
+    padding: 50px 5vw;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.18);
+    width: 100%;
+  }
 
-    header h1 {
-      margin: 0;
-      font-size: 2.2em;
-      color: var(--primary);
-    }
+  header h1 {
+    font-size: 2.3em;
+    font-weight: 700;
+  }
 
-    main {
-      width: 100%;
-      max-width: none;
-      margin: 50px 0;
-      padding: 0 60px;
-    }
+  main {
+    width: 100%;
+    padding: 60px 6vw;
+    background: #ffffff;
+  }
 
-    section {
-      width: 100%;
-      margin-bottom: 60px;
-    }
+  section {
+    width: 100%;
+    margin-bottom: 70px;
+  }
 
+  h2 {
+    font-size: 1.8em;
+    border-left: 6px solid var(--secondary);
+    padding-left: 15px;
+    margin-bottom: 25px;
+    font-weight: 700;
+    color: var(--primary);
+  }
+
+  h3 {
+    color: var(--primary);
+    margin-top: 25px;
+    margin-bottom: 10px;
+    font-size: 1.3em;
+  }
+
+  p {
+    margin-bottom: 15px;
+    font-size: 1.05em;
+  }
+
+  ul {
+    list-style: none;
+    padding-left: 0;
+  }
+
+  ul li {
+    background: #ffffff;
+    margin-bottom: 12px;
+    padding: 16px 24px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    transition: all 0.2s ease-in-out;
+    width: 100%;
+    border-left: 4px solid rgba(13,71,161,0.15);
+  }
+
+  ul li:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+    border-left-color: var(--secondary);
+  }
+
+  /* Ikon disesuaikan untuk Fakultas Kelautan & Pelayaran */
+  .facilities li::before {
+    content: "⚓"; /* simbol kelautan & pelayaran */
+    margin-right: 12px;
+  }
+
+  .highlight {
+    background: linear-gradient(
+      90deg,
+      rgba(245,124,0,0.18),
+      transparent
+    );
+    border-left: 4px solid var(--secondary);
+    padding: 18px 22px;
+    border-radius: 10px;
+    margin-bottom: 25px;
+  }
+
+  footer {
+    width: 100%;
+    background: linear-gradient(
+      135deg,
+      var(--primary),
+      var(--accent)
+    );
+    color: #ffffff;
+    text-align: center;
+    padding: 40px 20px;
+    font-size: 0.95em;
+    margin-top: 60px;
+  }
+
+  /* Responsif */
+  @media (max-width: 768px) {
+    header, main {
+      padding: 30px 5vw;
+    }
+    h1 {
+      font-size: 1.9em;
+    }
     h2 {
-      font-size: 1.8em;
-      margin-bottom: 20px;
-      border-left: 5px solid var(--primary);
-      padding-left: 15px;
+      font-size: 1.5em;
     }
+  }
+</style>
 
-    h3 {
-      margin-top: 30px;
-      color: var(--accent);
-    }
-
-    ul {
-      list-style: none;
-      padding-left: 0;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 15px;
-    }
-
-    ul li {
-      background-color: var(--card);
-      padding: 16px 20px;
-      border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-    }
-
-    .facilities li::before {
-      content: '🌊';
-      margin-right: 10px;
-    }
-
-    footer {
-      background-color: var(--text);
-      color: white;
-      text-align: center;
-      padding: 40px 20px;
-      margin-top: 80px;
-      width: 100%;
-    }
-  </style>
 </head>
 <body>
   <header>
@@ -106,206 +157,561 @@
       <p>Program Pendidikan Vokasi Universitas Seruni, berlokasi di Kampus Vokasi, dirancang untuk menghasilkan lulusan siap kerja melalui pendidikan terapan berbasis industri. Program ini menawarkan berbagai jurusan yang relevan dengan kebutuhan dunia kerja modern di bidang komunikasi, kreatif, administrasi, dan teknik.</p>
     </section>
 
-  <section>
+<section>
   <h2>Program Studi</h2>
 
-  <!-- DIPLOMA 1 -->
-  <h3>Diploma 1 (D1)</h3>
+  <!-- ================================================== -->
+  <!-- Departemen Administrasi, Manajemen, Bisnis & Logistik -->
+  <!-- ================================================== -->
+  <h3>Departemen Administrasi, Manajemen, Bisnis & Logistik</h3>
+
+  <h4>Diploma 1 (Ahli Pratama)</h4>
   <ul>
     <li>Administrasi Perkantoran Modern</li>
-    <li>Teknologi Informasi Dasar</li>
-    <li>Bahasa Inggris untuk Komunikasi Bisnis</li>
-    <li>Desain Multimedia Interaktif</li>
-    <li>Teknik Komputer dan Perakitan</li>
     <li>Akuntansi dan Keuangan Dasar</li>
-    <li>Pemrograman Aplikasi Mobile</li>
     <li>Manajemen Administrasi Logistik</li>
-    <li>Operator Sistem Informasi Geografis</li>
-    <li>Pelayanan Kesehatan Komunitas</li>
-    <li>Teknik Pendingin dan Tata Udara</li>
-    <li>Desain Interior dan Tata Ruang</li>
-    <li>Teknik Listrik Dasar</li>
-    <li>Peternakan Modern</li>
     <li>Administrasi Pemerintahan Desa</li>
   </ul>
 
-  <!-- DIPLOMA 2 -->
-  <h3>Diploma 2 (D2)</h3>
+  <h4>Diploma 2 (Ahli Muda)</h4>
   <ul>
     <li>Administrasi Publik dan Layanan Masyarakat</li>
-    <li>Teknik Otomotif dan Sistem Elektronik</li>
-    <li>Manajemen Pemasaran Digital</li>
     <li>Manajemen Keuangan Mikro</li>
     <li>Manajemen Bisnis Kuliner</li>
-    <li>Teknik Jaringan Komputer dan IoT</li>
-    <li>Teknik Sipil Dasar</li>
-    <li>Teknik Listrik dan Energi Terbarukan</li>
-    <li>Agribisnis dan Ketahanan Pangan</li>
-    <li>Teknologi Pengelolaan Lingkungan</li>
-    <li>Teknik Pengolahan Hasil Pertanian</li>
-    <li>Desain Interior dan Arsitektur Mini</li>
-    <li>Teknik Gambar dan Konstruksi Bangunan</li>
-    <li>Teknik Geomatika dan Penginderaan Jauh</li>
     <li>Administrasi Bisnis dan Logistik</li>
   </ul>
 
-  <!-- DIPLOMA 3 -->
-  <h3>Diploma 3 (D3)</h3>
+  <h4>Diploma 3 (Ahli Madya)</h4>
   <ul>
     <li>Administrasi Rumah Sakit</li>
-    <li>Manajemen Perpajakan</li>
-    <li>Akuntansi</li>
     <li>Administrasi Keuangan dan Perbankan</li>
     <li>Administrasi Asuransi dan Aktuaria</li>
+    <li>Akuntansi</li>
+    <li>Manajemen Perpajakan</li>
     <li>Administrasi Perkantoran</li>
-    <li>Penyiaran Multimedia</li>
-    <li>Desain Produk</li>
-    <li>Periklanan Digital dan Kreatif</li>
-    <li>Hubungan Masyarakat</li>
-    <li>Desain Grafis & Animasi</li>
-    <li>Teknik Komputer dan Jaringan</li>
-    <li>Teknik Elektronika</li>
-    <li>Teknik Mekatronika</li>
-    <li>Teknik Otomasi Industri</li>
-    <li>Teknik Kendaraan Ringan</li>
-    <li>Teknik Alat Berat</li>
-    <li>Teknik Konstruksi</li>
-    <li>Elektronika dan Instrumentasi</li>
-    <li>Metrologi dan Instrumentasi</li>
-    <li>Teknik Pengelasan</li>
-    <li>Agroindustri</li>
-    <li>Rekam Medis</li>
-    <li>Kesehatan Hewan</li>
-    <li>Pengelolaan Hutan</li>
-    <li>Penginderaan Jauh dan Sistem Informasi Geografi</li>
-    <li>Teknologi Pangan dan Gizi</li>
-    <li>Teknik Mesin dan Manufaktur</li>
-    <li>Teknik Perminyakan</li>
-    <li>Teknik Sipil dan Infrastruktur</li>
     <li>Manajemen Transportasi dan Logistik</li>
     <li>Manajemen Pemasaran dan Retail</li>
-    <li>Desain Interior</li>
-    <li>Teknik Energi Terbarukan</li>
-    <li>Teknik Informatika Industri</li>
-    <li>Teknik Telekomunikasi</li>
-    <li>Manajemen Produksi Film dan TV</li>
-    <li>Manajemen Usaha Peternakan</li>
-    <li>Pengelolaan Sumber Daya Alam dan Lingkungan</li>
-    <li>Teknik Geofisika Terapan</li>
   </ul>
 
-  <!-- DIPLOMA 4 -->
-  <h3>Diploma 4 (D4)</h3>
+  <h4>Diploma 4 (Sarjana Terapan)</h4>
   <ul>
-    <li>Produksi Media</li>
-    <li>Bisnis Digital dan Kreatif</li>
     <li>Manajemen Rekod dan Arsip</li>
     <li>Manajemen Bisnis Pariwisata</li>
+    <li>Bisnis Digital dan Kreatif</li>
     <li>Manajemen Perhotelan</li>
-    <li>Fisioterapi</li>
-    <li>Okupasi Terapi</li>
-    <li>Teknologi Laboratorium Medis</li>
-    <li>Teknologi Informasi dan Komunikasi</li>
-    <li>Teknik Pengelolaan dan Pemeliharaan Infrastruktur Sipil</li>
-    <li>Teknik Pengelolaan Energi Terbarukan</li>
-    <li>Teknik Tenaga Listrik</li>
-    <li>Teknologi Laboratorium Medik</li>
-    <li>Bidan Pendidik</li>
-    <li>Keselamatan dan Kesehatan Kerja</li>
-    <li>Teknologi Rekayasa Perangkat Lunak</li>
-    <li>Teknologi Rekayasa Otomotif</li>
-    <li>Teknologi Rekayasa Konstruksi Bangunan</li>
-    <li>Teknologi Rekayasa Energi dan Kelistrikan</li>
     <li>Manajemen Agribisnis dan Ketahanan Pangan</li>
     <li>Manajemen Transportasi Maritim</li>
-    <li>Teknologi Rekayasa Geomatika</li>
-    <li>Teknologi Rekayasa Geofisika</li>
-    <li>Teknologi Rekayasa Telekomunikasi</li>
     <li>Manajemen Logistik dan Rantai Pasok</li>
-    <li>Teknologi Rekayasa Komputer</li>
-    <li>Teknologi Rekayasa Internet of Things</li>
-    <li>Teknologi Rekayasa Instrumentasi</li>
-    <li>Teknologi Rekayasa Material</li>
-    <li>Teknologi Rekayasa Mesin</li>
-    <li>Teknologi Rekayasa Sipil</li>
-    <li>Teknologi Rekayasa Kimia Industri</li>
-    <li>Teknologi Rekayasa Migas dan Petrokimia</li>
-    <li>Teknologi Rekayasa Lingkungan</li>
-    <li>Teknologi Rekayasa Pangan</li>
-    <li>Teknologi Rekayasa Pertanian</li>
   </ul>
 
-  <!-- MAGISTER TERAPAN -->
-  <h3>Magister Terapan (S2 Terapan)</h3>
+  <h4>Magister Terapan (S2 Terapan)</h4>
   <ul>
     <li>Magister Terapan Administrasi dan Manajemen Publik</li>
     <li>Magister Terapan Keuangan dan Akuntansi</li>
-    <li>Magister Terapan Teknologi Informasi dan Inovasi Digital</li>
-    <li>Magister Terapan Rekayasa Energi dan Otomasi</li>
-    <li>Magister Terapan Kesehatan dan Rehabilitasi Medik</li>
-    <li>Magister Terapan Teknik Sipil dan Infrastruktur</li>
-    <li>Magister Terapan Agribisnis dan Ketahanan Pangan</li>
     <li>Magister Terapan Manajemen Transportasi dan Logistik</li>
-    <li>Magister Terapan Komunikasi dan Produksi Media</li>
     <li>Magister Terapan Pariwisata dan Perhotelan</li>
-    <li>Magister Terapan Rekayasa Komputer dan Data</li>
-    <li>Magister Terapan Sistem Informasi Geografi</li>
-    <li>Magister Terapan Teknologi Kelautan dan Maritim</li>
-    <li>Magister Terapan Desain dan Inovasi Industri</li>
-    <li>Magister Terapan Kesehatan Masyarakat Digital</li>
   </ul>
 
-  <!-- DOKTOR TERAPAN -->
-  <h3>Doktor Terapan (S3 Terapan)</h3>
+  <h4>Doktor Terapan (S3 Terapan)</h4>
   <ul>
-    <li>Doktor Terapan Rekayasa dan Inovasi Industri</li>
     <li>Doktor Terapan Administrasi Publik dan Kebijakan Terapan</li>
     <li>Doktor Terapan Manajemen dan Kepemimpinan Teknologi</li>
-    <li>Doktor Terapan Kesehatan dan Rehabilitasi Terpadu</li>
-    <li>Doktor Terapan Energi dan Teknologi Berkelanjutan</li>
-    <li>Doktor Terapan Teknologi Informasi dan Sistem Cerdas</li>
-    <li>Doktor Terapan Geospasial dan Kebumian</li>
-    <li>Doktor Terapan Agribisnis dan Pangan Berkelanjutan</li>
-    <li>Doktor Terapan Komunikasi dan Media Inovatif</li>
-    <li>Doktor Terapan Teknologi Kelautan dan Perikanan</li>
-    <li>Doktor Terapan Desain dan Teknologi Kreatif</li>
-    <li>Doktor Terapan Manajemen Bencana dan Mitigasi Risiko</li>
   </ul>
+
+
+  <!-- ================================ -->
+<!-- Departemen Teknologi Informasi, Komputer & Data -->
+<!-- ================================ -->
+<h3>Departemen Teknologi Informasi, Komputer & Data</h3>
+
+<h4>Program Diploma 1 (Ahli Pratama)</h4>
+<ul>
+  <li>Teknologi Informasi Dasar</li>
+  <li>Teknik Komputer dan Perakitan</li>
+  <li>Pemrograman Aplikasi Mobile</li>
+  <li>Operator Sistem Informasi Geografis</li>
+</ul>
+
+<h4>Program Diploma 2 (Ahli Muda)</h4>
+<ul>
+  <li>Teknik Jaringan Komputer dan IoT</li>
+</ul>
+
+<h4>Program Diploma 3 (Ahli Madya)</h4>
+<ul>
+  <li>Teknik Komputer dan Jaringan</li>
+  <li>Teknik Informatika Industri</li>
+</ul>
+
+<h4>Program Diploma 4 (Sarjana Terapan)</h4>
+<ul>
+  <li>Teknologi Informasi dan Komunikasi</li>
+  <li>Teknologi Rekayasa Perangkat Lunak</li>
+  <li>Teknologi Rekayasa Komputer</li>
+  <li>Teknologi Rekayasa Internet of Things</li>
+</ul>
+
+<h4>Program Magister Terapan (S2 Terapan)</h4>
+<ul>
+  <li>Magister Terapan Teknologi Informasi dan Inovasi Digital</li>
+  <li>Magister Terapan Rekayasa Komputer dan Data</li>
+  <li>Magister Terapan Sistem Informasi Geografi</li>
+</ul>
+
+<h4>Program Doktor Terapan (S3 Terapan)</h4>
+<ul>
+  <li>Doktor Terapan Teknologi Informasi dan Sistem Cerdas</li>
+</ul>
+
+
+<!-- ================================ -->
+<!-- Departemen Desain, Media, Komunikasi & Kreatif -->
+<!-- ================================ -->
+<h3>Departemen Desain, Media, Komunikasi & Kreatif</h3>
+
+<h4>Program Diploma 1 (Ahli Pratama)</h4>
+<ul>
+  <li>Desain Multimedia Interaktif</li>
+  <li>Desain Interior dan Tata Ruang</li>
+  <li>Bahasa Inggris untuk Komunikasi Bisnis</li>
+</ul>
+
+<h4>Program Diploma 2 (Ahli Muda)</h4>
+<ul>
+  <li>Desain Interior dan Arsitektur Mini</li>
+</ul>
+
+<h4>Program Diploma 3 (Ahli Madya)</h4>
+<ul>
+  <li>Penyiaran Multimedia</li>
+  <li>Desain Produk</li>
+  <li>Periklanan Digital dan Kreatif</li>
+  <li>Hubungan Masyarakat</li>
+  <li>Desain Grafis & Animasi</li>
+  <li>Manajemen Produksi Film dan TV</li>
+  <li>Desain Interior</li>
+</ul>
+
+<h4>Program Diploma 4 (Sarjana Terapan)</h4>
+<ul>
+  <li>Produksi Media</li>
+</ul>
+
+<h4>Program Magister Terapan (S2 Terapan)</h4>
+<ul>
+  <li>Magister Terapan Komunikasi dan Produksi Media</li>
+  <li>Magister Terapan Desain dan Inovasi Industri</li>
+</ul>
+
+<h4>Program Doktor Terapan (S3 Terapan)</h4>
+<ul>
+  <li>Doktor Terapan Komunikasi dan Media Inovatif</li>
+  <li>Doktor Terapan Desain dan Teknologi Kreatif</li>
+</ul>
+
+
+
+<!-- ================================ -->
+<!-- Departemen Teknik Sipil, Konstruksi & Infrastruktur -->
+<!-- ================================ -->
+<h3>Departemen Teknik Sipil, Konstruksi & Infrastruktur</h3>
+
+<h4>Diploma 2 (Ahli Muda)</h4>
+<ul>
+  <li>Teknik Sipil Dasar</li>
+  <li>Teknik Gambar dan Konstruksi Bangunan</li>
+</ul>
+
+<h4>Diploma 3 (Ahli Madya)</h4>
+<ul>
+  <li>Teknik Konstruksi</li>
+  <li>Teknik Sipil dan Infrastruktur</li>
+  <li>Teknik Alat Berat</li>
+</ul>
+
+<h4>Diploma 4 (Sarjana Terapan)</h4>
+<ul>
+  <li>Teknik Pengelolaan dan Pemeliharaan Infrastruktur Sipil</li>
+  <li>Teknologi Rekayasa Konstruksi Bangunan</li>
+  <li>Teknologi Rekayasa Sipil</li>
+</ul>
+
+<h4>Program Magister Terapan (S2 Terapan)</h4>
+<ul>
+  <li>Magister Terapan Teknik Sipil dan Infrastruktur</li>
+</ul>
+
+
+
+<!-- ================================ -->
+<!-- Departemen Teknik Mesin, Otomotif & Manufaktur -->
+<!-- ================================ -->
+<h3>Departemen Teknik Mesin, Otomotif & Manufaktur</h3>
+
+<h4>Diploma 1 (Ahli Pratama)</h4>
+<ul>
+  <li>Teknik Pendingin dan Tata Udara</li>
+</ul>
+
+<h4>Diploma 2 (Ahli Muda)</h4>
+<ul>
+  <li>Teknik Otomotif dan Sistem Elektronik</li>
+</ul>
+
+<h4>Diploma 3 (Ahli Madya)</h4>
+<ul>
+  <li>Teknik Kendaraan Ringan</li>
+  <li>Teknik Pengelasan</li>
+  <li>Teknik Mesin dan Manufaktur</li>
+</ul>
+
+<h4>Diploma 4 (Sarjana Terapan)</h4>
+<ul>
+  <li>Teknologi Rekayasa Otomotif</li>
+  <li>Teknologi Rekayasa Mesin</li>
+  <li>Teknologi Rekayasa Material</li>
+</ul>
+
+
+<!-- ================================ -->
+<!-- Departemen Teknik Listrik, Energi & Kelistrikan -->
+<!-- ================================ -->
+<h3>Departemen Teknik Listrik, Energi & Kelistrikan</h3>
+
+<h4>Diploma 1 (Ahli Pratama)</h4>
+<ul>
+  <li>Teknik Listrik Dasar</li>
+</ul>
+
+<h4>Diploma 2 (Ahli Muda)</h4>
+<ul>
+  <li>Teknik Listrik dan Energi Terbarukan</li>
+</ul>
+
+<h4>Diploma 3 (Ahli Madya)</h4>
+<ul>
+  <li>Teknik Energi Terbarukan</li>
+</ul>
+
+<h4>Diploma 4 (Sarjana Terapan)</h4>
+<ul>
+  <li>Teknik Tenaga Listrik</li>
+  <li>Teknik Pengelolaan Energi Terbarukan</li>
+  <li>Teknologi Rekayasa Energi dan Kelistrikan</li>
+</ul>
+
+<h4>Program Magister Terapan (S2 Terapan)</h4>
+<ul>
+  <li>Magister Terapan Rekayasa Energi dan Otomasi</li>
+</ul>
+
+<h4>Program Doktor Terapan (S3 Terapan)</h4>
+<ul>
+  <li>Doktor Terapan Energi dan Teknologi Berkelanjutan</li>
+</ul>
+
+<!-- ================================ -->
+<!-- Departemen Teknik Elektronika, Telekomunikasi & Instrumentasi -->
+<!-- ================================ -->
+<h3>Departemen Teknik Elektronika, Telekomunikasi & Instrumentasi</h3>
+
+<h4>Program Diploma 3 (Ahli Madya)</h4>
+<ul>
+  <li>Teknik Elektronika</li>
+  <li>Teknik Mekatronika</li>
+  <li>Teknik Otomasi Industri</li>
+  <li>Elektronika dan Instrumentasi</li>
+  <li>Metrologi dan Instrumentasi</li>
+  <li>Teknik Telekomunikasi</li>
+</ul>
+
+<h4>Program Diploma 4 (Sarjana Terapan)</h4>
+<ul>
+  <li>Teknologi Rekayasa Telekomunikasi</li>
+  <li>Teknologi Rekayasa Instrumentasi</li>
+</ul>
+
+  
+<!-- ================================ -->
+<!-- Departemen Geospasial, Geomatika & Kebumian -->
+<!-- ================================ -->
+<h3>Departemen Geospasial, Geomatika & Kebumian</h3>
+
+<h4>Program Diploma 2 (Ahli Muda)</h4>
+<ul>
+  <li>Teknik Geomatika dan Penginderaan Jauh</li>
+</ul>
+
+<h4>Program Diploma 3 (Ahli Madya)</h4>
+<ul>
+  <li>Penginderaan Jauh dan Sistem Informasi Geografi</li>
+  <li>Teknik Geofisika Terapan</li>
+</ul>
+
+<h4>Program Diploma 4 (Sarjana Terapan)</h4>
+<ul>
+  <li>Teknologi Rekayasa Geomatika</li>
+  <li>Teknologi Rekayasa Geofisika</li>
+</ul>
+
+<h4>Program Magister Terapan (S2 Terapan)</h4>
+<ul>
+  <li>Magister Terapan Geomatika dan Sistem Informasi Geospasial</li>
+  <li>Magister Terapan Geofisika Terapan dan Eksplorasi Kebumian</li>
+</ul>
+
+<h4>Program Doktor Terapan (S3 Terapan)</h4>
+<ul>
+  <li>Doktor Terapan Geospasial dan Kebumian</li>
+</ul>
+
+
+<!-- ================================ -->
+<!-- Departemen Migas, Kimia & Proses Industri -->
+<!-- ================================ -->
+<h3>Departemen Migas, Kimia & Proses Industri</h3>
+
+<h4>Program Diploma 3 (Ahli Madya)</h4>
+<ul>
+  <li>Teknik Perminyakan</li>
+</ul>
+
+<h4>Program Diploma 4 (Sarjana Terapan)</h4>
+<ul>
+  <li>Teknologi Rekayasa Kimia Industri</li>
+  <li>Teknologi Rekayasa Migas dan Petrokimia</li>
+</ul>
+
+
+<!-- ================================ -->
+<!-- Departemen Pertanian, Pangan, Peternakan & Kehutanan -->
+<!-- ================================ -->
+<h3>Departemen Pertanian, Pangan, Peternakan & Kehutanan</h3>
+
+<h4>Diploma 1 (Ahli Pratama)</h4>
+<ul>
+  <li>Peternakan Modern</li>
+</ul>
+
+<h4>Diploma 2 (Ahli Muda)</h4>
+<ul>
+  <li>Agribisnis dan Ketahanan Pangan</li>
+  <li>Teknik Pengolahan Hasil Pertanian</li>
+</ul>
+
+<h4>Diploma 3 (Ahli Madya)</h4>
+<ul>
+  <li>Agroindustri</li>
+  <li>Kesehatan Hewan</li>
+  <li>Pengelolaan Hutan</li>
+  <li>Teknologi Pangan dan Gizi</li>
+  <li>Manajemen Usaha Peternakan</li>
+  <li>Pengelolaan Sumber Daya Alam dan Lingkungan</li>
+</ul>
+
+<h4>Diploma 4 (Sarjana Terapan)</h4>
+<ul>
+  <li>Manajemen Agribisnis dan Ketahanan Pangan</li>
+  <li>Teknologi Rekayasa Pangan</li>
+  <li>Teknologi Rekayasa Pertanian</li>
+  <li>Teknologi Rekayasa Lingkungan</li>
+</ul>
+
+<h4>Program Magister Terapan (S2 Terapan)</h4>
+<ul>
+  <li>Magister Terapan Agribisnis dan Ketahanan Pangan</li>
+</ul>
+
+<h4>Program Doktor Terapan (S3 Terapan)</h4>
+<ul>
+  <li>Doktor Terapan Agribisnis dan Pangan Berkelanjutan</li>
+</ul>
+
+
+<!-- ================================ -->
+<!-- Departemen Kesehatan & Rehabilitasi -->
+<!-- ================================ -->
+<h3>Departemen Kesehatan & Rehabilitasi</h3>
+
+<h4>Diploma 2 (Ahli Muda)</h4>
+<ul>
+  <li>Pelayanan Kesehatan Komunitas</li>
+</ul>
+
+<h4>Diploma 3 (Ahli Madya)</h4>
+<ul>
+  <li>Rekam Medis</li>
+</ul>
+
+<h4>Diploma 4 (Sarjana Terapan)</h4>
+<ul>
+  <li>Fisioterapi</li>
+  <li>Okupasi Terapi</li>
+  <li>Teknologi Laboratorium Medis</li>
+  <li>Teknologi Laboratorium Medik</li>
+  <li>Bidan Pendidik</li>
+</ul>
+
+<h4>Program Magister Terapan (S2 Terapan)</h4>
+<ul>
+  <li>Magister Terapan Kesehatan dan Rehabilitasi Medik</li>
+  <li>Magister Terapan Kesehatan Masyarakat Digital</li>
+</ul>
+
+<h4>Program Doktor Terapan (S3 Terapan)</h4>
+<ul>
+  <li>Doktor Terapan Kesehatan dan Rehabilitasi Terpadu</li>
+</ul>
+
+
+<!-- ================================ -->
+<!-- Departemen Kelautan, Maritim & Transportasi -->
+<!-- ================================ -->
+<h3>Departemen Kelautan, Maritim & Transportasi</h3>
+
+<h4>Diploma 3 (Ahli Madya)</h4>
+<ul>
+  <li>Manajemen Transportasi dan Logistik</li>
+  <li>Pengelolaan Transportasi Laut dan Kepelabuhanan</li>
+  <li>Teknologi Operasi Kapal dan Sistem Maritim</li>
+</ul>
+
+<h4>Diploma 4 (Sarjana Terapan)</h4>
+<ul>
+  <li>Manajemen Transportasi Maritim</li>
+  <li>Teknologi Rekayasa Sistem Maritim</li>
+  <li>Teknologi Rekayasa Transportasi Laut</li>
+</ul>
+
+<h4>Program Magister Terapan (S2 Terapan)</h4>
+<ul>
+  <li>Magister Terapan Teknologi Kelautan dan Maritim</li>
+</ul>
+
+<h4>Program Doktor Terapan (S3 Terapan)</h4>
+<ul>
+  <li>Doktor Terapan Teknologi Kelautan dan Perikanan</li>
+</ul>
+
+  
+<!-- ================================ -->
+<!-- Departemen Manajemen Risiko & Kebencanaan -->
+<!-- ================================ -->
+<h3>Departemen Manajemen Risiko & Kebencanaan</h3>
+
+<h4>Diploma 4 (Sarjana Terapan)</h4>
+<ul>
+  <li>Manajemen Risiko Industri</li>
+  <li>Keselamatan, Kesehatan Kerja dan Lingkungan (K3L)</li>
+  <li>Teknologi Rekayasa Mitigasi Bencana</li>
+</ul>
+
+<h4>Program Magister Terapan (S2 Terapan)</h4>
+<ul>
+  <li>Magister Terapan Manajemen Risiko dan Keselamatan</li>
+  <li>Magister Terapan Manajemen Bencana dan Ketahanan Wilayah</li>
+</ul>
+
+<h4>Program Doktor Terapan (S3 Terapan)</h4>
+<ul>
+  <li>Doktor Terapan Manajemen Bencana dan Mitigasi Risiko</li>
+</ul>
+
 </section>
 
+
+    
 <section class="facilities">
   <h2>Fasilitas Unggulan</h2>
   <ul>
+    <!-- Teknologi Informasi, Komputer & Data -->
     <li>Laboratorium Komputer dan Multimedia Interaktif</li>
+    <li>Laboratorium Rekayasa Perangkat Lunak dan Sistem Informasi</li>
+    <li>Laboratorium Rekayasa Komputer dan Internet of Things (IoT)</li>
+    <li>Data Science & Artificial Intelligence Applied Lab</li>
+    <li>Cyber Network & Industrial Informatics Lab</li>
+
+    <!-- Media, Desain, Kreatif & Komunikasi -->
     <li>Studio Produksi dan Broadcasting</li>
+    <li>Studio Produksi Digital dan Creative Lab</li>
+    <li>Studio Animasi, Motion Graphic dan Virtual Production</li>
+    <li>Lab Inovasi dan Desain Kreatif</li>
+    <li>Studio Desain Grafis, UI/UX dan Periklanan Digital</li>
+
+    <!-- Administrasi, Manajemen, Bisnis & Logistik -->
     <li>Pusat Inkubasi Bisnis Vokasi</li>
     <li>Pusat Pelatihan Administrasi Modern</li>
-    <li>Workshop Desain Produk & Mesin CNC</li>
-    <li>Bengkel Otomotif dan Alat Berat</li>
-    <li>Studio Simulasi Kesehatan dan Rekam Medis Digital</li>
-    <li>Laboratorium Elektronika dan Mekatronika Terpadu</li>
-    <li>GIS dan Remote Sensing Lab</li>
-    <li>Laboratorium Agroindustri dan Peternakan Modern</li>
-    <li>Laboratorium Teknik Sipil dan Energi Terbarukan</li>
-    <li>Pusat Latihan Kebidanan dan Klinik Edukasi</li>
-    <li>Fasilitas K3 Training Center</li>
-    <li>Laboratorium Kesehatan & Diagnostik Modern</li>
-    <li>Workshop Desain Produk & Mesin CNC</li>
     <li>Pusat Pelatihan Arsip & Rekod Digital</li>
-    <li>Hotel Simulasi dan Front Office Training Room</li>
-    <li>Studio Produksi Digital dan Creative Lab</li>
-    <li>Laboratorium Energi Terbarukan dan Otomasi</li>
-    <li>Pusat Pelatihan Teknologi Kelautan dan Maritim</li>
-    <li>Laboratorium Rekayasa Komputer dan IoT</li>
-    <li>Studio Animasi dan Virtual Production</li>
-    <li>Smart Manufacturing & CNC Training Center</li>
-    <li>Laboratorium Geospasial dan Kebumian Terapan</li>
-    <li>Pusat Pelatihan Agribisnis Modern</li>
-    <li>Lab Inovasi dan Desain Kreatif</li>
-    <li>Pusat Studi Energi dan Material Maju</li>
     <li>Pusat Digitalisasi Arsip dan Data Publik</li>
+    <li>Business Simulation & Digital Marketing Lab</li>
+    <li>Supply Chain, Logistik dan Transportasi Simulation Center</li>
+
+    <!-- Akuntansi, Keuangan & Perpajakan -->
+    <li>Laboratorium Akuntansi, Audit dan Perpajakan Terapan</li>
+    <li>Financial Technology (FinTech) & Microfinance Lab</li>
+
+    <!-- Teknik Mesin, Manufaktur & Otomotif -->
+    <li>Workshop Desain Produk & Mesin CNC</li>
+    <li>Smart Manufacturing & CNC Training Center</li>
+    <li>Bengkel Otomotif dan Alat Berat</li>
+    <li>Laboratorium Teknik Mesin, Pengelasan dan Manufaktur</li>
+    <li>Laboratorium Material dan Rekayasa Produksi</li>
+
+    <!-- Teknik Listrik, Energi & Otomasi -->
+    <li>Laboratorium Teknik Listrik dan Instalasi Industri</li>
+    <li>Laboratorium Energi Terbarukan dan Otomasi</li>
+    <li>Pusat Studi Energi dan Material Maju</li>
+    <li>Renewable Energy & Smart Grid Training Center</li>
+
+    <!-- Teknik Elektronika, Telekomunikasi & Instrumentasi -->
+    <li>Laboratorium Elektronika dan Mekatronika Terpadu</li>
+    <li>Laboratorium Instrumentasi, Metrologi dan Kontrol Industri</li>
+    <li>Telekomunikasi dan Fiber Optic Training Lab</li>
+
+    <!-- Teknik Sipil, Konstruksi & Infrastruktur -->
+    <li>Laboratorium Teknik Sipil dan Energi Terbarukan</li>
+    <li>Laboratorium Struktur, Bahan Bangunan dan Konstruksi</li>
+    <li>Infrastructure Maintenance & Building Management Lab</li>
+
+    <!-- Geospasial, Geomatika & Kebumian -->
+    <li>GIS dan Remote Sensing Lab</li>
+    <li>Laboratorium Geospasial dan Kebumian Terapan</li>
+    <li>Geofisika Terapan & Survey Kebumian Lab</li>
+
+    <!-- Migas, Kimia & Proses Industri -->
+    <li>Laboratorium Kimia Industri dan Proses Rekayasa</li>
+    <li>Migas, Petrokimia dan Proses Produksi Terapan Lab</li>
+
+    <!-- Pertanian, Pangan, Peternakan & Kehutanan -->
+    <li>Laboratorium Agroindustri dan Peternakan Modern</li>
+    <li>Pusat Pelatihan Agribisnis Modern</li>
+    <li>Laboratorium Teknologi Pangan dan Gizi</li>
+    <li>Smart Farming, Precision Agriculture & Greenhouse Lab</li>
+    <li>Laboratorium Pengelolaan Hutan dan Lingkungan</li>
+
+    <!-- Kesehatan & Rehabilitasi -->
+    <li>Studio Simulasi Kesehatan dan Rekam Medis Digital</li>
+    <li>Pusat Latihan Kebidanan dan Klinik Edukasi</li>
+    <li>Laboratorium Kesehatan & Diagnostik Modern</li>
+    <li>Fisioterapi, Okupasi Terapi dan Rehabilitasi Medik Center</li>
+    <li>Kesehatan Masyarakat Digital & Telemedicine Lab</li>
+
+    <!-- K3, Risiko & Kebencanaan -->
+    <li>Fasilitas K3 Training Center</li>
+    <li>Manajemen Risiko, Keselamatan Industri dan Lingkungan Lab</li>
+    <li>Pusat Simulasi Mitigasi Bencana dan Ketahanan Wilayah</li>
+
+    <!-- Kelautan, Maritim & Transportasi -->
+    <li>Pusat Pelatihan Teknologi Kelautan dan Maritim</li>
+    <li>Marine Technology, Port & Shipping Simulation Lab</li>
+    <li>Laboratorium Transportasi Maritim dan Logistik Laut</li>
+
+    <!-- Pariwisata & Perhotelan -->
+    <li>Hotel Simulasi dan Front Office Training Room</li>
+    <li>Hospitality, Culinary dan Tourism Management Lab</li>
   </ul>
 </section>
+
 
 
     <section>
