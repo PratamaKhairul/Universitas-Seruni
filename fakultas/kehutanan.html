@@ -5,109 +5,134 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Fakultas Kehutanan - Universitas Seruni</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
-  <style>
-    :root { 
-      --primary: #2ecc71;
-      --accent: #27ae60;
-      --bg: #f6fff9;
-      --text: #2c3e50;
-      --card: #ffffff;
-    }
+<style>
+  :root {
+    --primary: #4e342e;   /* Coklat kehutanan – kayu & hutan */
+    --accent: #6d4c41;    /* Coklat lebih muda – tanah & ekosistem */
+    --bg: #f5f1ec;        /* Krem alami hutan */
+    --text: #2b2b2b;      /* Gelap netral untuk keterbacaan */
+  }
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
 
-    body {
-      font-family: 'Inter', sans-serif;
-      background-color: var(--bg);
-      color: var(--text);
-      overflow-x: hidden;
-    }
+  body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
 
-    header {
-      background-color: var(--card);
-      padding: 40px 60px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-      width: 100%;
-    }
+  header {
+    background: linear-gradient(135deg, var(--primary), var(--accent));
+    color: #ffffff;
+    padding: 50px 5vw;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+    width: 100%;
+  }
 
-    header h1 {
-      margin: 0;
-      font-size: 2.2em;
-      color: var(--primary);
-    }
+  header h1 {
+    font-size: 2.3em;
+    font-weight: 700;
+  }
 
-    /* Bagian utama dibuat full width */
-    main {
-      width: 100%;
-      max-width: none;
-      margin: 0;
-      padding: 60px 60px;
-    }
+  main {
+    width: 100%;
+    padding: 60px 6vw;
+    background: #fffdf8;
+  }
 
-    section {
-      margin-bottom: 60px;
-      width: 100%;
-    }
+  section {
+    width: 100%;
+    margin-bottom: 70px;
+  }
 
+  h2 {
+    font-size: 1.8em;
+    border-left: 6px solid var(--accent);
+    padding-left: 15px;
+    margin-bottom: 25px;
+    font-weight: 700;
+  }
+
+  h3 {
+    color: var(--primary);
+    margin-top: 25px;
+    margin-bottom: 10px;
+    font-size: 1.3em;
+  }
+
+  p {
+    margin-bottom: 15px;
+    font-size: 1.05em;
+  }
+
+  ul {
+    list-style: none;
+    padding-left: 0;
+  }
+
+  ul li {
+    background: #ffffff;
+    margin-bottom: 12px;
+    padding: 16px 24px;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+    transition: all 0.2s ease-in-out;
+    width: 100%;
+  }
+
+  ul li:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 14px rgba(0,0,0,0.12);
+  }
+
+  /* Ikon disesuaikan untuk Fakultas Kehutanan */
+  .facilities li::before {
+    content: "🌲"; /* simbol kehutanan */
+    margin-right: 10px;
+  }
+
+  .highlight {
+    background: linear-gradient(
+      90deg,
+      rgba(109,76,65,0.18),
+      transparent
+    );
+    border-left: 4px solid var(--accent);
+    padding: 18px 22px;
+    border-radius: 10px;
+    margin-bottom: 25px;
+  }
+
+  footer {
+    width: 100%;
+    background-color: var(--primary);
+    color: #ffffff;
+    text-align: center;
+    padding: 40px 20px;
+    font-size: 0.95em;
+    margin-top: 60px;
+  }
+
+  /* Responsif */
+  @media (max-width: 768px) {
+    header, main {
+      padding: 30px 5vw;
+    }
+    h1 {
+      font-size: 1.9em;
+    }
     h2 {
-      font-size: 1.8em;
-      margin-bottom: 20px;
-      border-left: 5px solid var(--primary);
-      padding-left: 15px;
+      font-size: 1.5em;
     }
+  }
+</style>
 
-    h3 {
-      margin-top: 30px;
-      color: var(--accent);
-    }
-
-    ul {
-      list-style: none;
-      padding-left: 0;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 15px;
-      width: 100%;
-    }
-
-    ul li {
-      background-color: var(--card);
-      padding: 16px 20px;
-      border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-    }
-
-    .facilities li::before {
-      content: '🧠';
-      margin-right: 10px;
-    }
-
-    footer {
-      background-color: var(--text);
-      color: white;
-      text-align: center;
-      padding: 50px 30px;
-      margin-top: 80px;
-      width: 100%;
-    }
-
-    /* Responsif di layar kecil */
-    @media (max-width: 768px) {
-      header {
-        padding: 25px 30px;
-      }
-      main {
-        padding: 40px 25px;
-      }
-      ul {
-        grid-template-columns: 1fr;
-      }
-    }
-  </style>
 </head>
 <body>
   <header>
@@ -120,37 +145,100 @@
       <p>Fakultas Kehutanan Universitas Seruni berkomitmen untuk mencetak lulusan yang mampu menjaga kelestarian hutan Indonesia melalui pendidikan, penelitian, dan pengabdian masyarakat. Fokus utama fakultas ini adalah pengelolaan sumber daya hutan yang berkelanjutan berbasis teknologi hijau.</p>
     </section>
 
-    <section>
-      <h2>Program Studi</h2>
-      <h3>Sarjana (S1)</h3>
-      <ul>
-        <li>Kehutanan</li>
-        <li>Manajemen Hutan</li>
-        <li>Hasil Hutan</li>
-        <li>Konservasi Sumberdaya Hutan</li>
-        <li>Silvikultur</li>
-        <li>Teknologi Rekayasa Kehutanan</li>
-        <li>Ekologi Hutan</li>
-        <li>Manajemen Pariwisata Alam</li>
-        <li>Teknologi Industri Berbasis Hayati</li>
-      </ul>
+<section>
+  <h2>Program Studi</h2>
 
-      <h3>Magister (S2)</h3>
-      <ul>
-        <li>Magister Kehutanan</li>
-        <li>Magister Ilmu Pengelolaan Hutan</li>
-        <li>Magister Ilmu dan Teknologi Hasil Hutan</li>
-        <li>Magister Konservasi Biodiversitas Tropika</li>
-        <li>Magister Manajemen Ekowisata dan Jasa Lingkungan</li>
-        <li>Magister Silvikultur</li>
-        <li>Magister Ekologi Hutan</li>
-      </ul>
+  <!-- ================================ -->
+  <!-- Departemen Manajemen dan Kebijakan Kehutanan -->
+  <!-- ================================ -->
+  <h3>Departemen Manajemen dan Kebijakan Kehutanan</h3>
 
-      <h3>Doktor (S3)</h3>
-      <ul>
-        <li>Doktor Kehutanan</li>
-      </ul>
-    </section>
+  <h4>Program Sarjana (S1)</h4>
+  <ul>
+    <li>Kehutanan</li>
+    <li>Manajemen Hutan</li>
+  </ul>
+
+  <h4>Program Magister (S2)</h4>
+  <ul>
+    <li>Magister Kehutanan</li>
+    <li>Magister Ilmu Pengelolaan Hutan</li>
+  </ul>
+
+  <h4>Program Doktor (S3)</h4>
+  <ul>
+    <li>Doktor Kehutanan</li>
+  </ul>
+
+
+  <!-- ================================ -->
+  <!-- Departemen Silvikultur dan Ekologi Hutan -->
+  <!-- ================================ -->
+  <h3>Departemen Silvikultur dan Ekologi Hutan</h3>
+
+  <h4>Program Sarjana (S1)</h4>
+  <ul>
+    <li>Silvikultur</li>
+    <li>Ekologi Hutan</li>
+  </ul>
+
+  <h4>Program Magister (S2)</h4>
+  <ul>
+    <li>Magister Silvikultur</li>
+    <li>Magister Ekologi Hutan</li>
+  </ul>
+
+
+  <!-- ================================ -->
+  <!-- Departemen Konservasi dan Keanekaragaman Hayati -->
+  <!-- ================================ -->
+  <h3>Departemen Konservasi dan Keanekaragaman Hayati</h3>
+
+  <h4>Program Sarjana (S1)</h4>
+  <ul>
+    <li>Konservasi Sumberdaya Hutan</li>
+  </ul>
+
+  <h4>Program Magister (S2)</h4>
+  <ul>
+    <li>Magister Konservasi Biodiversitas Tropika</li>
+  </ul>
+
+
+  <!-- ================================ -->
+  <!-- Departemen Hasil Hutan dan Teknologi Industri Kehutanan -->
+  <!-- ================================ -->
+  <h3>Departemen Hasil Hutan dan Teknologi Industri Kehutanan</h3>
+
+  <h4>Program Sarjana (S1)</h4>
+  <ul>
+    <li>Hasil Hutan</li>
+    <li>Teknologi Rekayasa Kehutanan</li>
+    <li>Teknologi Industri Berbasis Hayati</li>
+  </ul>
+
+  <h4>Program Magister (S2)</h4>
+  <ul>
+    <li>Magister Ilmu dan Teknologi Hasil Hutan</li>
+  </ul>
+
+
+  <!-- ================================ -->
+  <!-- Departemen Pariwisata Alam dan Jasa Lingkungan -->
+  <!-- ================================ -->
+  <h3>Departemen Pariwisata Alam dan Jasa Lingkungan</h3>
+
+  <h4>Program Sarjana (S1)</h4>
+  <ul>
+    <li>Manajemen Pariwisata Alam</li>
+  </ul>
+
+  <h4>Program Magister (S2)</h4>
+  <ul>
+    <li>Magister Manajemen Ekowisata dan Jasa Lingkungan</li>
+  </ul>
+
+</section>
 
     <section class="facilities">
       <h2>Fasilitas Unggulan</h2>
