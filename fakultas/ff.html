@@ -5,128 +5,177 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Fakultas Farmasi - Universitas Seruni</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --primary: #2e4053;
-      --accent: #16a085;
-      --bg: #f9fafb;
-      --text: #2c3e50;
-    }
+<style>
+  :root {
+    --primary: #0f766e;   /* Hijau-biru tua (teal akademik farmasi) */
+    --accent: #0284c7;    /* Biru sains & teknologi */
+    --bg: #f0fdfa;        /* Latar hijau-biru sangat lembut */
+    --text: #042f2e;      /* Teal gelap teks utama */
+  }
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
 
-    body {
-      font-family: 'Inter', sans-serif;
-      background-color: var(--bg);
-      color: var(--text);
-      line-height: 1.6;
-      overflow-x: hidden;
-    }
+  body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
 
-    header {
-      background: linear-gradient(135deg, var(--primary), var(--accent));
-      color: white;
-      padding: 50px 5vw;
-      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
-      width: 100%;
-    }
+  header {
+    background: linear-gradient(135deg, var(--primary), var(--accent));
+    color: white;
+    padding: 50px 5vw;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.25);
+    width: 100%;
+  }
 
-    header h1 {
-      font-size: 2.3em;
-      font-weight: 700;
-    }
+  header h1 {
+    font-size: 2.3em;
+    font-weight: 700;
+    letter-spacing: 0.4px;
+  }
 
-    main {
-      width: 100%;
-      padding: 60px 6vw;
-      background: var(--bg);
-    }
+  main {
+    width: 100%;
+    padding: 60px 6vw;
+    background: var(--bg);
+  }
 
-    section {
-      width: 100%;
-      margin-bottom: 70px;
-    }
+  section {
+    width: 100%;
+    margin-bottom: 70px;
+  }
 
+  h2 {
+    font-size: 1.8em;
+    border-left: 6px solid var(--accent);
+    padding-left: 15px;
+    margin-bottom: 25px;
+    font-weight: 700;
+  }
+
+  h3 {
+    color: var(--primary);
+    margin-top: 25px;
+    margin-bottom: 10px;
+    font-size: 1.3em;
+  }
+
+  h4 {
+    color: #155e75;
+    margin-bottom: 12px;
+    font-size: 1.05em;
+    font-weight: 600;
+  }
+
+  p {
+    margin-bottom: 15px;
+    font-size: 1.05em;
+  }
+
+  ul {
+    list-style: none;
+    padding-left: 0;
+  }
+
+  ul li {
+    background: #ffffff;
+    margin-bottom: 12px;
+    padding: 16px 24px;
+    border-radius: 10px;
+    border-left: 4px solid var(--primary);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+    transition: all 0.2s ease-in-out;
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  ul li:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+  }
+
+  /* ================================ */
+  /* Ikon Fakultas Farmasi */
+  /* ================================ */
+
+  /* Farmasi umum */
+  .pharmacy li::before {
+    content: "💊";
+    margin-right: 12px;
+  }
+
+  /* Farmasi klinik & pelayanan kefarmasian */
+  .clinical-pharmacy li::before {
+    content: "🧑‍⚕️";
+    margin-right: 12px;
+  }
+
+  /* Teknologi & industri farmasi */
+  .pharm-tech li::before {
+    content: "⚗️";
+    margin-right: 12px;
+  }
+
+  /* Bahan alam, herbal & fitofarmaka */
+  .natural-product li::before {
+    content: "🌱";
+    margin-right: 12px;
+  }
+
+  /* Riset & akademik farmasi */
+  .research li::before {
+    content: "🔬";
+    margin-right: 12px;
+  }
+
+  /* ================================ */
+  /* Highlight akademik */
+  /* ================================ */
+
+  .highlight {
+    background: linear-gradient(
+      90deg,
+      rgba(15,118,110,0.14),
+      transparent
+    );
+    border-left: 4px solid var(--accent);
+    padding: 18px 22px;
+    border-radius: 8px;
+    margin-bottom: 25px;
+  }
+
+  footer {
+    width: 100%;
+    background-color: var(--primary);
+    color: #ccfbf1;
+    text-align: center;
+    padding: 40px 20px;
+    font-size: 0.95em;
+    margin-top: 60px;
+  }
+
+  /* Responsif */
+  @media (max-width: 768px) {
+    header, main {
+      padding: 30px 5vw;
+    }
+    h1 {
+      font-size: 1.9em;
+    }
     h2 {
-      font-size: 1.8em;
-      border-left: 6px solid var(--accent);
-      padding-left: 15px;
-      margin-bottom: 25px;
-      font-weight: 700;
+      font-size: 1.5em;
     }
+  }
+</style>
 
-    h3 {
-      color: var(--accent);
-      margin-top: 25px;
-      margin-bottom: 10px;
-      font-size: 1.3em;
-    }
-
-    p {
-      margin-bottom: 15px;
-      font-size: 1.05em;
-    }
-
-    ul {
-      list-style: none;
-      padding-left: 0;
-    }
-
-    ul li {
-      background: white;
-      margin-bottom: 12px;
-      padding: 16px 24px;
-      border-radius: 10px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-      transition: all 0.2s ease-in-out;
-      width: 100%;
-    }
-
-    ul li:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    }
-
-    .facilities li::before {
-      content: "💊";
-      margin-right: 10px;
-    }
-
-    .highlight {
-      background: linear-gradient(90deg, rgba(22,160,133,0.1), transparent);
-      border-left: 4px solid var(--accent);
-      padding: 18px 22px;
-      border-radius: 8px;
-      margin-bottom: 25px;
-    }
-
-    footer {
-      width: 100%;
-      background-color: var(--primary);
-      color: #ecf0f1;
-      text-align: center;
-      padding: 40px 20px;
-      font-size: 0.95em;
-      margin-top: 60px;
-    }
-
-    /* Responsif */
-    @media (max-width: 768px) {
-      header, main {
-        padding: 30px 5vw;
-      }
-      h1 {
-        font-size: 1.9em;
-      }
-      h2 {
-        font-size: 1.5em;
-      }
-    }
-  </style>
 </head>
 <body>
   <header>
@@ -144,52 +193,97 @@
       Kolaborasi dengan rumah sakit, industri farmasi, dan lembaga riset nasional memperkuat posisi FF sebagai motor penggerak kesehatan masyarakat berbasis ilmu pengetahuan.</p>
     </section>
 
-    <section>
-      <h2>Program Studi</h2>
+ <section>
+  <h2>Program Studi</h2>
 
-      <h3>Sarjana (S1)</h3>
-      <ul>
-        <li>Farmasi</li>
-      </ul>
+<!-- ================================ -->
+<!-- Departemen Farmasi Dasar -->
+<!-- ================================ -->
+<h3>Departemen Farmasi Dasar</h3>
 
-      <h3>Magister (S2)</h3>
-      <ul>
-        <li>Magister Farmasi</li>
-        <li>Magister Farmasi Klinis</li>
-        <li>Magister Farmasi Industri</li>
-        <li>Magister Teknologi Farmasi dan Obat Tradisional</li>
-        <li>Magister Farmasi Herbal dan Fitofarmaka</li>
-        <li>Magister Farmasi Bahan Alam dan Bioteknologi</li>
-      </ul>
+<h4>Program Sarjana (S1)</h4>
+<ul>
+  <li>Farmasi</li>
+</ul>
 
-      <h3>Doktor (S3)</h3>
-      <ul>
-        <li>Doktor Farmasi</li>
-        <li>Doktor Teknologi Farmasi dan Kesehatan Molekuler</li>
-      </ul>
+<h4>Program Magister (S2)</h4>
+<ul>
+  <li>Magister Farmasi</li>
+</ul>
+
+<h4>Program Doktor (S3)</h4>
+<ul>
+    <li>Doktor Farmasi</li>
+</ul>
+
+
+<!-- ================================ -->
+<!-- Departemen Farmasi Klinik dan Pelayanan Kesehatan -->
+<!-- ================================ -->
+<h3>Departemen Farmasi Klinik dan Pelayanan Kesehatan</h3>
+<h4>Program Magister (S2)</h4>
+<ul>
+  <li>Magister Farmasi Klinis</li>
+</ul>
+
+<!-- ================================ -->
+<!-- Departemen Teknologi dan Rekayasa Farmasi -->
+<!-- ================================ -->
+<h3>Departemen Teknologi dan Rekayasa Farmasi</h3>
+<h4>Program Magister (S2)</h4>
+<ul>
+  <li>Magister Farmasi Industri</li>
+  <li>Magister Teknologi Farmasi dan Obat Tradisional</li>
+</ul>
+
+<h4>Program Doktor (S3)</h4>
+<ul>
+    <li>Doktor Teknologi Farmasi dan Kesehatan Molekuler</li>
+</ul>
+
+
+<!-- ================================ -->
+<!-- Departemen Farmasi Bahan Alam, Herbal, dan Bioteknologi -->
+<!-- ================================ -->
+<h3>Departemen Farmasi Bahan Alam, Herbal, dan Bioteknologi</h3>
+<h4>Program Magister (S2)</h4>
+<ul>
+  <li>Magister Farmasi Herbal dan Fitofarmaka</li>
+  <li>Magister Farmasi Bahan Alam dan Bioteknologi</li>
+</ul>
     </section>
 
     <section>
       <h2>Profesi & Spesialisasi</h2>
       <p>Fakultas Farmasi Universitas Seruni juga membuka jalur pendidikan profesi dan spesialis bagi lulusan sarjana maupun magister yang ingin mendalami keahlian profesional sesuai kebutuhan dunia kerja nasional dan global.</p>
 
-      <h3>Program Profesi</h3>
-      <ul>
-        <li>Apoteker (Pharmacist Professional Program)</li>
-      </ul>
+     <!-- ================================ -->
+<!-- Departemen Program Profesi -->
+<!-- ================================ -->
+<h3>Departemen Pendidikan Profesi Kefarmasian</h3>
 
-      <h3>Spesialisasi dan Bidang Keahlian</h3>
-      <ul>
-        <li>Spesialis Farmasi Klinik (Clinical Pharmacy Specialist)</li>
-        <li>Spesialis Farmasi Rumah Sakit (Hospital Pharmacy)</li>
-        <li>Spesialis Farmasi Komunitas (Community & Primary Care Pharmacy)</li>
-        <li>Spesialis Farmasi Industri (Industrial & Manufacturing Pharmacy)</li>
-        <li>Spesialis Farmasi Herbal dan Fitoterapi (Herbal & Phytotherapy Specialist)</li>
-        <li>Farmasi Forensik dan Regulasi Obat (Forensic & Regulatory Pharmacy)</li>
-        <li>Farmakogenomik dan Terapi Presisi (Pharmacogenomics & Precision Therapy)</li>
-        <li>Farmasi Nuklir dan Radiopharmacy (Nuclear & Radiopharmacy)</li>
-        <li>Farmasi Klinis Pediatrik dan Geriatrik (Pediatric & Geriatric Clinical Pharmacy)</li>
-      </ul>
+<h4>Program Profesi</h4>
+<ul>
+  <li>Program Profesi Apoteker (Pharmacist Professional Program)</li>
+</ul>
+
+<!-- ================================ -->
+<!-- Departemen Program Spesialis -->
+<!-- ================================ -->
+
+<h3>Departemen Spesialisasi dan Pengembangan Keahlian Farmas</h3>
+<h4>Program Spesialis</h4>
+<ul>
+  <li>Spesialis Farmasi Klinik (Clinical Pharmacy Specialist)</li>
+  <li>Spesialis Farmasi Rumah Sakit (Hospital Pharmacy)</li>
+  <li>Spesialis Farmasi Komunitas (Community & Primary Care Pharmacy)</li>
+  <li>Spesialis Farmasi Industri (Industrial & Manufacturing Pharmacy)</li>
+  <li>Spesialis Farmasi Herbal dan Fitoterapi (Herbal & Phytotherapy Specialist)</li>
+  <li>Farmasi Forensik dan Regulasi Obat (Forensic & Regulatory Pharmacy)</li>
+  <li>Farmakogenomik dan Terapi Presisi (Pharmacogenomics & Precision Therapy)</li>
+  <li>Farmasi Nuklir dan Radiopharmacy (Nuclear & Radiopharmacy)</li>
+Farmasi Klinis Pediatrik dan Geriatrik (Pediatric & Geriatric Clinical Pharmacy)
+</ul>
 
       <p>Seluruh program dikembangkan mengikuti standar <em>International Pharmaceutical Federation (FIP)</em> dan <em>World Health Organization (WHO)</em>, serta disesuaikan dengan regulasi dan kebutuhan pelayanan kefarmasian di Indonesia.</p>
     </section>
