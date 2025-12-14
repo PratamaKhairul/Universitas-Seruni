@@ -7,10 +7,10 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
 <style>
   :root {
-    --primary: #e67e22;   /* Oranye utama – keilmuan & spiritualitas */
-    --accent: #f3c892;    /* Oranye lembut */
-    --bg: #ffffff;        /* Putih bersih */
-    --text: #1f1f1f;      /* Hitam elegan untuk keterbacaan */
+    --primary: #1f1f1f;   /* Hitam – akademik & otoritatif */
+    --accent: #f2a900;    /* Oranye – nilai, pencerahan */
+    --bg: #fdfaf4;        /* Krem lembut */
+    --text: #2b2b2b;      /* Gelap netral untuk keterbacaan */
   }
 
   * {
@@ -43,7 +43,7 @@
   main {
     width: 100%;
     padding: 60px 6vw;
-    background: #fffdf9; /* putih hangat */
+    background: #fffdf8; /* krem sangat halus */
   }
 
   section {
@@ -53,7 +53,7 @@
 
   h2 {
     font-size: 1.8em;
-    border-left: 6px solid var(--primary);
+    border-left: 6px solid var(--accent);
     padding-left: 15px;
     margin-bottom: 25px;
     font-weight: 700;
@@ -93,17 +93,17 @@
 
   /* Ikon disesuaikan untuk Fakultas Ilmu Agama */
   .facilities li::before {
-    content: "📖"; /* kitab, ilmu agama, kajian */
+    content: "🕌"; /* simbol keilmuan agama */
     margin-right: 10px;
   }
 
   .highlight {
     background: linear-gradient(
       90deg,
-      rgba(230,126,34,0.18),
+      rgba(242,169,0,0.18),
       transparent
     );
-    border-left: 4px solid var(--primary);
+    border-left: 4px solid var(--accent);
     padding: 18px 22px;
     border-radius: 10px;
     margin-bottom: 25px;
@@ -111,7 +111,7 @@
 
   footer {
     width: 100%;
-    background-color: #1f1f1f; /* hitam solid */
+    background-color: var(--primary);
     color: #ffffff;
     text-align: center;
     padding: 40px 20px;
