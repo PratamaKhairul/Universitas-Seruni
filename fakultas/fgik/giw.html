@@ -6,6 +6,32 @@
   <title>Fakultas Geografi dan Ilmu Kebumian - Universitas Seruni</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
   <style>
+.program-btn {
+  display: block;
+  width: calc(100% + 40px);
+  margin: -16px -20px;
+  padding: 16px 20px;
+  border: none;
+  border-radius: 10px;
+  background: transparent;
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  text-align: left;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.program-btn:hover {
+  background: #e0f7f4;
+  color: #159b89;
+}
+
+.program-btn:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: -3px;
+}
+    
     :root {
       --primary: #2980b9;
       --accent: #1abc9c;
@@ -122,15 +148,16 @@
 
     <section>
 <h3>Program Sarjana (S1)</h3>
-      <ul>
+<ul>
   <li>
-    <button class="program-btn" type="button" onclick="window.location.href='geografikur.html'">
+    <button class="program-btn" type="button"
+      onclick="window.location.href='geografikur.html'">
       Geografi
     </button>
   </li>
-        <li>Perencanaan Tata Ruang Wilayah</li>
-        <li>Pembangunan Wilayah</li>
-      </ul>
+  <li>Perencanaan Tata Ruang Wilayah</li>
+  <li>Pembangunan Wilayah</li>
+</ul>
 
       <h3>Program Magister (S2)</h3>
       <ul>
