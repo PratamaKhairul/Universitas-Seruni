@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Katalog mata kuliah wajib dan pilihan Program Studi Geografi, Departemen Geografi dan Ilmu Wilayah.">
+  <meta name="theme-color" content="#183b35">
+  <title>Mata Kuliah | Program Studi Geografi – Universitas Seruni</title>
+<script>
+(() => {
+  let theme = null;
+  try { theme = localStorage.getItem('geografi-portal-theme'); } catch (error) {}
+  if (theme !== 'light' && theme !== 'dark') {
+    theme = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+  }
+  document.documentElement.dataset.theme = theme;
+})();
+</script>
+  <link rel="stylesheet" href="assets/style.css">
+  <script defer src="assets/courses.js"></script>
+</head>
+<body>
+  <div class="topbar">
+    <div class="shell">
+      <span>UNIVERSITAS SERUNI · FAKULTAS GEOGRAFI DAN ILMU KEBUMIAN</span>
+      <span>Portal Akademik Program Studi Geografi</span>
+    </div>
+  </div>
+
+  <header class="header">
+    <div class="shell navwrap">
+      <a class="brand" href="geografikur.html">
+        <div class="brand-mark">GEO</div>
+        <div class="brand-name">PROGRAM STUDI GEOGRAFI<small>DEPARTEMEN GEOGRAFI DAN ILMU WILAYAH</small></div>
+      </a>
+      <button class="menu-btn" id="menu-btn" aria-label="Buka navigasi" aria-expanded="false">☰</button>
+      <nav class="nav" id="site-nav" aria-label="Navigasi utama"></nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="shell">
+        <div class="crumb">Beranda / Mata Kuliah</div>
+        <div class="eyebrow">Katalog akademik</div>
+        <h1>Mata Kuliah</h1>
+        <p>Telusuri mata kuliah wajib dan pilihan berdasarkan kelompok kode, semester, SKS, dan tujuh bidang peminatan Program Studi Geografi.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="shell">
+        <div class="grid four catalog-stats">
+          <div class="card stat-card"><strong>272</strong><span>Total mata kuliah katalog</span></div>
+          <div class="card stat-card"><strong>57</strong><span>Mata kuliah wajib</span></div>
+          <div class="card stat-card"><strong>215</strong><span>Mata kuliah pilihan</span></div>
+          <div class="card stat-card"><strong>7</strong><span>Kelompok peminatan</span></div>
+        </div>
+
+        <div class="catalog-intro">
+          <div>
+            <div class="eyebrow light-text">Pencarian katalog</div>
+            <h2>Temukan mata kuliah sesuai rencana studi.</h2>
+            <p>Gunakan pencarian, filter kelompok, semester, atau kategori. Pilih salah satu bidang untuk menampilkan daftar mata kuliah pilihan pada bidang tersebut.</p>
+          </div>
+          <div class="catalog-note">
+            <strong>Keterangan kode kelompok</strong>
+            <span><b>GKWK</b> · Wajib Fakultas</span>
+            <span><b>GLWK</b> · Wajib Departemen</span>
+            <span><b>GEWK</b> · Wajib dan pilihan Prodi</span>
+            <span><b>USWK</b> · Wajib Universitas</span>
+          </div>
+        </div>
+
+        <div class="toolbar" aria-label="Filter mata kuliah">
+          <input class="field search" id="course-search" type="search" placeholder="Cari nama, kode, atau bidang peminatan…" aria-label="Cari mata kuliah">
+          <select class="field" id="group-filter" aria-label="Filter kelompok kode">
+            <option value="all">Semua kelompok kode</option>
+            <option value="GKWK">GKWK · Fakultas</option>
+            <option value="GLWK">GLWK · Departemen</option>
+            <option value="GEWK">GEWK · Program Studi</option>
+            <option value="USWK">USWK · Universitas</option>
+          </select>
+          <select class="field" id="semester-filter" aria-label="Filter semester">
+            <option value="all">Semua semester</option>
+            <option value="1">Semester 1</option>
+            <option value="2">Semester 2</option>
+            <option value="3">Semester 3</option>
+            <option value="4">Semester 4</option>
+            <option value="5">Semester 5</option>
+            <option value="6">Semester 6</option>
+            <option value="7">Semester 7</option>
+            <option value="8">Semester 8</option>
+            <option value="">Belum ditetapkan</option>
+          </select>
+          <select class="field" id="kind-filter" aria-label="Filter kategori mata kuliah">
+            <option value="all">Wajib & pilihan</option>
+            <option value="Wajib">Wajib</option>
+            <option value="Pilihan">Pilihan</option>
+          </select>
+          <button class="btn outline" id="reset-filter" type="button">Reset filter</button>
+          <button class="btn" id="download-csv" type="button">Unduh CSV ↓</button>
+          <span class="result-count" id="course-count" aria-live="polite">Memuat katalog…</span>
+        </div>
+
+        <div class="track-heading">
+          <h2>Bidang peminatan</h2>
+          <p>Seluruh mata kuliah pilihan memiliki bobot 2 SKS, kecuali mata kuliah kebumian yang mencantumkan komponen praktikum.</p>
+        </div>
+        <div class="track-tabs" role="group" aria-label="Filter bidang peminatan">
+          <button class="tab active" type="button" data-track="Semua">Semua mata kuliah</button>
+          <button class="tab" type="button" data-track="Geografi Fisik dan Lingkungan">Geografi Fisik dan Lingkungan</button>
+          <button class="tab" type="button" data-track="Geospasial, SIG, dan Penginderaan Jauh">Geospasial, SIG, dan Penginderaan Jauh</button>
+          <button class="tab" type="button" data-track="Geografi Sosial">Geografi Sosial</button>
+          <button class="tab" type="button" data-track="Perencanaan Wilayah dan Kota">Perencanaan Wilayah dan Kota</button>
+          <button class="tab" type="button" data-track="Geografi Kebencanaan">Geografi Kebencanaan</button>
+          <button class="tab" type="button" data-track="Geografi Kelautan dan Atmosfer">Geografi Kelautan dan Atmosfer</button>
+          <button class="tab" type="button" data-track="Geografi Kebumian">Geografi Kebumian</button>
+        </div>
+
+        <div class="course-grid" id="course-list" aria-live="polite"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" id="site-footer"></footer>
+  <script src="assets/app.js"></script>
+</body>
+</html>

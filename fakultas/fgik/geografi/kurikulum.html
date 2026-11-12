@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Struktur kurikulum Program Studi Geografi semester 1 hingga 8 dengan total rancangan 144 SKS.">
+  <meta name="theme-color" content="#183b35">
+  <title>Kurikulum | Program Studi Geografi – Universitas Seruni</title>
+<script>
+(() => {
+  let theme = null;
+  try { theme = localStorage.getItem('geografi-portal-theme'); } catch (error) {}
+  if (theme !== 'light' && theme !== 'dark') {
+    theme = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+  }
+  document.documentElement.dataset.theme = theme;
+})();
+</script>
+  <link rel="stylesheet" href="assets/style.css">
+  <script defer src="assets/curriculum.js"></script>
+</head>
+<body>
+  <div class="topbar">
+    <div class="shell">
+      <span>UNIVERSITAS SERUNI · FAKULTAS GEOGRAFI DAN ILMU KEBUMIAN</span>
+      <span>Portal Akademik Program Studi Geografi</span>
+    </div>
+  </div>
+
+  <header class="header">
+    <div class="shell navwrap">
+      <a class="brand" href="geografikur.html">
+        <div class="brand-mark">GEO</div>
+        <div class="brand-name">PROGRAM STUDI GEOGRAFI<small>DEPARTEMEN GEOGRAFI DAN ILMU WILAYAH</small></div>
+      </a>
+      <button class="menu-btn" id="menu-btn" aria-label="Buka navigasi" aria-expanded="false">☰</button>
+      <nav class="nav" id="site-nav" aria-label="Navigasi utama"></nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="shell">
+        <div class="crumb">Beranda / Kurikulum</div>
+        <div class="eyebrow">Rancangan akademik</div>
+        <h1>Kurikulum 144 SKS</h1>
+        <p>Struktur pembelajaran delapan semester yang menggabungkan fondasi sains, metode geografi, kerja lapangan, pendalaman peminatan, dan tugas akhir.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="shell">
+        <div class="grid four curriculum-stats">
+          <div class="card stat-card"><strong>144</strong><span>SKS minimum kelulusan</span></div>
+          <div class="card stat-card"><strong>164</strong><span>SKS maksimum rancangan</span></div>
+          <div class="card stat-card"><strong>8</strong><span>Semester rancangan normal</span></div>
+          <div class="card stat-card"><strong>12</strong><span>Semester / 6 tahun batas studi</span></div>
+        </div>
+
+        <div class="section-head curriculum-head">
+          <div>
+            <div class="eyebrow light-text">Peta semester</div>
+            <h2>Distribusi beban studi</h2>
+          </div>
+          <p>Rincian SKS setiap semester dihitung langsung dari daftar mata kuliah pada rancangan kurikulum.</p>
+        </div>
+        <div class="semester-grid" id="semester-list"></div>
+
+        <div class="callout curriculum-callout">
+          <strong>Komponen pilihan dan MBKM</strong>
+          <p>Semester 5 dan 6 masing-masing mengalokasikan 20 SKS untuk mata kuliah pilihan atau pembelajaran MBKM. Mahasiswa dapat menyusun kombinasi mata kuliah dari tujuh bidang peminatan sesuai ketentuan akademik.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section soft-band">
+      <div class="shell split">
+        <div>
+          <div class="eyebrow light-text">Ketentuan penyelesaian studi</div>
+          <h2 class="section-title-large">Ruang belajar yang terarah dan fleksibel.</h2>
+          <ul class="list-check">
+            <li>Mahasiswa perlu memenuhi sekurang-kurangnya 144 SKS untuk syarat kelulusan.</li>
+            <li>Mahasiswa dapat merencanakan pengambilan hingga maksimum 164 SKS sesuai rancangan ini.</li>
+            <li>Batas masa studi paling lama adalah 6 tahun atau 12 semester.</li>
+            <li>Semester 5 dan 6 menyediakan alokasi 20 SKS mata kuliah pilihan atau pembelajaran MBKM pada masing-masing semester.</li>
+            <li>Pengakuan kredit MBKM, prasyarat, batas SKS per semester, dan persyaratan tugas akhir mengikuti peraturan akademik yang berlaku.</li>
+          </ul>
+        </div>
+
+        <div class="credit-panel">
+          <div class="label">Simulasi capaian kredit</div>
+          <div class="big"><span id="credit-value">144</span> <span class="credit-unit">SKS</span></div>
+          <p class="muted simulation-hint">Geser untuk melihat posisi jumlah kredit terhadap rentang 144–164 SKS.</p>
+          <input type="range" id="credit-slider" min="0" max="180" value="144" step="1" aria-label="Simulasi jumlah SKS">
+          <div class="slider-labels"><span>0</span><span>144 minimum</span><span>164 maksimum</span><span>180</span></div>
+          <div class="progress-track"><span id="credit-progress" style="width:87.8%"></span></div>
+          <p id="credit-status" class="credit-status" aria-live="polite"></p>
+          <p class="small-note">Simulasi ini bersifat informatif dan bukan validasi KRS atau status kelulusan.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="shell">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow light-text">Rangkuman per semester</div>
+            <h2>Distribusi total SKS</h2>
+          </div>
+        </div>
+        <div class="table-wrap">
+          <table class="curriculum-table">
+            <thead>
+              <tr><th>Semester</th><th>Fokus tahap</th><th>Total SKS</th><th>Komponen khusus</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>1</td><td>Fondasi sains dan geografi</td><td>19</td><td>Praktikum dasar</td></tr>
+              <tr><td>2</td><td>Geografi manusia, kebumian, dan kartografi</td><td>19</td><td>Praktikum geologi dan kartografi</td></tr>
+              <tr><td>3</td><td>Metode, survei, dan analisis geografi</td><td>20</td><td>KKL 1, PWK, dan kebencanaan</td></tr>
+              <tr><td>4</td><td>Pendalaman sistem bumi, kelautan, dan atmosfer</td><td>23</td><td>KKL 2 dan rangkaian praktikum</td></tr>
+              <tr><td>5</td><td>Metode penelitian dan pendalaman minat</td><td>24</td><td>20 SKS pilihan / MBKM</td></tr>
+              <tr><td>6</td><td>Geografi terapan dan pendalaman minat</td><td>24</td><td>20 SKS pilihan / MBKM</td></tr>
+              <tr><td>7</td><td>Persiapan penelitian dan komunikasi ilmiah</td><td>10</td><td>Seminar dan metode penelitian</td></tr>
+              <tr><td>8</td><td>Penyelesaian studi</td><td>5</td><td>Tugas akhir</td></tr>
+            </tbody>
+            <tfoot>
+              <tr><th colspan="2">Total rancangan</th><th>144</th><th>8 semester</th></tr>
+            </tfoot>
+          </table>
+        </div>
+
+        <div class="stage-summary">
+          <div><span>Semester 1–2</span><strong>38 SKS</strong></div>
+          <div><span>Semester 3–4</span><strong>43 SKS</strong></div>
+          <div><span>Semester 5–6</span><strong>48 SKS</strong></div>
+          <div><span>Semester 7–8</span><strong>15 SKS</strong></div>
+        </div>
+        <p class="small-note">Total beban studi pada rancangan semester 1–8 adalah 144 SKS (19 + 19 + 20 + 23 + 24 + 24 + 10 + 5).</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" id="site-footer"></footer>
+  <script src="assets/app.js"></script>
+</body>
+</html>
