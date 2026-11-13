@@ -141,6 +141,156 @@
       }
     }
   </style>
+
+  <style id="viewport-width-repair">
+    /* Reset batas lebar/zoom yang dapat membuat seluruh situs hanya selebar sebagian layar. */
+    html,
+    body {
+      width: 100vw !important;
+      min-width: 0 !important;
+      max-width: none !important;
+      margin: 0 !important;
+      padding: 0;
+      zoom: 1 !important;
+      transform: none !important;
+      overflow-x: hidden !important;
+    }
+
+    body {
+      position: relative !important;
+      left: 0 !important;
+      right: auto !important;
+    }
+
+    /* Elemen pembungkus utama harus mengikuti lebar viewport, bukan lebar tetap. */
+    .topbar,
+    .header,
+    main,
+    .page-hero,
+    .section,
+    .soft-band,
+    .footer {
+      display: block;
+      width: 100vw !important;
+      min-width: 0 !important;
+      max-width: none !important;
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+      transform: none !important;
+    }
+
+    .shell {
+      width: min(calc(100vw - 36px), 1200px) !important;
+      min-width: 0 !important;
+      max-width: 1200px !important;
+      margin-left: auto !important;
+      margin-right: auto !important;
+    }
+
+    .navwrap {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .split,
+    .section-head,
+    .grid,
+    .card,
+    .brand,
+    .brand-name {
+      min-width: 0 !important;
+      max-width: 100% !important;
+    }
+
+    /* Tabel identitas tidak boleh memaksa card melebar ke kanan. */
+    .card {
+      width: 100%;
+      overflow: hidden;
+    }
+
+    .card table {
+      display: table !important;
+      width: 100% !important;
+      min-width: 0 !important;
+      max-width: 100% !important;
+      table-layout: fixed !important;
+      border-collapse: collapse;
+    }
+
+    .card table tr {
+      display: table-row !important;
+    }
+
+    .card table td {
+      display: table-cell !important;
+      min-width: 0 !important;
+      max-width: 100%;
+      white-space: normal !important;
+      overflow-wrap: anywhere;
+      word-break: normal;
+    }
+
+    .card table td:first-child {
+      width: 34%;
+    }
+
+    .card table td:last-child {
+      width: 66%;
+    }
+
+    img,
+    video,
+    iframe,
+    svg {
+      max-width: 100%;
+    }
+
+    @media (max-width: 720px) {
+      .shell {
+        width: calc(100vw - 36px) !important;
+      }
+
+      .split {
+        display: grid !important;
+        grid-template-columns: minmax(0, 1fr) !important;
+        gap: 28px;
+      }
+
+      .grid.two,
+      .grid.three {
+        display: grid !important;
+        grid-template-columns: minmax(0, 1fr) !important;
+      }
+
+      .section-head {
+        display: block;
+      }
+
+      .topbar .shell {
+        flex-wrap: wrap;
+        gap: 4px 12px;
+      }
+
+      .navwrap {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+      }
+
+      .brand-name {
+        overflow-wrap: anywhere;
+      }
+
+      .card table td {
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+    }
+  </style>
+
 </head>
 
 <body>
